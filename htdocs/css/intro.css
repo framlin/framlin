@@ -1,0 +1,28 @@
+div#topframe{
+	background-image: none;
+	background-repeat: no-repeat;
+}
+h1.firma{
+	display: none;
+}
+div#contextmenuframe{
+	display: none;
+}
+div#contentframe{
+	border-style: none;
+	border-width:0px;
+	padding: 0px;
+	margin: 0px;
+	background-color:#ffefbf;
+	background-image: none;
+}
+div.contentpath{
+	display: none;
+}
+div#cover{
+	vertical-align: middle;
+	text-align:center;
+	padding: 0px;
+	margin: 0px;
+}
+
