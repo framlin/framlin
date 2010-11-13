@@ -1,0 +1,14 @@
+[
+    {
+      "from": "/",
+      "to": "/index.html"
+    },
+    {
+      "from": "/home.html",
+      "to": "/index.html"
+    },
+    {
+      "from": "/:dir/*",
+      "to": "/:dir/*"
+    }
+]
