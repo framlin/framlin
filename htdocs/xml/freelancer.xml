@@ -2,6 +2,10 @@
 
 
   <auftraege>
+   <kunde von="2006" bis=""   firma="Soprado GmbH &amp; Co. KG"  ort="Pullach"
+          description="software identity" url="http://www.soprado.de">
+     <projekt name="Leasing Intranet-Frontend" skills="XUL, JavaScript, AJAX" url="" endkunde="Sixt Leasing AG"/>
+   </kunde>
    <kunde von="2005" bis=""   firma="Hoch3 GmbH"  ort="Berlin"
           description="Healthcare-Kommunikation" url="http://www.hoch3.de">
      <projekt name="BWP 2005 (Upgrade) +++ barrierefreie PDF-Archiv-CD mit Volltextsuche" skills="J2EE, JSP, XML, XSLT, XSL-FO" url="" endkunde="Bundesinstitut für Berufsbildung"/>
@@ -9,6 +13,8 @@
    </kunde>
    <kunde von="2001" bis=""   firma="WR-Multimedia"  ort="Berlin"
           description="Web Development" url="http://www.wr-multimedia.com">
+     <projekt name="BWP 2007 (Update)" skills="J2EE, JSP, XML, XSLT, XSL-FO" url="" endkunde="Bundesinstitut für Berufsbildung"/>
+     <projekt name="BWP 2006 (Update)" skills="J2EE, JSP, XML, XSLT, XSL-FO" url="" endkunde="Bundesinstitut für Berufsbildung"/>
      <projekt name="MS SpaceSellers" skills="C#, .NET, ActionScript, XML" url="" endkunde="Microsoft Deutschland GmbH"/>
      <projekt name="Pille.com" skills="PHP, Perl, CMS (Teamsite)" url="http://www.pille.com" endkunde="Schering Deutschland GmbH"/>
      <projekt name="Ventavis International" skills="PHP" url="" endkunde="Schering Deutschland GmbH"/>

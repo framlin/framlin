@@ -17,7 +17,8 @@ div#menuframe{
 	left:0px;
 }
 div.mainmenu{
-	background-color:#ffffd0;
+#	background-color:#ffffd0;
+	background-color:#8e0408;
 	border-style: solid;
 	border-width:1px;
 	border-color:#fc9;
@@ -39,12 +40,12 @@ div.mainmenu a.menu{
 	display:block;
 }
 a.menu{
-	color:maroon;
+	color:white;
 	margin:0px 0px 0px 0px;
 	text-decoration: none;
 }
 a.menu:hover{
-	color:green;
+	color:#f7d202;
 	font-family: arial, sans-serif;
 	text-decoration: underline;
 }
@@ -54,7 +55,8 @@ div#contextmenuframe{
 }
 .contextMenuEntry{
 	font-weight:bold;
-	background-color:#ffd;
+#	background-color:#ffd;
+	background-color:#FEEC07;
 	padding:0px 4px 1px 4px;
 	border-style: solid;
 	border-width:1px;
@@ -63,7 +65,8 @@ div#contextmenuframe{
 	display:inline;
 }
 div#contextmenuframe a.menu{
-	background-color:#ffffd0;
+#	background-color:#ffffd0;
+	background-color:#FA9705;
 	padding:0px 4px 0px 4px;
 	border-style: solid;
 	border-width:1px;

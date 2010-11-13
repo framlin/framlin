@@ -32,9 +32,9 @@ if(EMPTY($_REQUEST['page'])){
 }
 //========== CONTENT ======================= 
 if(EMPTY($_REQUEST['content'])){
-	$myContent = "/php/content/intro.php";
+	$myContent = "/php/content/home.php";
 	//redefine styles for Intro
-	echo "<style type=\"text/css\">@import \"$fr_root/css/intro.css\";</style>";
+	//echo "<style type=\"text/css\">@import \"$fr_root/css/intro.css\";</style>";
 }else{
 	$myContent = $_REQUEST['content'];
 }

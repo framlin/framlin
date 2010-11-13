@@ -4,13 +4,13 @@ Die Kosten richten sich nach Art und Umfang der erbrachten Leistungen:<br/>
 	<td>Beratungsgespräche und Kleinstaufträge</td><td class="preis">70€/Stunde</td>
 	</tr>
 	<tr>
-	<td>Projektlaufzeitaufzeit 1 bis 20 Tage</td><td class="preis">60€/Stundeg</td>
+	<td>Projektlaufzeitaufzeit 1 bis 20 Tage</td><td class="preis">480€/Tag</td>
 	</tr>
 	<tr>
-	<td>Projektlaufzeitaufzeit über 20 Tage</td><td class="preis">55€/Stunde (ab dem 21. Tag)</td>
+	<td>Projektlaufzeitaufzeit über 20 Tage</td><td class="preis">400€/Tag (ab dem 21. Tag)</td>
 	</tr>
 	<tr>
-	<td>gemeinnützige/soziale Projekte</td><td class="preis">50€/Stunde</td>
+	<td>gemeinnützige/soziale Projekte</td><td class="preis">350€/Tag</td>
 	</tr>
 </table>
 
