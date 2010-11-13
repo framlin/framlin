@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<project name="framlin" default="dist" basedir="..">
+	<property name="web.target" value="/home/beuys/workspace/wolfgang-egger"/>
+	<property name="export.target" value="/home/beuys/workspace/framlin/htdocs"/>
+	<property name="lib" value="${basedir}/lib"/>
+	<property name="classes" value="${basedir}/classes"/>
+	<property name="html" value="${basedir}"/>
+
+
+	<!--  .......................................   -->
+	<target name="dist" depends="prepare">
+	   <!--copy file="${basedir}/index.html" todir="${web.target}"/>
+	   <copy file="${basedir}/english/index.html" todir="${web.target}/english"/>
+	   <copy todir="${web.target}/css">
+	      <fileset dir="${basedir}/css"/>
+	   </copy>
+	   <copy todir="${web.target}/images">
+	      <fileset dir="${basedir}/images"/>
+	   </copy-->
+	</target>
+	<!--  .......................................   -->
+	<target name="prepare">
+		<mkdir dir="${classes}"/>
+		<mkdir dir="${web.target}/css"/>
+		<mkdir dir="${web.target}/personal"/>
+		<mkdir dir="${web.target}/bibliographie"/>
+		<mkdir dir="${web.target}/images"/>
+		<mkdir dir="${basedir}/css"/>
+		<mkdir dir="${basedir}/fo"/>
+		<mkdir dir="${basedir}/pdf"/>
+		<mkdir dir="${basedir}/personal"/>
+		<mkdir dir="${basedir}/bibliographie"/>
+		<mkdir dir="${basedir}/images"/>
+	</target>
+
+        <target name="prepare.ftp">
+           <ftp action="mkdir"
+                server="ftp.mbaaba.de"
+                userid="p220681"
+                password="st3008" 
+                remotedir="html/wolfgang-egger/css"/>
+
+           <ftp action="mkdir"
+                server="ftp.mbaaba.de"
+                userid="p220681"
+                password="st3008" 
+                remotedir="html/wolfgang-egger/personal"/>
+            
+           <ftp action="mkdir"
+                server="ftp.mbaaba.de"
+                userid="p220681"
+                password="st3008" 
+                remotedir="html/wolfgang-egger/images"/>
+            
+        </target>
+
+
+        <target name="deploy">
+            <ftp server="ftp.mbaaba.de"
+                 remotedir="html/wolfgang-egger/css"
+                 userid="p220681"
+                 password="st3008"
+                 depends="yes"
+            >
+                <fileset dir="${basedir}/css"/>
+            </ftp>
+            <ftp server="ftp.mbaaba.de"
+                 remotedir="html/wolfgang-egger/images"
+                 userid="p220681"
+                 password="st3008"
+                 depends="yes"
+            >
+                <fileset dir="${basedir}/images"/>
+            </ftp>
+            <ftp server="ftp.mbaaba.de"
+                 remotedir="html/wolfgang-egger/personal"
+                 userid="p220681"
+                 password="st3008"
+                 depends="yes"
+            >
+                <fileset dir="${basedir}/personal"/>
+            </ftp>
+            <ftp server="ftp.mbaaba.de"
+                 remotedir="html/wolfgang-egger"
+                 userid="p220681"
+                 password="st3008"
+                 depends="yes"
+            >
+                <fileset dir="${basedir}">
+                    <include name="*.html"/>
+                </fileset>
+            </ftp>
+
+
+
+
+
+        </target>
+
+</project>

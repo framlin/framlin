@@ -1,0 +1,17 @@
+<img src="gehtalles.xcf" width="800" height="600" border="0" usemap="#map" />
+
+<map name="map">
+<!-- #$-:Image Map file created by GIMP Imagemap Plugin -->
+<!-- #$-:GIMP Imagemap Plugin by Maurits Rijk -->
+<!-- #$-:Please do not edit lines starting with "#$" -->
+<!-- #$VERSION:2.0 -->
+<!-- #$AUTHOR:Wolfgang Egger -->
+<area shape="rect" coords="273,82,372,132" alt="link-uml" href="http://#" />
+<area shape="poly" coords="471,96,412,133,376,261,421,301,555,299,564,180,558,125,553,122,556,123" alt="logo" href="http://#" />
+<area shape="rect" coords="79,225,168,267" alt="xml" href="http://#" />
+<area shape="rect" coords="110,460,211,505" alt="j2ee" href="http://#" />
+<area shape="rect" coords="362,515,643,566" alt="alles" href="http://#" />
+<area shape="rect" coords="622,101,711,145" alt="ooa" href="http://#" />
+<area shape="rect" coords="692,256,788,303" alt="ood" href="http://#" />
+<area shape="rect" coords="638,443,728,483" alt="oop" href="http://#" />
+</map>

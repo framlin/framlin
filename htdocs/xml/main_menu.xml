@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu image="">
+	<menuentry label="Leistungskatalog" link="" image="">
+		<childmenu image="">
+				<menuentry label="Anforderungsanalyse" link="analyse" image="">
+					<childmenu image="">
+							<menuentry label="Beschreibung" link="/php/content/leistung/analyse_descr.php" image=""/>
+							<menuentry label="Ergebnis" link="/php/content/leistung/analyse_res.php" image=""/>
+							<menuentry label="Preis" link="/php/content/leistung/preise.php" image=""/>
+					</childmenu>
+				</menuentry>
+				<menuentry label="Systementwurf" link="design" image="">
+					<childmenu image="">
+							<menuentry label="Beschreibung" link="/php/content/leistung/design_descr.php" image=""/>
+							<menuentry label="Ergebnis" link="/php/content/leistung/design_res.php" image=""/>
+							<menuentry label="Preis" link="/php/content/leistung/preise.php" image=""/>
+					</childmenu>
+				</menuentry>
+				<menuentry label="Programmierung" link="programmierung" image="">
+					<childmenu image="">
+							<menuentry label="Beschreibung" link="/php/content/leistung/programmierung_descr.php" image=""/>
+							<menuentry label="Sprachen" link="/php/content/leistung/programmierung_sprachen.php" image=""/>
+							<menuentry label="Preis" link="/php/content/leistung/preise.php" image=""/>
+					</childmenu>
+				</menuentry>
+				<!-->menuentry label="Installation" link="installation" image="">
+					<childmenu image="">
+							<menuentry label="Beschreibung" link="/php/content/leistung/insallation_descr.php" image=""/>
+							<menuentry label="Ergebnis" link="/php/content/leistung/insallation_res.php" image=""/>
+							<menuentry label="Preis" link="/php/content/leistung/preise.php" image=""/>
+					</childmenu>
+				</menuentry>
+				<menuentry label="Wartung" link="wartung" image="">
+					<childmenu image="">
+							<menuentry label="Beschreibung" link="/php/content/leistung/wartung_descr.php" image=""/>
+							<menuentry label="Ergebnis" link="/php/content/leistung/wartung_res.php" image=""/>
+							<menuentry label="Preis" link="/php/content/leistung/preise.php" image=""/>
+					</childmenu>
+				</menuentry>
+				<menuentry label="Projektleitung" link="management" image="">
+					<childmenu image="">
+							<menuentry label="Beschreibung" link="/php/content/leistung/management_descr.php" image=""/>
+							<menuentry label="Ergebnis" link="/php/content/leistung/management_res.php" image=""/>
+							<menuentry label="Preis" link="/php/content/leistung/preise.php" image=""/>
+					</childmenu>
+				</menuentry>
+				<menuentry label="Qualitätssicherung" link="qualitaet" image="">
+					<childmenu image="">
+							<menuentry label="Beschreibung" link="/php/content/leistung/qualitaet_descr.php" image=""/>
+							<menuentry label="Ergebnis" link="/php/content/leistung/qualitaet_res.php" image=""/>
+							<menuentry label="Preis" link="/php/content/leistung/preise.php" image=""/>
+					</childmenu>
+				</menuentry-->
+		</childmenu>
+	</menuentry>
+	<menuentry label="Unternehmen" link="" image="">
+		<childmenu image="">
+				<!--menuentry label="Kunden" link="/php/content/firma/kunden.php" image=""/-->
+				<menuentry label="Projekte" link="/php/content/firma/projekte.php" image=""/>
+				<!-->menuentry label="Partner" link="/php/content/firma/partner.php" image=""/-->
+				<menuentry label="Inhaber" link="/php/content/firma/inhaber.php" image=""/>
+				<menuentry label="Kontakt" link="/php/content/meta/kontakt.php" image=""/>
+		</childmenu>
+	</menuentry>
+</menu>
