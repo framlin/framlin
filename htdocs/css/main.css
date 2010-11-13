@@ -1,33 +1,157 @@
 body{
-	margin:0px;
-	padding:0px;
-	background-color:#ffefbf;
-	background-image: url("../images/servus.jpg");
-	background-repeat: no-repeat;
+	margin:0;
+	padding:0;
 }
 div#masterframe{
-	position:absolute;
-	top:0px;
-	left:0px;
-	margin:0px;
-	padding:0px;
+	margin:0;
+	padding:0;
 	width:100%;
-	font-family: arial, sans-serif;
-	text-decoration: none;
+	height:100%;
+	position:absolute;
+	background-color: red;
 }
 div#topframe{
-	margin:0px;
-	padding:0px;
+	border-style: dotted;
 	text-align: right;
-	border-width: 0px 0px 0px 0px;
-	border-bottom-style: solid;
-	border-bottom-color: #fc9;
-	z-index: 40;
+	display:block;
 }
 img#logo{
 	float:left;
-	padding:4px 0px 0px 4px;
+	padding:4px;
 } 
+h1.firma{
+	font-family:monospace;
+	font-size: 16pt !important;
+	margin-top: 3px;
+	margin-bottom: 20px;
+}
+p.metamenu{
+	display: inline;
+	margin-left: 10px;
+}
+div.contentpath{
+	margin-top: -1.3em;
+	width:100%;
+	border-style: solid;
+	text-align:left;
+}
+div#mainframe{
+	background-color: blue;
+	border-style:solid;
+}
+div#menuframe{
+	border-style: dashed;
+	background-color:green;
+	float:left;
+}
+div.mainmenu{
+	background-color: gray;
+	margin: 0.5em;	
+	padding: 0.5em;	
+}
+div#contentframe{
+	border-style: double;
+	padding: 0.5em;
+	margin-left: 12em;
+}
+/*
+body  { 
+	background-color:#ffffdd; 
+	padding:0px;
+	margin:0px;
+}
+div#masterframe{
+	position: absolute;
+	top:0px;
+	right:0px;
+	bottom: 0px;
+	left:0px;
+}
+#logo{
+	position:absolute;
+	top:7px;
+	left:8px;
+	z-index: 2;	
+}
+div#topframe{
+	position:absolute;
+	top:0px;
+	left:0px;
+	right:0px;
+	z-index:1;
+	height:70px;
+	width:100%;
+	background-color:#fea;
+	border-bottom-width: 10px;
+	border-bottom-style: solid;
+	border-bottom-color: #fc9;
+	text-align: right;
+	padding-right: 4px;
+}
+div#menuframe{
+	position:absolute;
+	top:0px;
+	left:0px;
+	height:110%;
+	margin:80px 0px 0px 0px;
+	text-align:left;
+	background-color:#fe7;
+	border-right-width: 7px;
+	border-right-style: solid;
+	border-right-color: #fc9;
+	font-weight:bold;
+	width:13em;
+}
+div#contentframe{
+	position:absolute;
+	top:0px;
+	left:0px;
+	height:100%;
+	margin:80px 0px 0px 14em;
+	padding:1em;
+	font-size: 12pt;
+	font-family: arial, sans-serif;
+}
+div.contentpath{
+	position:absolute;
+	bottom:1px;
+	left:60px;
+	z-index:5;
+	font-weight: bold;
+	font-family: sans-serif;
+	font-size:10pt;
+}
+p.metamenu{
+	display: inline;
+	margin-left: 10px;
+}
+p.menu{
+	padding-left:0.7em;
+}
+div.metamenu{
+	position:absolute;
+	bottom:2px;
+	right:3px;
+	margin-top: auto;
+	margin-bottom: 3px;
+	padding-right: 4px;
+}
+a.menu{
+	color:maroon;
+	font-family: sans-serif;
+	text-decoration: none;
+}
+a.menu:hover{
+	color:green;
+	font-family: sans-serif;
+	text-decoration: none;
+}
+p.label{
+	background-color:#fa0;
+	padding-left:0.5em;
+	margin:0px;
+	color:white;
+}
 em.firma{
 	font-style:normal;
 	font-weight:bold;
@@ -39,15 +163,7 @@ em.bigfirma{
 }
 h1.firma{
 	font-family:monospace;
-	font-size: 20pt !important;
-	margin: 0px 10px 20px 150px;
+	font-size: 16pt !important;
+	display:inline;
 }
-div#mainframe{
-	margin-left: 12.5em;
-	border-style: solid;
-	border-width: 1px 0px 0px 0px;
-	border-color:#fc9;
-}
-.invisible{
-	display:none;
-}
+ */
