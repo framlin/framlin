@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"
+"http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   id="svg1"
+   sodipodi:version="0.32"
+   inkscape:version="0.39"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   width="8.0000000cm"
+   height="2.0000000cm"
+   sodipodi:docbase="/home/beuys/Documents/Pictures/work"
+   sodipodi:docname="swe-logo-voll.svg">
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="112.01558"
+     inkscape:cy="45.362439"
+     inkscape:window-width="1024"
+     inkscape:window-height="723"
+     showgrid="true"
+     inkscape:grid-bbox="false"
+     gridtolerance="1.0000000mm"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     gridspacingx="1.0000000mm"
+     gridspacingy="1.0000000mm" />
+  <metadata
+     id="metadata4">
+    <rdf:RDF
+       id="RDF5">
+      <cc:Work
+         rdf:about=""
+         id="Work6">
+        <dc:format
+           id="format7">image/svg+xml</dc:format>
+        <dc:type
+           id="type9"
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <path
+     style="fill:none;fill-opacity:0.75000000;fill-rule:evenodd;stroke:#000000;stroke-width:6.1156535;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.0000000;stroke-opacity:1.0000000;"
+     d="M 35.135911,65.183429 L 67.703819,47.792549 L 67.703819,47.792549"
+     id="path914" />
+  <path
+     style="fill:none;fill-opacity:0.75000000;fill-rule:evenodd;stroke:#000000;stroke-width:5.3599586;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.0000000;stroke-opacity:1.0000000;"
+     d="M 35.199236,47.193902 L 50.489898,38.350012 L 50.489898,38.350012"
+     id="path919" />
+  <path
+     style="fill:none;fill-opacity:0.75000000;fill-rule:evenodd;stroke:#000000;stroke-width:5.1298041;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.0000000;stroke-opacity:1.0000000;"
+     d="M 68.472304,12.018825 L 38.420182,5.7083960 L 20.810381,12.877310 L 51.220559,19.143701 L 35.131033,26.125645 L 5.0789080,19.815219 L 5.0789080,19.815219"
+     id="path2793" />
+  <path
+     style="fill:none;fill-opacity:0.75000000;fill-rule:evenodd;stroke:#000000;stroke-width:6.2120848;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.0000000;stroke-opacity:1.0000000;"
+     d="M 5.6556906,21.659202 L 5.9954210,54.113228 L 19.705280,43.649126 L 34.777493,65.464796 L 34.437762,33.010784 L 34.437762,33.010784"
+     id="path3416" />
+  <text
+     xml:space="preserve"
+     style="font-size:24.000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1.0000000;stroke:none;stroke-width:1.0000000pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;font-family:Times New Roman;text-anchor:start;writing-mode:lr;"
+     x="70.888351"
+     y="38.136433"
+     id="text8496"
+     sodipodi:linespacing="100%"><tspan
+       id="tspan8497">Wolfgang Egger</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:12.000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1.0000000;stroke:none;stroke-width:1.0000000pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;font-family:Bitstream Vera Sans;text-anchor:start;writing-mode:lr;"
+     x="147.65611"
+     y="65.675461"
+     id="text8499"
+     sodipodi:linespacing="100%"><tspan
+       x="147.65611"
+       y="65.675461"
+       sodipodi:role="line"
+       id="tspan8502">SoftWareEngineering</tspan></text>
+</svg>
