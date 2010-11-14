@@ -1,0 +1,30 @@
+version=pmwiki-1.0.11
+newline=²
+text=!Transformation des Ausgangsmaterials²!!Katalog²²Der Katalog wird aus der manuell extrahierten Datei “content.xml” via XSLT erzeugt. ²² -- .../bibb/engineering/doc/BWP/content.xml²² -- .../bibb/xsl/katalog.xsl: Haupt-XSLT-Stylesheet²²Folgende XSLT-Stylesheets sind ausserdem beteiligt:²² -- .../bibb/xsl/util/filter.xsl²² -- .../bibb/xsl/util/tokenizer.xsl²²Sie dienen als Hilfs-Stylesheets um z.B. Titel in einzelne Wörter zu zerlegen, oder alle Satzzeichen aus den Titeln zu entfernen.²²Die Erstellung des Kataloges wird durch einen Bibb/AntBuildLauf mit dem Target "katalog" durchgeführt.²² -- .../bibb/build/build.xml²² ==> .../bibb/xml/katalog/katalog.xml²----²+++  [[Projects/DokuSuchmaschine index]]  +++  {{Projects/Indices}} 
+time=1098360678
+diff:1098297392:1098297392:=1,21c1²< !!Katalog²< ²< Der Katalog wird aus der manuell extrahierten Datei “content.xml” via XSLT erzeugt.²< ²<  -- .../bibb/engineering/doc/BWP/content.xml²< ²<  -- .../bibb/xsl/katalog.xsl: Haupt-XSLT-Stylesheet²< ²< Folgende XSLT-Stylesheets sind ausserdem beteiligt:²< ²<  -- .../bibb/xsl/util/filter.xsl²< ²<  -- .../bibb/xsl/util/tokenizer.xsl²< ²< Sie dienen als Hilfs-Stylesheets um z.B. Titel in einzelne Wörter zu zerlegen, oder alle Satzzeichen aus den Titeln zu entfernen.²< ²< Die Erstellung des Kataloges wird durch das Target “katalog” im ANT-build-script durchgeführt.²< ²<  -- .../bibb/build/build.xml²< ²<  ==> .../bibb/xml/katalog/katalog.xml²---²> Describe {{Katalog}} here.²\ No newline at end of file²
+author=
+author:1098297392=
+host:1098297392=217.225.7.54
+name=Projects.Katalog
+host=217.230.190.190
+agent=Mozilla/5.0 (X11; U; Linux i686; de-AT; rv:1.5) Gecko/20031007
+rev=7
+diff:1098297487:1098297392:=22,23d21²< ----²< [[Projects/DokuSuchmaschine index]]²\ No newline at end of file²
+author:1098297487=
+host:1098297487=217.225.7.54
+diff:1098357883:1098297487:=3c3²< Der Katalog wird aus der manuell extrahierten Datei “content.xml” via XSLT erzeugt. Dies geschiet durch einen AntBuildLauf mit dem Target "katalog"²---²> Der Katalog wird aus der manuell extrahierten Datei “content.xml” via XSLT erzeugt.²
+author:1098357883=
+host:1098357883=217.230.190.190
+diff:1098357930:1098357883:=3c3²< Der Katalog wird aus der manuell extrahierten Datei “content.xml” via XSLT erzeugt. Dies geschiet durch einen Bibb/AntBuildLauf mit dem Target "katalog"²---²> Der Katalog wird aus der manuell extrahierten Datei “content.xml” via XSLT erzeugt. Dies geschiet durch einen AntBuildLauf mit dem Target "katalog"²
+author:1098357930=
+host:1098357930=217.230.190.190
+diff:1098359700:1098357930:=1d0²< !Transformation des Ausgangsmaterials²
+author:1098359700=
+host:1098359700=217.230.190.190
+diff:1098359830:1098359700:=4c4²< Der Katalog wird aus der manuell extrahierten Datei “content.xml” via XSLT erzeugt. ²---²> Der Katalog wird aus der manuell extrahierten Datei “content.xml” via XSLT erzeugt. Dies geschiet durch einen Bibb/AntBuildLauf mit dem Target "katalog"²18c18²< Die Erstellung des Kataloges wird durch einen Bibb/AntBuildLauf mit dem Target "katalog" durchgeführt.²---²> Die Erstellung des Kataloges wird durch das Target “katalog” im ANT-build-script durchgeführt.²
+author:1098359830=
+host:1098359830=217.230.190.190
+diff:1098360678:1098359830:=24c24²< +++  [[Projects/DokuSuchmaschine index]]  +++  {{Projects/Indices}} ²\ No newline at end of file²---²> [[Projects/DokuSuchmaschine index]]²\ No newline at end of file²
+author:1098360678=
+host:1098360678=217.230.190.190

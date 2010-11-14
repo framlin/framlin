@@ -1,0 +1,36 @@
+version=pmwiki-1.0.11
+newline=²
+text=!!!Schlagwortindex²²Auch der Schlagwortindex wird in zwei Phasen durchgeführt, die prinzipiell den Phasen der VolltextIndex-Erzeugung entsprechen.²Hauptskript, das beide Phasen abwickelt ist ² -- .../bibb/bin/schlagwortindex.sh²²'''1) Indizierung'''²²Als Ausgangsmaterial für die erste Phase dient der Katalog.²² -- .../bibb/xml/katalog/katalog.xml²²Daraus wird via XSLT eine Schlagwort-IDX-Datei hergestellt. Dies geschiet durch einen Bibb/AntBuildLauf mit dem Target "schlagwort"²² -- .../bibb/xsl/schlagwort.xsl² -- .../bibb/build/build.xml²² ==> .../bibb/idx/schlagwort/schlagwort.idx²²Exakt wie beim VolltextIndex werden daraus dann die einzelnen IDX-Dateien hergestellt.²² -- .../bibb/bin/schlagwortindex.sh: Das Hauptskript, dass die weiteren Skripte aufruft² -- .../bibb/bin/wordindex.sh: Hilfsscript, das die Verteilung in die Anfangsbuchstaben.IDX-Dateien vornimmt² -- .../bibb/bin/wordindex.awk: Hilfsscript zur Formatierung²² ==> .../bibb/idx/schlagwort/[a-z].idx²²'''2) XML - Dateien'''²Exakt gleich wie bei allen anderen Indices. Die entsprechenden Skripte werden lediglich mit "schlagwort" parametrisiert.²----²+++ {{Projects/Indices}}    +++  [[Projects/DokuSuchmaschine index]]
+time=1098360426
+diff:1098354442:1098354442:=1,23c1²< !!!Schlagwortindex²< ²< Auch der Schlagwortindex wird in zwei Phasen durchgeführt, die prinzipiell den Phasen der Volltextindex-Erzeugung entsprechen.²< ²< '''1) Indizierung'''²< ²< Als Ausgangsmaterial für die erste Phase dient der Katalog.²< ²<  -- .../bibb/xml/katalog/katalog.xml²< ²< Daraus wird via XSLT eine Schlagwort-IDX-Datei hergestellt²< ²<  -- .../bibb/xsl/schlagwort.xsl²< ²<  ==> .../bibb/idx/schlagwort/schlagwort.idx²< ²< Exakt wie beim VolltextIndex werden daraus dann die einzelnen IDX-Dateien hergestellt.²< ²<  -- .../bibb/bin/wordindex.sh: Hilfsscript, das die Verteilung in die Anfangsbuchstaben.IDX-Dateien vornimmt²< ²<  -- .../bibb/bin/wordindex.awk: Hilfsscript zur Formatierung²< ²<  ==> .../bibb/idx/schlagwort/[a-z].idx²---²> Describe SchlagwortIndex here.²\ No newline at end of file²
+author=
+author:1098354442=
+host:1098354442=217.230.190.190
+name=Bibb.SchlagwortIndex
+host=217.230.190.190
+agent=Mozilla/5.0 (X11; U; Linux i686; de-AT; rv:1.5) Gecko/20031007
+rev=9
+diff:1098354470:1098354442:=3c3²< Auch der Schlagwortindex wird in zwei Phasen durchgeführt, die prinzipiell den Phasen der VolltextIndex-Erzeugung entsprechen.²---²> Auch der Schlagwortindex wird in zwei Phasen durchgeführt, die prinzipiell den Phasen der Volltextindex-Erzeugung entsprechen.²
+author:1098354470=
+host:1098354470=217.230.190.190
+diff:1098355413:1098354470:=24,25d23²< ----²< +++ {{Projects/Indices}}    +++  [[Projects/DokuSuchmaschine index]]²\ No newline at end of file²
+author:1098355413=
+host:1098355413=217.230.190.190
+diff:1098356459:1098355413:=11c11²< Daraus wird via XSLT eine Schlagwort-IDX-Datei hergestellt. Dies geschiet durch einen AntBuildLauf mit dem Target "schlagwort"²---²> Daraus wird via XSLT eine Schlagwort-IDX-Datei hergestellt²
+author:1098356459=
+host:1098356459=217.230.190.190
+diff:1098357968:1098356459:=11c11²< Daraus wird via XSLT eine Schlagwort-IDX-Datei hergestellt. Dies geschiet durch einen Bibb/AntBuildLauf mit dem Target "schlagwort"²---²> Daraus wird via XSLT eine Schlagwort-IDX-Datei hergestellt. Dies geschiet durch einen AntBuildLauf mit dem Target "schlagwort"²
+author:1098357968=
+host:1098357968=217.230.190.190
+diff:1098359947:1098357968:=14d13²<  -- .../bibb/build/build.xml²
+author:1098359947=
+host:1098359947=217.230.190.190
+diff:1098360211:1098359947:=20d19²<  -- .../bibb/bin/schlagwortindex.sh: Das Hauptskript, dass die weiteren Skripte aufruft²22d20²<  -- .../bibb/bin/wordindex.awk: Hilfsscript zur Formatierung²23a22,23²>  -- .../bibb/bin/wordindex.awk: Hilfsscript zur Formatierung²> ²
+author:1098360211=
+host:1098360211=217.230.190.190
+diff:1098360411:1098360211:=4,5d3²< Hauptskript, das beide Phasen abwickelt ist ²<  -- .../bibb/bin/schlagwortindex.sh²27,29d24²< ²< '''2) XML - Dateien'''²< Exakt gleich wie bei allenanderen Indices. Die entsprechenden Skripte werden lediglich mit "schlagwort" parametrisiert.²
+author:1098360411=
+host:1098360411=217.230.190.190
+diff:1098360426:1098360411:=29c29²< Exakt gleich wie bei allen anderen Indices. Die entsprechenden Skripte werden lediglich mit "schlagwort" parametrisiert.²---²> Exakt gleich wie bei allenanderen Indices. Die entsprechenden Skripte werden lediglich mit "schlagwort" parametrisiert.²
+author:1098360426=
+host:1098360426=217.230.190.190

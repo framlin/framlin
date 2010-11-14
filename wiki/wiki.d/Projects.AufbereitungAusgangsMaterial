@@ -1,0 +1,21 @@
+version=pmwiki-1.0.11
+newline=²
+text=!Aufbereitung des Ausgangsmaterials²²Letztlich wird das Ausgangsmaterial von Hoch3 mittels einiger Shell-Scripte und XSLT in zahlreiche XML-Dateien gewandelt, die dann von der Suchmaschine eingelesen, ausgewertet und angezeigt werden.²²!!Vorbereitung der Metainformationen²²Die Exceldatei wird zunächst im OpenOffice-Format (bwp.sxc) abgespeichert. *.SCX – Dateien sind “in Wirklichkeit” ZIP-Dateien, die verschiedene XML-Dateien enthalten. Eine davon (content.xml) enthält die eigentlichen Inhalte und wird daher extrahiert und dient als Grundlage für die Erstellung des Kataloges.²² ==> .../bibb/engineering/doc/BWP/content.xml²²!!Vorbereitung der Hefte und Artikel²²Die Gesamtheit der PDF-Dateien kann in zwei Kategorien unterschieden werden. Erstens existiert für jedes Heft eine PDF-Datei. Die einzelnen Artikel in jedem Heft sind dann jeweils nochmal in einer eignen Datei enthalten. Da für Volltext-, Schlagwort- und Titelsuche nur die Artikel indiziert werden dürfen, werden die beiden Kategorien in unterschiedliche Verzeichnisse verteilt.²² ==> .../bibb/pdf/arftikel/*.pdf²² ==> .../bibb/pdf/hefte/*.pdf²----²[[Projects/DokuSuchmaschine index]]
+time=1098296527
+diff:1098296332:1098296332:=1,9c1²< !Aufbereitung des Ausgangsmaterials²< ²< Letztlich wird das Ausgangsmaterial von Hoch3 mittels einiger Shell-Scripte und XSLT in zahlreiche XML-Dateien gewandelt, die dann von der Suchmaschine eingelesen, ausgewertet und angezeigt werden.²< ²< !!Vorbereitung der Metainformationen²< ²< Die Exceldatei wird zunächst im OpenOffice-Format (bwp.sxc) abgespeichert. *.SCX – Dateien sind “in Wirklichkeit” ZIP-Dateien, die verschiedene XML-Dateien enthalten. Eine davon (content.xml) enthält die eigentlichen Inhalte und wird daher extrahiert und dient als Grundlage für die Erstellung des Kataloges.²< ²< ==> .../bibb/engineering/doc/BWP/content.xml²\ No newline at end of file²---²> Describe AufbereitungAusgangsMaterial here.²\ No newline at end of file²
+author=
+author:1098296332=
+host:1098296332=217.225.7.54
+name=Projects.AufbereitungAusgangsMaterial
+host=217.225.7.54
+agent=Mozilla/5.0 (X11; U; Linux i686; de-AT; rv:1.5) Gecko/20031007
+rev=4
+diff:1098296402:1098296332:=9,17c9²<  ==> .../bibb/engineering/doc/BWP/content.xml²< ²< !Vorbereitung der Hefte und Artikel²< ²< Die Gesamtheit der PDF-Dateien kann in zwei Kategorien unterschieden werden. Erstens existiert für jedes Heft eine PDF-Datei. Die einzelnen Artikel in jedem Heft sind dann jeweils nochmal in einer eignen Datei enthalten. Da für Volltext-, Schlagwort- und Titelsuche nur die Artikel indiziert werden dürfen, werden die beiden Kategorien in unterschiedliche Verzeichnisse verteilt.²< ²<  ==> .../bibb/pdf/arftikel/*.pdf²< ²<  ==> .../bibb/pdf/hefte/*.pdf²\ No newline at end of file²---²> ==> .../bibb/engineering/doc/BWP/content.xml²\ No newline at end of file²
+author:1098296402=
+host:1098296402=217.225.7.54
+diff:1098296445:1098296402:=11c11²< !!Vorbereitung der Hefte und Artikel²---²> !Vorbereitung der Hefte und Artikel²
+author:1098296445=
+host:1098296445=217.225.7.54
+diff:1098296527:1098296445:=17,19c17²<  ==> .../bibb/pdf/hefte/*.pdf²< ----²< [[Projects/DokuSuchmaschine index]]²\ No newline at end of file²---²>  ==> .../bibb/pdf/hefte/*.pdf²\ No newline at end of file²
+author:1098296527=
+host:1098296527=217.225.7.54

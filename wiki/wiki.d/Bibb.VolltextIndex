@@ -1,0 +1,33 @@
+version=pmwiki-1.0.11
+newline=²
+text=!!!Volltextindex²²Der Erstellungsprozess ist in zwei Phasen unterteilt.²²'''1) Indizierung'''²²In der ersten Phase werden die Artikel-PDF-Dateien in mehreren Schritten in IDX-Dateien verwandelt. IDX-Dateien sind Text-Dateien, in denen im CSV-Format abgespeichert wird, welches Wort wie oft in welchem Artikel vorkommt. Für jeden Anfangsbuchstaben gibt es eine IDX-Datei. Die Zeilen in jeder Datei sind alphabetisch nach den Wörtern sortiert.²²Beispiel: a.xml²² ...²² arbeit;2;bwp-h1-54ff.pdf²² arbeit;1;bwp-h6-02ff.pdf²² arbeitsamt;1;bwp-h3-01ff.pdf²² ....²²Diese Transfromation werden von OpenSource-Linux-Applikationen, bash-Shellscripten und awk-Scripten durchgeführt.²² -- .../bibb/bin/Volltextindex.sh: Das Hauptscript, das die weiteren Scripte nachläd.²² -- .../bibb/bin/register.sh: Sorgt für die Zerlegung und indizierung der PDF-Dateien, ²    indem es die Applikationen startet und weitere Scripte nachläd.²² -- .../bibb/bin/pdftotext: Applikation, die PDF-Dateien in Text-Dateinen konvertiert²² -- .../bibb/bin/wf: Applikation, die zählt, wie oft welches Wort in einer Datei vorkommt²² -- .../bibb/bin/wordindex.sh: Hilfsscript, das die Verteilung in die Anfangsbuchstaben.IDX-Dateien vornimmt²² -- .../bibb/bin/wordindex.awk: Hilfsscript zur Formatierung²² ==> .../bibb/idx/volltext/[a-z].idx²²'''2) XML - Transformation'''²²In der zweiten Phase werden die IDX-Dateien in XML-Dateien transformiert. Zuständig dafür sind ein bash-Shellscript und ein awk-Script.²² -- .../bibb/bin/idx2xml.sh: Übernimmt die Steuerung der Transformation. Erster Parameter muss “volltext” sein.²² -- .../bibb/bin/idx2xml.awk: Nimmt die XML-Formatierung vor²² ==> .../bibb/xml/index/volltext/[a-z].xml²²----²+++ {{Projects/Indices}}    +++  [[Projects/DokuSuchmaschine index]]
+time=1098359177
+diff:1098354357:1098354357:=1,44c1²< !!!Volltextindex²< ²< Der Erstellungsprozess ist in zwei Phasen unterteilt.²< ²< '''1) Indizierung'''²< ²< In der ersten Phase werden die Artikel-PDF-Dateien in mehreren Schritten in IDX-Dateien verwandelt. IDX-Dateien sind Text-Dateien, in denen im CSV-Format abgespeichert wird, welches Wort wie oft in welchem Artikel vorkommt. Für jeden Anfangsbuchstaben gibt es eine IDX-Datei. Die Zeilen in jeder Datei sind alphabetisch nach den Wörtern sortiert.²< ²< Beispiel: a.xml²< ²<  ...²< ²<  arbeit;2;bwp-h1-54ff.pdf²< ²<  arbeit;1;bwp-h6-02ff.pdf²< ²<  arbeitsamt;1;bwp-h3-01ff.pdf²< ²<  ....²< ²< Diese Transfromation werden von OpenSource-Linux-Applikationen, bash-Shellscripten und awk-Scripten durchgeführt.²< ²<  -- .../bibb/bin/register.sh: Das Hauptscript, das die Applikationen startet und weitere Scripte nachläd.²< ²<  -- .../bibb/bin/pdftotext: Applikation, die PDF-Dateien in Text-Dateinen konvertiert²< ²<  -- .../bibb/bin/wf: Applikation, die zählt, wie oft welches Wort in einer Datei vorkommt²< ²<  -- .../bibb/bin/wordindex.sh: Hilfsscript, das die Verteilung in die Anfangsbuchstaben.IDX-Dateien vornimmt²< ²<  -- .../bibb/bin/wordindex.awk: Hilfsscript zur Formatierung²< ²<  ==> .../bibb/idx/volltext/[a-z].idx²< ²< '''2) XML - Transformation'''²< ²< In der zweiten Phase werden die IDX-Dateien in XML-Dateien transformiert. Zuständig dafür sind ein bash-Shellscript und ein awk-Script.²< ²<  -- .../bibb/bin/idx2xml.sh: Übernimmt die Steuerung der Transformation. Erster Parameter muss “volltext” sein.²< ²<  -- .../bibb/bin/idx2xml.awk: Nimmt die XML-Formatierung vor²< ²<  ==> .../bibb/xml/index/volltext/[a-z].xml²< ²---²> Describe VolltextIndex here.²\ No newline at end of file²
+author=
+author:1098354357=
+host:1098354357=217.230.190.190
+name=Bibb.VolltextIndex
+host=217.230.190.190
+agent=Mozilla/5.0 (X11; U; Linux i686; de-AT; rv:1.5) Gecko/20031007
+rev=8
+diff:1098355191:1098354357:=45,46d44²< ----²< {{Project/Indices}}²\ No newline at end of file²
+author:1098355191=
+host:1098355191=217.230.190.190
+diff:1098355258:1098355191:=46c46²< {{Projects/Indices}}²\ No newline at end of file²---²> {{Project/Indices}}²\ No newline at end of file²
+author:1098355258=
+host:1098355258=217.230.190.190
+diff:1098355327:1098355258:=46c46²< {{Projects/Indices}}     [[Projects/DokuSuchmaschine index]]²\ No newline at end of file²---²> {{Projects/Indices}}²\ No newline at end of file²
+author:1098355327=
+host:1098355327=217.230.190.190
+diff:1098355365:1098355327:=46c46²< +++ {{Projects/Indices}}    +++  [[Projects/DokuSuchmaschine index]]²\ No newline at end of file²---²> {{Projects/Indices}}     [[Projects/DokuSuchmaschine index]]²\ No newline at end of file²
+author:1098355365=
+host:1098355365=217.230.190.190
+diff:1098358526:1098355365:=23c23²<  -- .../bibb/bin/Volltextindex.sh: Das Hauptscript, das die weiteren Scripte nachläd.²---²>  -- .../bibb/bin/register.sh: Das Hauptscript, das die Applikationen startet und weitere Scripte nachläd.²25,26d24²<  -- .../bibb/bin/register.sh: Sorgt für die Zerlegung und indizierung der PDF-Dateien, indem es die Applikationen startet und weitere Scripte nachläd.²< ²
+author:1098358526=
+host:1098358526=217.230.190.190
+diff:1098359144:1098358526:=25,26c25²<  -- .../bibb/bin/register.sh: Sorgt für die Zerlegung und indizierung der PDF-Dateien, ²< indem es die Applikationen startet und weitere Scripte nachläd.²---²>  -- .../bibb/bin/register.sh: Sorgt für die Zerlegung und indizierung der PDF-Dateien, indem es die Applikationen startet und weitere Scripte nachläd.²
+author:1098359144=
+host:1098359144=217.230.190.190
+diff:1098359177:1098359144:=26c26²<     indem es die Applikationen startet und weitere Scripte nachläd.²---²> indem es die Applikationen startet und weitere Scripte nachläd.²
+author:1098359177=
+host:1098359177=217.230.190.190

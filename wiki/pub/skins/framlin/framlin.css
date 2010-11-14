@@ -1,0 +1,42 @@
+/***********************************************************************
+** framlin.css
+** author: Wolfgang Egger
+***********************************************************************/
+
+body { position:absolute; width:720px; }
+
+#wikilogo { border-bottom:2px solid #cccccc; }
+
+#wikihead { 
+  position:absolute; top:0px; right:0px; 
+  font-size:smaller; text-align:right;
+}
+#wikihead input { font-size:smaller; }
+#wikihead form { margin:0px; }
+
+#wikileft { 
+  width:150px; 
+  padding-top:0.5em; padding-right:5px; 
+  font-size:smaller; 
+  border-right:2px solid #cccccc;
+  background-color:#ffdd00;
+}
+#wikileft h1 { 
+  margin:0px; background-color:#ffaa00; 
+  font-size:medium; text-align:center;
+}
+#wikileft hr { color:#cccccc; }
+#wikileft ul { margin-left:0px; padding-left:6px; list-style-type:none; }
+
+#wikibody { padding-bottom:1em; padding-top:0.5em; background-color:#ffffcc;padding-right:1em; }
+
+#wikititle { padding-left:10px; vertical-align:top; }
+#wikitext { padding-left:10px; margin-top:0.5em; }
+
+#wikicmds { font-size:smaller; text-align:right; vertical-align:top; }
+#wikicmds a { display:block; }
+
+#wikifoot { clear:both; border-top:2px solid #cccccc; font-size:smaller; }
+
+h1.wikiaction { font-size:150%; margin:0px; }
+#wikiedit form { margin:0px; }

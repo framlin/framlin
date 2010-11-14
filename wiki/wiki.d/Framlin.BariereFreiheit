@@ -1,0 +1,12 @@
+version=pmwiki-1.0.11
+newline=²
+text=* http://www.einfach-fuer-alle.de/ 
+time=1098874292
+diff:1098874292:1098874292:=1c1²< * http://www.einfach-fuer-alle.de/ ²\ No newline at end of file²---²> Describe BariereFreiheit here.²\ No newline at end of file²
+author=
+author:1098874292=
+host:1098874292=217.88.124.219
+name=Framlin.BariereFreiheit
+host=217.88.124.219
+agent=Mozilla/5.0 (X11; U; Linux i686; de-AT; rv:1.5) Gecko/20031007
+rev=1

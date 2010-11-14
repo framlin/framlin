@@ -1,0 +1,15 @@
+version=pmwiki-1.0.11
+newline=²
+text=Analog zum Bibb/SchlagwortIndex²----²+++ {{Projects/Indices}}    +++  [[Projects/DokuSuchmaschine index]]
+time=1098360967
+diff:1098360922:1098360922:=1c1²< Analog zum Bibb/SchlagwortIndex²\ No newline at end of file²---²> Describe AutorenIndex here.²\ No newline at end of file²
+author=
+author:1098360922=
+host:1098360922=217.230.190.190
+name=Bibb.AutorenIndex
+host=217.230.190.190
+agent=Mozilla/5.0 (X11; U; Linux i686; de-AT; rv:1.5) Gecko/20031007
+rev=2
+diff:1098360967:1098360922:=1,3c1²< Analog zum Bibb/SchlagwortIndex²< ----²< +++ {{Projects/Indices}}    +++  [[Projects/DokuSuchmaschine index]]²\ No newline at end of file²---²> Analog zum Bibb/SchlagwortIndex²\ No newline at end of file²
+author:1098360967=
+host:1098360967=217.230.190.190

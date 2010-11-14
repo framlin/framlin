@@ -1,0 +1,18 @@
+version=pmwiki-1.0.11
+newline=²
+text=[=HOCH3 GmbH=]\\²Concept Creation Communication\\²Obentrautstr. 72\\²10963 Berlin\\²FON 030 - 21 00 28 82\\²FAX 030 - 21 00 28 89\\²WEB http://www.hoch3.de
+time=1107435406
+diff:1107435352:1107435352:=1,7c1²< HOCH3 GmbH\\²< Concept Creation Communication\\²< Obentrautstr. 72\\²< 10963 Berlin\\²< FON 030 - 21 00 28 82\\²< FAX 030 - 21 00 28 89\\²< WEB www.hoch3.de\\²\ No newline at end of file²---²> Describe HO3 here.²\ No newline at end of file²
+author=
+author:1107435352=
+host:1107435352=194.231.187.147
+name=PilleDE.HO3
+host=194.231.187.147
+agent=Mozilla/5.0 (X11; U; Linux i686; de-DE; rv:1.7.5) Gecko/20041108 Firefox/1.0
+rev=3
+diff:1107435387:1107435352:=1c1²< [=HOCH3 GmbH=]\\²---²> HOCH3 GmbH\\²7c7²< WEB www.hoch3.de²\ No newline at end of file²---²> WEB www.hoch3.de\\²\ No newline at end of file²
+author:1107435387=
+host:1107435387=194.231.187.147
+diff:1107435406:1107435387:=7c7²< WEB http://www.hoch3.de²\ No newline at end of file²---²> WEB www.hoch3.de²\ No newline at end of file²
+author:1107435406=
+host:1107435406=194.231.187.147

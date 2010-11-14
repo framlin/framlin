@@ -1,0 +1,15 @@
+version=pmwiki-1.0.11
+newline=²
+text=TimeLine:²²bis 13.4 24:00 Uhr²* Spezifikation der XML-Struktur für Tassilo von Wolfgang²bis 14.4 24:00 Uhr²* Spezifikation der Ranking-Kriterien für Wolfgang von Susanne²bis 15.4 24:00 Uhr²* Flashfilme für Planet1 und SpaceStation1 von Marischka²* Load/Store-XML-Schnittstelle von Tassilo²* Spezifikation der Ranking-Schnittstelle für Tassilo von Wolfgang²bis 19.4 24:00 Uhr²* ALLE FlashFilme bis Ende Cluster1 von Marischka²* Alpha-Version des zentralen ASPX-Scripts zur Spielsteuerung von Wolfgang²* Alpha-Version der ActionScripte für Planet1 und SpaceStation1 von Winfried und Wolfgang²* Testlauf Planet1 und SpaceStation1²* Ranking-Schnittstelle von Tassilo²bis 21.4 24:00²* Beta-Version der ActionScripte bis Ende Cluster1 von Wolfgang und Winfried²* Testlauf bis Ende Cluster1²bis 22.4 24:00²* Final-Version des zentralen ASPX-Scripts von Wolfgang²* Final-Version der ActionScripte bis Ende Cluster1 von Winfried und Wolfgang²* Abschlusstest bis Ende Cluster1²* Beta-Version des Ranking ASPX-Scripts von Wolfgang²
+time=1113257534
+diff:1113257513:1113257513:=1,23c1²< TimeLine:²< bis 13.4 24:00 Uhr²< * Spezifikation der XML-Struktur für Tassilo von Wolfgang²< bis 14.4 24:00 Uhr²< * Spezifikation der Ranking-Kriterien für Wolfgang von Susanne²< bis 15.4 24:00 Uhr²< * Flashfilme für Planet1 und SpaceStation1 von Marischka²< * Load/Store-XML-Schnittstelle von Tassilo²< * Spezifikation der Ranking-Schnittstelle für Tassilo von Wolfgang²< bis 19.4 24:00 Uhr²< * ALLE FlashFilme bis Ende Cluster1 von Marischka²< * Alpha-Version des zentralen ASPX-Scripts zur Spielsteuerung von Wolfgang²< * Alpha-Version der ActionScripte für Planet1 und SpaceStation1 von Winfried und Wolfgang²< * Testlauf Planet1 und SpaceStation1²< * Ranking-Schnittstelle von Tassilo²< bis 21.4 24:00²< * Beta-Version der ActionScripte bis Ende Cluster1 von Wolfgang und Winfried²< * Testlauf bis Ende Cluster1²< bis 22.4 24:00²< * Final-Version des zentralen ASPX-Scripts von Wolfgang²< * Final-Version der ActionScripte bis Ende Cluster1 von Winfried und Wolfgang²< * Abschlusstest bis Ende Cluster1²< * Beta-Version des Ranking ASPX-Scripts von Wolfgang²---²> Describe MSSpaceSellers here.²\ No newline at end of file²
+author=
+author:1113257513=
+host:1113257513=194.231.187.147
+name=Projects.MSSpaceSellers
+host=194.231.187.147
+agent=Mozilla/5.0 (X11; U; Linux i686; de-DE; rv:1.7.5) Gecko/20041108 Firefox/1.0
+rev=2
+diff:1113257534:1113257513:=2d1²< ²
+author:1113257534=
+host:1113257534=194.231.187.147

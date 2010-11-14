@@ -1,0 +1,12 @@
+version=pmwiki-1.0.11
+newline=²
+text=Dies ist ein Testtext der nix zu bedeuten hat.
+time=1098868790
+diff:1098868790:1098868790:=1c1²< Dies ist ein Testtext der nix zu bedeuten hat.²\ No newline at end of file²---²> Describe HalloWelt here.²\ No newline at end of file²
+author=
+author:1098868790=
+host:1098868790=217.224.249.33
+name=Framlin.HalloWelt
+host=217.224.249.33
+agent=Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)
+rev=1

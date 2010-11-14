@@ -1,0 +1,18 @@
+version=pmwiki-1.0.11
+newline=²
+text=Dies ist die Dokumentation der Suchmaschine für die BWP-Archiv-CD. Es handelt sich um eine Wiki-Site. Die Formatierungsmöglichkeiten sind entsrechend rudimentär. Folgende Konventionen werden verwendet:²² -- .../bibb/irgendein/File.xyz²²repräsentiert ein Eingabe-File. Das kann z.B. entweder eine Datei sein, die verarbeitet wird, oder ein Skript, das an einer solchen Verabeitung teilnimmt.²² ==> .../bibb/eine/andere/Datei.xyz²²repräsentiert das Ergebnis eines Verarbeitungsschrittes. Dies kann z.B. eine Indexdatei sein.²²----²+++ [[Projects/DokuSuchmaschine index]]    ²
+time=1098361223
+diff:1098361124:1098361124:=1,12c1²< !Vorwort²< ²< Dies ist die Dokumentation der Suchmaschine für die BWP-Archiv-CD. Es handelt sich um eine Wiki-Site. Die Formatierungsmöglichkeiten sind entsrechend rudimentär. Folgende Konventionen werden verwendet:²< ²<  -- .../bibb/irgendein/File.xyz²< ²< repräsentiert ein Eingabe-File. Das kann z.B. entweder eine Datei sein, die verarbeitet wird, oder ein Skript, das an einer solchen Verabeitung teilnimmt.²< ²<  ==> .../bibb/eine/andere/Datei.xyz²< ²< repräsentiert das Ergebnis eines Verarbeitungsschrittes. Dies kann z.B. eine Indexdatei sein.²< ²---²> Describe {{Vorwort}} here.²\ No newline at end of file²
+author=
+author:1098361124=
+host:1098361124=217.230.190.190
+name=Bibb.Vorwort
+host=217.230.190.190
+agent=Mozilla/5.0 (X11; U; Linux i686; de-AT; rv:1.5) Gecko/20031007
+rev=3
+diff:1098361194:1098361124:=13,14d12²< ----²< +++ [[Projects/DokuSuchmaschine index]]    ²
+author:1098361194=
+host:1098361194=217.230.190.190
+diff:1098361223:1098361194:=0a1,2²> !Vorwort²> ²
+author:1098361223=
+host:1098361223=217.230.190.190

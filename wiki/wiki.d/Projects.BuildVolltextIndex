@@ -1,0 +1,39 @@
+version=pmwiki-1.0.11
+newline=²
+text=!Algo im Groben:² register *.pdf -> wordindex -> *.idx² idx2xml *.idx -> *.xml²²!locale:²* Sortierung: de_DE.UTF-8 --- LC_COLLATE=POSIX²* Codierung: de_DE.UTF-8 --- LC_CTYPE=de_DE.UTF-8²----²+++  [[Projects/DokuSuchmaschine index]]  +++  {{Projects/Indices}}
+time=1102028190
+diff:1102027733:1102027733:=1,7c1²< !Algo im Groben:²<  register *.pdf -> wordindex -> *.idx²<  idx2xml *.idx -> *.xml²< ²< !locale:²< * Sortierung: de_DE.UTF-8 --- LC_COLLATE=POSIX²< * Codierung: de_DE.UTF-8 --- LC_CTAYPE=de_DE.UTF-8²---²> Describe BuildVolltextIndex here.²\ No newline at end of file²
+author=
+author:1102027733=
+host:1102027733=194.231.187.147
+name=Projects.BuildVolltextIndex
+host=194.231.187.147
+agent=Mozilla/5.0 (X11; U; Linux i686; de-DE; rv:1.7.5) Gecko/20041108 Firefox/1.0
+rev=10
+diff:1102027757:1102027733:=7c7²< * Codierung: de_DE.UTF-8 --- LC_CTYPE=de_DE.UTF-8²---²> * Codierung: de_DE.UTF-8 --- LC_CTAYPE=de_DE.UTF-8²
+author:1102027757=
+host:1102027757=194.231.187.147
+diff:1102027822:1102027757:=8,9d7²< ----²< [[Projects/DokuSuchmaschine index]]²\ No newline at end of file²
+author:1102027822=
+host:1102027822=194.231.187.147
+diff:1102027891:1102027822:=9c9²< [[Projects/DokuSuchmaschine index]] +++ [[Projects/Indices indices]]²\ No newline at end of file²---²> [[Projects/DokuSuchmaschine index]]²\ No newline at end of file²
+author:1102027891=
+host:1102027891=194.231.187.147
+diff:1102027971:1102027891:=9c9²< [[Projects/DokuSuchmaschine index]] +++ [[Indices indices]]²\ No newline at end of file²---²> [[Projects/DokuSuchmaschine index]] +++ [[Projects/Indices indices]]²\ No newline at end of file²
+author:1102027971=
+host:1102027971=194.231.187.147
+diff:1102028021:1102027971:=9c9²< [[Projects/DokuSuchmaschine index]] +++ {{Indices}}²\ No newline at end of file²---²> [[Projects/DokuSuchmaschine index]] +++ [[Indices indices]]²\ No newline at end of file²
+author:1102028021=
+host:1102028021=194.231.187.147
+diff:1102028050:1102028021:=9c9²< [[Projects/DokuSuchmaschine index]] +++ {{Indices indices}}²\ No newline at end of file²---²> [[Projects/DokuSuchmaschine index]] +++ {{Indices}}²\ No newline at end of file²
+author:1102028050=
+host:1102028050=194.231.187.147
+diff:1102028069:1102028050:=9c9²< [[Projects/DokuSuchmaschine index]] +++ [[Indices indices]]²\ No newline at end of file²---²> [[Projects/DokuSuchmaschine index]] +++ {{Indices indices}}²\ No newline at end of file²
+author:1102028069=
+host:1102028069=194.231.187.147
+diff:1102028115:1102028069:=9c9²< [[Projects/DokuSuchmaschine index]] +++ {{Indices}}²\ No newline at end of file²---²> [[Projects/DokuSuchmaschine index]] +++ [[Indices indices]]²\ No newline at end of file²
+author:1102028115=
+host:1102028115=194.231.187.147
+diff:1102028190:1102028115:=9c9²< +++  [[Projects/DokuSuchmaschine index]]  +++  {{Projects/Indices}}²\ No newline at end of file²---²> [[Projects/DokuSuchmaschine index]] +++ {{Indices}}²\ No newline at end of file²
+author:1102028190=
+host:1102028190=194.231.187.147

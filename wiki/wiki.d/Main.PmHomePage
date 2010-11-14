@@ -1,0 +1,12 @@
+version=pmwiki-1.0.11
+newline=²
+text=This is the default HomePage for a new PmWiki/PmWiki ²installation.  If you're reading this screen, then ²the PmWiki/PmWiki software is probably set up correctly.²²----²²Here are some useful default pages installed along with the PmWiki/PmWiki software:²* PmWiki/PmWiki documentation is available at PmWiki.DocumentationIndex.²* What is the PmWiki/WikiWikiWeb?²* PmWiki/TipsForEditing and PmWiki/TextFormattingRules describe how to create pages in PmWiki/PmWiki.²* Practice editing pages in the WikiSandbox.²²More information about PmWiki/PmWiki can be found at http://www.pmwiki.org/.²
+time=1098307624
+diff:1098307624:1098307624:=1,13c1²< This is the default HomePage for a new PmWiki/PmWiki ²< installation.  If you're reading this screen, then ²< the PmWiki/PmWiki software is probably set up correctly.²< ²< ----²< ²< Here are some useful default pages installed along with the PmWiki/PmWiki software:²< * PmWiki/PmWiki documentation is available at PmWiki.DocumentationIndex.²< * What is the PmWiki/WikiWikiWeb?²< * PmWiki/TipsForEditing and PmWiki/TextFormattingRules describe how to create pages in PmWiki/PmWiki.²< * Practice editing pages in the WikiSandbox.²< ²< More information about PmWiki/PmWiki can be found at http://www.pmwiki.org/.²---²> Describe PmHomePage here.²\ No newline at end of file²
+author=
+author:1098307624=
+host:1098307624=217.225.7.54
+name=Main.PmHomePage
+host=217.225.7.54
+agent=Mozilla/5.0 (X11; U; Linux i686; de-AT; rv:1.5) Gecko/20031007
+rev=1

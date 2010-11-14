@@ -1,0 +1,9 @@
+version=pmwiki-1.0.8
+newline=²
+text=PageHistory displays a summary of past edits on a page. Each past edit is shown in a box which shows lines added, changed or deleted during that edit in a before & after format.²²Below each box is a "Restore" link. Clicking the link will open an edit box with the page as it was ''before'' that edit.  You can make changes or simply click Save to restore the text.²²There are two additional options specific to Page''''History:²* '''Hide minor edits''' - hides any edit that the author marked as 'minor'.²* '''Show changes to markup'''- shows changes to the markup (as opposed to the normal display which shows changes to the output).²²A page's history is kept for the number of days given by the $DiffKeepDays variable (set by the site's WikiAdministrator).  When a page is edited, any page history information older than this value is automatically discarded.²²%trail% <<|PmWiki.DocumentationIndex|>>²²hello - i hope someone can help me here - i am running pmwiki - and everything is great except it doesn't keep the history of the pages and so i cannot restore to the older versions of the page - it always loads the most recent - it keeps track of the number of pages and dates of changes though²²If you're running under Windows, see WinDiff.  If you're running under a Unix server and it's not working, try Cookbook:PhpDiffEngine.  --Pm²²----²--- this solution WILL NOT work on the windows 2003 servers that will not allow foreign programs to work under IIS 6. you have to use php (sript versions) of difff and patch please find it here: http://www.pmwiki.org/wiki/Cookbook/PHPDiffEngine   ²----²²novak
+time=1095271351
+author=novak rogic
+name=PmWiki.PageHistory
+host=142.103.92.86
+agent=Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.7) Gecko/20040626 Firefox/0.8
+rev=11
