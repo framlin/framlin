@@ -1,3 +1,4 @@
+/* ------  header -------- */
 #logo {
 	float:left;
 	margin-right: 15px;
@@ -19,4 +20,23 @@ header h1{
 	font-size: 1.5em;
 	margin-top: 5px;
 	margin-left: 4em;
+}
+/* ................................. */
+
+
+#competent li, #implementation li, #language li, #timeline li, #productive li, #innovative li{
+	display:inline;
+	margin-left: 40px;
+}
+
+
+
+#productive, #implementation, #competent, #innovative {
+	display:inline;
+	background-color: gray;
+	color: white;
+}
+
+#d_impl{
+	width:50em;
 }
