@@ -40,29 +40,54 @@ header h1{
 	border-left-width: 1px;
 	border-left-color: yellow;
 }
-
-#cpp, #delphi, #java, #js {
-	margin-left:20px;	
+.strong{
+	color:yellow;
 }
 
-#t1993{
-	margin-left:20px;	
+#experienced {
+	position: relative; 
+	height:  75px;
 }
-#t1997{
-	margin-left:24px;	
+
+#exp_row {
+	position: relative; 
 }
-#t2000{
-	margin-left:43px;	
+
+#exp_label{
+	position: absolute;
+	top: 40px;
 }
-#t2006{
-	margin-left:27px;	
+
+#cpp, #delphi, #java, #js, #t1993, #t1997, #t2000, #t2006 {
+	position: absolute;
 }
-#competent div, #implementation div, #language div, #timeline div, #productive div, #innovative div{
+
+#cpp, #delphi, #java, #js{
+	top: 25px;
+}
+#t1993, #t1997, #t2000, #t2006 {
+	top: 50px;
+}
+
+#cpp, #t1993{
+	left: 20px;
+}
+
+#delphi, #t1997 {
+	left: 104px;
+}
+
+#java, #t2000 {
+	left: 190px;
+}
+
+#js, #t2006 {
+	left: 270px;
+}
+
+
+#competent div, #implementation div, #productive div, #innovative div{
 	display:inline;
-}
-
-#language div{
-	margin-right:20px;
 }
 
 #competent, #productive{
@@ -72,7 +97,6 @@ header h1{
 #implementation{
 	padding-left:130px;
 }
-
 
 #competent .spacer{
 	margin-left:85px;
