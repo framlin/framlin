@@ -35,113 +35,153 @@
 	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
        chromium.org/developers/how-tos/chrome-frame-getting-started -->
 	<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
-	<header>
+	<header id='heading'>
 		<div class='clearfix'>
 			<img id='logo' src='images/framlin-logo-g+.jpg.png' />
-			<div class='heading'>
+			<div class='slogan'>
 				<span id="firma">SoftWareEngineering Wolfgang Egger</span>
 				<h1>Enterprise WebApplcations</h1>
 			</div>
 		</div>
 	</header>
 	<div role="main" id="main">
-		
-		<div id='topteaser'>
-			<div>
-				<div class='col1'>
-					<span>competent</span>
-				</div>
-				<div id='competent' class='col2'>
-					<div>Analysis</div>
-					<div class='spacer'>UML</div>
-					<div>Design</div>
-				</div>
-				<div class='clearfix'></div>
-				<div class='col1'>
-					<span>experienced</span>
-				</div>
-				<div id='experienced' class='col2'>
-					<div id='implementation'>
-						<div>Implementation</div>
+		<div id='navigation'>
+			<div id='topteaser'>
+				<span>Navigation</span>
+				<nav>
+					<div class='col1'>
+						<span>competent</span>
 					</div>
-					<div id='language'>
-						<div id='cpp'>C++</div>
-						<div id='delphi'>Delphi</div>
-						<div id='java'>Java</div>
-						<div id='js'>JavaScript</div>
+					<div id='competent' class='col2'>
+						<div class='strong'>
+							<a href='#analysis'>Analysis</a>
+						</div>
+						<div class='spacer'>UML</div>
+						<div>Design</div>
 					</div>
-					<div id='timeline'>
-						<div id='t1993'>1993 -</div>
-						<div id='t1997'>1997 -</div>
-						<div id='t2000'>2000 -</div>
-						<div id='t2006'>2006 - now</div>
+					<div class='clearfix'></div>
+					<div class='col1' id='exp_row'>
+						<span id='exp_label'>experienced</span>
 					</div>
-				</div>
-				<div class='clearfix'></div>
-				<div class='col1'>
-					<span>productive</span>
-				</div>
-				<div id='productive' class='col2'>
-					<div>MagicDraw</div>
-					<div class='spacer'>Eclipse</div>
-					<div class='spacer2'>git</div>
-					<div>Linux</div>
-				</div>
-				<div class='clearfix'></div>
-				<div class='col1'>
-					<span>innovative</span>
-				</div>
-				<div id='innovative' class='col2'>
-					<div>Node.JS</div>
-					<div>&amp; CouchDB</div>
-				</div>
-				<div class='clearfix'></div>
+					<div id='experienced' class='col2'>
+						<div id='implementation'>
+							<div>Implementation</div>
+						</div>
+						<div id='language'>
+							<div id='cpp'>C++</div>
+							<div id='delphi'>Delphi</div>
+							<div id='java'>Java</div>
+							<div id='js' class='strong'>
+								<a href='#javascript'>JavaScript</a>
+							</div>
+						</div>
+						<div id='timeline'>
+							<div id='t1993'>1993 -</div>
+							<div id='t1997'>1997 -</div>
+							<div id='t2000'>2000 -</div>
+							<div id='t2006'>2006 - now</div>
+						</div>
+					</div>
+					<div class='clearfix'></div>
+					<div class='col1'>
+						<span>productive</span>
+					</div>
+					<div id='productive' class='col2'>
+						<div class='strong'>MagicDraw</div>
+						<div class='spacer'>Eclipse</div>
+						<div class='spacer2'>git</div>
+						<div>Linux</div>
+					</div>
+					<div class='clearfix'></div>
+					<div class='col1'>
+						<span>innovative</span>
+					</div>
+					<div id='innovative' class='col2'>
+						<div>Node.JS</div>
+						<div>&amp; CouchDB</div>
+					</div>
+					<div class='clearfix'></div>
+				</nav>
+			</div>
+			<div id='bottomteaser'>
+				<table border="1">
+					<thead>
+						<tr>
+							<th>Projekte</th>
+							<th>Endkunden</th>
+							<th>Agenturen</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Leasing Vertragsverwaltung</td>
+							<td>Sixt Leasing AG</td>
+							<td>Soprado</td>
+						</tr>
+						<tr>
+							<td>PDF Volltextsuche</td>
+							<td>BiBB</td>
+							<td>WR Multimedia</td>
+						</tr>
+						<tr>
+							<td>Pille.de</td>
+							<td>Schering Deutschland</td>
+							<td>Hoch 3</td>
+						</tr>
+						<tr>
+							<td>Social Network Prototype</td>
+							<td>Red Bull</td>
+							<td>BeagleSoft</td>
+						</tr>
+						<tr>
+							<td>Sprachsignalanalyse</td>
+							<td>Kasseler Stottertherapie</td>
+							<td>Bioservices</td>
+						</tr>
+						<tr>
+							<td>Presse-Mailbox</td>
+							<td>Leipziger Messe AG</td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+
 			</div>
 		</div>
-
-		<div id='bottomteaser'>
-			<table border="1">
-				<thead>
-					<tr>
-						<th>Projekte</th>
-						<th>Endkunden</th>
-						<th>Agenturen</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Leasing Vertragsverwaltung</td>
-						<td>Sixt Leasing AG</td>
-						<td>Soprado</td>
-					</tr>
-					<tr>
-						<td>PDF Volltextsuche</td>
-						<td>BiBB</td>
-						<td>WR Multimedia</td>
-					</tr>
-					<tr>
-						<td>Pille.de</td>
-						<td>Schering Deutschland</td>
-						<td>Hoch 3</td>
-					</tr>
-					<tr>
-						<td>Social Network Prototype</td>
-						<td>Red Bull</td>
-						<td>BeagleSoft</td>
-					</tr>
-					<tr>
-						<td>Sprachsignalanalyse</td>
-						<td>Kasseler Stottertherapie</td>
-						<td>Bioservices</td>
-					</tr>
-					<tr>
-						<td>Presse-Mailbox</td>
-						<td>Leipziger Messe AG</td>
-						<td></td>
-					</tr>
-				</tbody>
-			</table>
-
+		<div id='content'>
+			<article>
+				<section id='sec_analysis'>
+					<header>
+						<h1>
+							<a id='#analysis'>Analysis</a>
+						</h1>
+						Dia Analyse besthender Software-Systeme und Geschäftsprozesse ist
+						meine Kernkompetenz
+					</header>
+					<p>Meine größte Stärke ist eine natürliche Begabung für
+						analytisches Denken. Dadurch fällt es mir sehr leicht, mich in
+						bestehende Software einzudenken und mich schnell darin
+						zurechtzufinden.</p>
+					<p>Darüber ermöglicht mir diese Fähigkeit bestehende
+						Geschäftsprozesse in logische Strukturen zu übersetzen.</p>
+				</section>
+				<section id='sec_javascript'>
+					<header>
+						<h1>
+							<a id='#javascript'>JavaScript</a>
+						</h1>
+						Meine Lieblingsprogrammiersprache ist JavaScript
+					</header>
+					<p>Nachdem ich jahrelang mit objektorientierten Sprachen mit
+						statischer Typisierung programmiert hatte, stand ich JavaScript
+						anfangs sehr skeptisch gegenüber. Ich teilte das allgemeine
+						Voruteil, das diese Sprache lediglich dazu nützlich sein könnte,
+						Webseite optisch "aufzumotzen"</p>
+					<p>Sechs Jahre täglicher Einsatz als
+						Anwendungsprogrammiersprache für Enterprise Applikationen haben
+						mich eines besseren belehrt.</p>
+				</section>
+			</article>
 		</div>
 	</div>
 	<footer> </footer>
@@ -149,9 +189,13 @@
 	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline  -->
 	<script
 		src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+	<script>
+		window.jQuery
+				|| document
+						.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')
+	</script>
 
-	<!-- scripts concatenated and minified via build script  --> 
+	<!-- scripts concatenated and minified via build script  -->
 	<script src="js/plugins.js"></script>
 	<script src="js/script.js"></script>
 	<!-- end scripts -->

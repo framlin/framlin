@@ -1,12 +1,16 @@
+body{
+	background-color:#ffefbf;
+}
 /* ------  header -------- */
 #logo {
 	float:left;
-	margin-right: 15px;
-	margin-top: 10px;
+	margin: 10px 15px 0px 10px
 }
 
 header {
-	padding: 10px;	
+	padding: 10px 10px 0px 10px;
+	border-bottom-style: solid;
+	border-bottom-color: orange;	
 }
 
 header span{
@@ -21,15 +25,46 @@ header h1{
 	margin-top: 5px;
 	margin-left: 4em;
 }
-/* ................................. */
-#topteaser, #bottomteaser, #bottomteaser table{
-	width: 33em;
+
+#heading, #main{
+	max-width: 70em;
 }
 
-#topteaser{
+#main{
+	position: 'relative';
+}
+#navigation{
+		float: left;
+}
+#content{
+	padding-top: 1em;
+	margin-left: 35em;
+}
+
+article{
+	background-color:#ffffde;
+}
+/* ................................. */
+#topteaser, #bottomteaser, #bottomteaser table{
+	background-color:#ffffde;
+	width: 33em;
+	margin: 1em;
+}
+
+#bottomteaser table{
+	margin: 0;
+}
+
+#topteaser > span{
+	padding: 5px;
+}
+
+nav{
 	background-color: black;
 	color: orange;
+	padding: 5px;
 }
+
 .col1{
 	float:left;
 }
@@ -40,29 +75,54 @@ header h1{
 	border-left-width: 1px;
 	border-left-color: yellow;
 }
-
-#cpp, #delphi, #java, #js {
-	margin-left:20px;	
+.strong, .strong a {
+	color:yellow;
 }
 
-#t1993{
-	margin-left:20px;	
+#experienced {
+	position: relative; 
+	height:  75px;
 }
-#t1997{
-	margin-left:24px;	
+
+#exp_row {
+	position: relative; 
 }
-#t2000{
-	margin-left:43px;	
+
+#exp_label{
+	position: absolute;
+	top: 40px;
 }
-#t2006{
-	margin-left:27px;	
+
+#cpp, #delphi, #java, #js, #t1993, #t1997, #t2000, #t2006 {
+	position: absolute;
 }
-#competent div, #implementation div, #language div, #timeline div, #productive div, #innovative div{
+
+#cpp, #delphi, #java, #js{
+	top: 25px;
+}
+#t1993, #t1997, #t2000, #t2006 {
+	top: 50px;
+}
+
+#cpp, #t1993{
+	left: 20px;
+}
+
+#delphi, #t1997 {
+	left: 104px;
+}
+
+#java, #t2000 {
+	left: 190px;
+}
+
+#js, #t2006 {
+	left: 270px;
+}
+
+
+#competent div, #implementation div, #productive div, #innovative div{
 	display:inline;
-}
-
-#language div{
-	margin-right:20px;
 }
 
 #competent, #productive{
@@ -72,7 +132,6 @@ header h1{
 #implementation{
 	padding-left:130px;
 }
-
 
 #competent .spacer{
 	margin-left:85px;
@@ -93,3 +152,14 @@ header h1{
 	text-align: center;
 }
 
+.hidden{
+	display:none;
+}
+
+section{
+	padding: 5px;
+}
+section header h1{
+	font-size: 1.1em;
+	margin: 0;
+}
