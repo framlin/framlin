@@ -11,7 +11,7 @@ header {
 
 header span{
 	margin-top: 2px;
-	font-size: 2em;
+	font-size: 1.2em;
 	font-weight: bold;
 	font-family: monospace;
 }
@@ -22,21 +22,74 @@ header h1{
 	margin-left: 4em;
 }
 /* ................................. */
+#topteaser, #bottomteaser, #bottomteaser table{
+	width: 33em;
+}
 
+#topteaser{
+	background-color: black;
+	color: orange;
+}
+.col1{
+	float:left;
+}
+.col2{
+	margin-left: 7em;
+	padding-left: 10px;
+	border-left-style: dotted;
+	border-left-width: 1px;
+	border-left-color: yellow;
+}
 
-#competent li, #implementation li, #language li, #timeline li, #productive li, #innovative li{
+#cpp, #delphi, #java, #js {
+	margin-left:20px;	
+}
+
+#t1993{
+	margin-left:20px;	
+}
+#t1997{
+	margin-left:24px;	
+}
+#t2000{
+	margin-left:43px;	
+}
+#t2006{
+	margin-left:27px;	
+}
+#competent div, #implementation div, #language div, #timeline div, #productive div, #innovative div{
 	display:inline;
-	margin-left: 40px;
+}
+
+#language div{
+	margin-right:20px;
+}
+
+#competent, #productive{
+	padding-left:30px;
+}
+
+#implementation{
+	padding-left:130px;
 }
 
 
-
-#productive, #implementation, #competent, #innovative {
-	display:inline;
-	background-color: gray;
-	color: white;
+#competent .spacer{
+	margin-left:85px;
+	margin-right:85px;
 }
 
-#d_impl{
-	width:50em;
+#productive .spacer {
+	margin-left:40px;
+	margin-right:40px;
 }
+
+#productive .spacer2{
+	margin-left:0px;
+	margin-right:40px;
+}
+
+#innovative{
+	text-align: center;
+}
+
