@@ -1,4 +1,4 @@
-body{
+body, footer nav{
 	background-color:#ffefbf;
 }
 /* ------  header -------- */
@@ -8,13 +8,14 @@ body{
 }
 
 header {
-	padding: 10px 10px 0px 10px;
+	background-color:#ffffde;
+	padding: 10px 10px 5px 10px;
 	border-bottom-style: solid;
 	border-bottom-color: orange;	
+	border-bottom-width: 2px;	
 }
 
 header span{
-	margin-top: 2px;
 	font-size: 1.2em;
 	font-weight: bold;
 	font-family: monospace;
@@ -22,9 +23,32 @@ header span{
 
 header h1{
 	font-size: 1.5em;
-	margin-top: 5px;
-	margin-left: 4em;
+	margin-top: 13px;
+	margin-left: 1em;
+	margin-bottom: 0;
 }
+
+#slogan{
+	margin-top: 5px;
+	float:left;
+}
+
+#contact{
+	margin-left:36em;
+	margin-right: 1em;
+	text-align: right;
+	font-size: 0.8em;
+}
+
+#contact p{
+	margin: 0;
+}
+
+#contact span{
+	font-weight: bold;
+	margin-right: 20px;
+}
+
 
 #heading, #main{
 	max-width: 70em;
@@ -33,9 +57,11 @@ header h1{
 #main{
 	position: 'relative';
 }
+
 #navigation{
 		float: left;
 }
+
 #content{
 	padding-top: 1em;
 	margin-left: 35em;
@@ -53,6 +79,7 @@ article{
 
 #bottomteaser table{
 	margin: 0;
+	border-color: red;
 }
 
 #topteaser > span{
@@ -68,6 +95,9 @@ nav{
 .col1{
 	float:left;
 }
+.col1 span{
+	color: #ffffde;
+}
 .col2{
 	margin-left: 7em;
 	padding-left: 10px;
@@ -81,7 +111,7 @@ nav{
 
 #experienced {
 	position: relative; 
-	height:  75px;
+	height:  95px;
 }
 
 #exp_row {
@@ -90,7 +120,7 @@ nav{
 
 #exp_label{
 	position: absolute;
-	top: 40px;
+	top: 50px;
 }
 
 #cpp, #delphi, #java, #js, #t1993, #t1997, #t2000, #t2006 {
@@ -98,10 +128,10 @@ nav{
 }
 
 #cpp, #delphi, #java, #js{
-	top: 25px;
+	top: 35px;
 }
 #t1993, #t1997, #t2000, #t2006 {
-	top: 50px;
+	top: 60px;
 }
 
 #cpp, #t1993{
@@ -157,9 +187,50 @@ nav{
 }
 
 section{
-	padding: 5px;
+	padding: 1em;
+	border: solid red 1px;
 }
-section header h1{
-	font-size: 1.1em;
+
+section header{
+	background-color: white;
+	padding: 0 0 5px 0;
 	margin: 0;
+	font-weight: bold;
+	border-bottom-color: red;	
+	border-bottom-width: 2px;
+		
+}
+
+section header h1{
+	background-color:#ffffde;
+	padding-bottom: 5px;
+	margin: 0 0 5px 0;
+	border-bottom-color: red;	
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	font-size: 1.3em;
+}
+
+section a{
+	color: red;
+}
+
+footer{
+	background-color: #ffffde;
+	max-width: 71em;
+	border-top-style: solid;
+	border-top-color: orange;	
+	margin-top: 1em;
+}
+
+footer nav{
+	text-align: right;
+}
+
+footer li{
+	display: inline;
+}
+
+footer nav a, footer nav a:visited{
+	color: orange;
 }
