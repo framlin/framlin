@@ -1,32 +1,28 @@
 /* Author: Wolfgang Egger
 */
 
-function styleArticles() {
+function hideArticles() {
 	$('section').addClass('hidden');
 }
-function styleContent() {
-	$('#content').addClass('hidden');
+
+function showSection(id) {
+	hideArticles();
+	$(id).removeClass('hidden');
+}
+
+function activateNavigation() {
+	$('nav a').click(function onClickA(){
+		var target = '#sec_' + $(this).attr('href').substring(1);
+		showSection(target);
+	});
 }
 
 function activatePage() {
 	activateNavigation();
 }
 
-function showSection(id) {
-	styleArticles();
-	$(id).removeClass('hidden');
-}
-
-function activateNavigation() {
-	$('nav a').click(function onClickA(){
-		//styleArticle();
-		var target = '#sec_' + $(this).attr('href').substring(1);
-		showSection(target);
-	});
-}
-
 function stylePage() {
-	styleArticles();
+	hideArticles();
 }
 
 jQuery(function() {
