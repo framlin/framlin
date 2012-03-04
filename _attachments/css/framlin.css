@@ -182,7 +182,11 @@ nav{
 	text-align: center;
 }
 
-.hidden{
+#inno_row, #innovative {
+	padding-top: 10px;
+}
+
+.hidden {
 	display:none;
 }
 
