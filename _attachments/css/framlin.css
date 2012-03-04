@@ -9,7 +9,7 @@ body, footer nav{
 
 header {
 	background-color:#ffffde;
-	padding: 10px 10px 5px 10px;
+	padding: 0px 10px 5px 10px;
 	border-bottom-style: solid;
 	border-bottom-color: orange;	
 	border-bottom-width: 2px;	
@@ -26,6 +26,11 @@ header h1{
 	margin-top: 13px;
 	margin-left: 1em;
 	margin-bottom: 0;
+}
+
+#heading div nav{
+	background-color:#ffffde;
+	height: 0px;
 }
 
 #slogan{
