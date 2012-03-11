@@ -5,7 +5,8 @@ var Framlin = (function(window){
 	
 	function Module() {
 		this.initialized = false;
-		this.currentSection = '';
+		this.currentSection = '#sec_home';
+		this.cameIn = false;
 
 	}
 	
@@ -15,48 +16,59 @@ var Framlin = (function(window){
 
 
 	Module.prototype.hideArticles = function hideArticles() {
-		$('section').addClass('hidden');
+		$('section').fadeOut(20);
 		if (!this.initialized) {
-			$('#sec_home').removeClass('hidden');
+			$('#sec_home').fadeIn(20);
 		}
 	};
 
-	Module.prototype.showSection = function showSection(id) {
+	Module.prototype.showSection = function showSection(id, time) {
 		this.hideArticles();
-		$(id).removeClass('hidden');
+		$(id).fadeIn(time||20);
 		this.currentSection = id;
 	};
 
 	Module.prototype.showHeader = function showHeader(id) {
 		var teaser = $('#teaser'),
 		clone = $(id + ' header').clone();
-
-		teaser.removeClass('hidden');
+		this.hideArticles();
+		teaser.fadeIn(20);
 		teaser.wrapInner(clone);		
 	};
 
 	Module.prototype.hideHeader = function hideHeader(id) {
-		$('#teaser header').remove();
-		$('#teaser').addClass('hidden');
+		$('#teaser').fadeOut(20);
+        $('#teaser header').remove();
 	};
 
 	Module.prototype.activateNavigation = function activateNavigation() {
 		var me = this;
 		$('nav a').click(function onClickA(){
 			var target = '#sec_' + $(this).attr('href').substring(1);
-			me.showSection(target);
-			me.hideHeader(target);
+            me.hideHeader(target);
+			me.showSection(target, 400);
 		});
 
-		$('nav a').hover(function onInA(){
-			var target = '#sec_' + $(this).attr('href').substring(1);
-			if (target !== me.currentSection) {
-				me.showHeader(target);
-			}
-		}, function onOutA(){
-			var target = '#sec_' + $(this).attr('href').substring(1);
-			me.hideHeader(target);
-		});
+		$('nav a').hover(
+            function onInA(){
+                me.cameIn = true;
+                var currElem = $(this);
+                window.setTimeout(function (){
+                    var target = '#sec_' + currElem.attr('href').substring(1);
+                    if ((me.cameIn) && (target !== me.currentSection)) {
+                        me.showHeader(target);
+                        me.cameIn = false;
+
+                    }
+                }, 200); 
+            }, function onOutA(){
+                var target = '#sec_' + $(this).attr('href').substring(1);
+                if ((!me.cameIn) && (target !== me.currentSection)) {
+                    me.hideHeader(target);
+                    me.showSection(me.currentSection);
+                }
+                me.cameIn = false;
+            });
 	};
 
 	Module.prototype.activatePage = function activatePage() {
