@@ -28,8 +28,8 @@
 
 <!-- All JavaScript at the bottom, except this Modernizr build.
        Modernizr enables HTML5 elements & feature detects for optimal performance.
-       Create your own custom Modernizr build: www.modernizr.com/download/ 
-<script src="js/libs/modernizr-2.5.3.min.js"></script> -->
+       Create your own custom Modernizr build: www.modernizr.com/download/  --> 
+<script src="js/libs/modernizr-2.5.3.min.js"></script>
 </head>
 <body>
 	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
@@ -37,7 +37,7 @@
 	<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 	<header id='heading'>
 		<div class='clearfix'>
-			<nav><a href='#home'><img id='logo' src='images/framlin-logo-g+.jpg.png' /></a></nav>
+			<nav><a href='home'><img id='logo' src='images/framlin-logo-g+.jpg.png' /></a></nav>
 			<div id='slogan'>
 				<span id="firma">SoftWareEngineering Wolfgang Egger</span>
 				<h1>Enterprise WebApplcations</h1>
@@ -52,7 +52,7 @@
 	</header>
 	<div role="main" id="main">
 		<div id='navigation'>
-			<div id='topteaser'>
+			<div id='topteaser' class='box-high'>
 				<span>Navigation</span>
 				<nav>
 					<div class='col1'>
@@ -60,7 +60,7 @@
 					</div>
 					<div id='competent' class='col2'>
 						<div class='strong'>
-							<a href='#analysis'>Analysis</a>
+							<a href='analysis'>Analysis</a>
 						</div>
 						<div class='spacer'>UML</div>
 						<div>Design</div>
@@ -78,7 +78,7 @@
 							<div id='delphi'>Delphi</div>
 							<div id='java'>Java</div>
 							<div id='js' class='strong'>
-								<a href='#javascript'>JavaScript</a>
+								<a href='javascript'>JavaScript</a>
 							</div>
 						</div>
 						<div id='timeline'>
@@ -109,7 +109,7 @@
 					<div class='clearfix'></div>
 				</nav>
 			</div>
-			<div id='bottomteaser'>
+			<div id='bottomteaser' class=' box-flat'>
 				<table border="1">
 					<thead>
 						<tr>
@@ -120,18 +120,18 @@
 					</thead>
 					<tbody>
 						<tr>
-							<td>Leasing Vertragsverwaltung</td>
+							<td>Leasing&nbsp;Vertragsverwaltung</td>
 							<td>Sixt Leasing AG</td>
 							<td>Soprado</td>
 						</tr>
 						<tr>
 							<td>PDF Volltextsuche</td>
 							<td>BiBB</td>
-							<td>WR Multimedia</td>
+							<td>WR&nbsp;Multimedia</td>
 						</tr>
 						<tr>
 							<td>Pille.de</td>
-							<td>Schering Deutschland</td>
+							<td>Schering&nbsp;Deutschland</td>
 							<td>Hoch 3</td>
 						</tr>
 						<tr>
@@ -141,7 +141,7 @@
 						</tr>
 						<tr>
 							<td>Sprachsignalanalyse</td>
-							<td>Kasseler Stottertherapie</td>
+							<td>Kasseler&nbsp;Stottertherapie</td>
 							<td>Bioservices</td>
 						</tr>
 						<tr>
@@ -154,7 +154,7 @@
 
 			</div>
 		</div>
-		<div id='content'>
+		<div id='content' class='hidden box-flat'>
 			<article>
 				<section id='teaser'></section>
 				<section id='sec_home'>
@@ -162,7 +162,8 @@
 						<h1>
 							<a id='#home'>Willkommen</a>
 						</h1>
-SoftwareEntwiclḱlung ist mein Leben und kann der Schlüssel zm Erfolg Ihrs Unternehmens sein.
+						SoftwareEntwicklung ist mein Leben und kann der Schlüssel zm
+						Erfolg Ihrs Unternehmens sein.
 					</header>
 					<p>Ja, ich gestehe, bin ein Geek!</p>
 					<p>Ich entwickle seit fast 20 Jahren ernsthafte SoftwareSysteme und muss mich zwingen hin und wieder auch mal an etwas anderes zu denken, als an das aktuelle Projekt, an Objektstrukturen und Algorithmen.</p>
@@ -320,13 +321,14 @@ SoftwareEntwiclḱlung ist mein Leben und kann der Schlüssel zm Erfolg Ihrs Unt
 	<footer>
 		<nav>
 			<ul>
-				<li><a href='#impressum'>Impressum</a></li>
-				<li><a href='#disclaimer'>Disclaimer</a></li>
+				<li><a href='impressum'>Impressum</a></li>
+				<li><a href='disclaimer'>Disclaimer</a></li>
 			</ul>
 		</nav>
 	</footer>
 	<!-- JavaScript at the bottom for fast page loading -->
 	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline  -->
+	
 	<script
 		src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<script>
@@ -334,7 +336,7 @@ SoftwareEntwiclḱlung ist mein Leben und kann der Schlüssel zm Erfolg Ihrs Unt
 				|| document
 						.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')
 	</script>
-
+ 
 	<!-- scripts concatenated and minified via build script  -->
 	<script src="js/plugins.js"></script>
 	<script src="js/script.js"></script>
