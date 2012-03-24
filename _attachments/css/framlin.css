@@ -133,6 +133,14 @@ nav{
 	height:  95px;
 }
 
+#topteaser a {
+	color:orange;
+}
+
+#topteaser .strong a {
+	color:yellow;
+}
+
 #exp_row {
 	position: relative; 
 }
@@ -211,7 +219,8 @@ nav{
 
 section{
 	padding: 1em;
-	border: solid orange 1px;
+	border-top: solid white 1px;
+	border-left: solid white 1px;
 }
 
 section header{
