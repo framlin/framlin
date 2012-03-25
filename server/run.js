@@ -13,7 +13,7 @@ var server = union.createServer({
 				res.emit('next');
 			}
 		},
-		require('ecstatic')(__dirname  + '/../_attachments')
+		require('ecstatic')(__dirname  + '/../site')
 	]
 });
 server.listen(8080);
