@@ -48,7 +48,7 @@ function Framlin(win){
 
 	Module.prototype.hideElem = function hideElem(elem, time) {
 		if (client) {
-			elem.fadeIn(20);			
+			elem.fadeOut(time);			
 		} else {
 			elem.addClass('hidden');
 		}		
@@ -56,7 +56,7 @@ function Framlin(win){
 
 	Module.prototype.showElem = function showElem(elem, time) {
 		if (client) {
-			elem.fadeOut(20);			
+			elem.fadeIn(time);			
 		} else {
 			elem.removeClass('hidden');
 		}		
@@ -68,17 +68,17 @@ function Framlin(win){
 	};
 
 	Module.prototype.hideArticles = function hideArticles() {
-		console.log('hideArticles');
-		$('section').fadeOut(20);
+		logger.log('info', 'hideArticles');
+		this.hideElem($('section'), 20);
 		if (!this.initialized) {
-			$('#sec_home').fadeIn(20);
+			this.showElem($('#sec_home'), 20);
 		}
 	};
 
 	Module.prototype.showSection = function showSection(id, time) {
 		console.log('showSection', id);
 		this.hideArticles();
-		$(id).fadeIn(time||20);
+		this.showElem($(id), time||20);
 		this.currentSection = id;
 	};
 
