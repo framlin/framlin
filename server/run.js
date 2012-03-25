@@ -24,7 +24,7 @@ server.listen(8080);
 //--------- server-side rendering ----------------------------------
 
 function requestHandler(id) {
-	winston.log('info', ['REQUEST ', id]);	
+	winston.log('info', ['REQUEST ', new Date(), id]);	
 	this.res.writeHead(200, { 'Content-Type': 'text/html' });
 	this.res.end(Framlin.render(id));
 }
@@ -35,7 +35,7 @@ router.get('/:id', function (id) {
 	if ( id !== 'favicon.ico') {
 		if (!window) {
 			jsdom.env("http://localhost:8080/", [
-	     	 	'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js',
+	     	 	'js/libs/jquery-1.7.1.min.js',
 	     	 	],
 	     	 	function(errors, win) {
 	     			window = win;

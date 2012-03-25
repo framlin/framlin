@@ -76,7 +76,13 @@ article{
 	background-color:#ffffde;
 }
 /* ................................. */
-#bottomteaser, #bottomteaser table{
+#bottomteaser {
+	background-color:#ffffde; 
+	width: 33em;
+	margin: 0em 1em 0.1em 1em;
+}
+
+#bottomteaser table{
 	background-color:#ffffde; 
 	width: 33em;
 	margin: 1em;
@@ -246,7 +252,7 @@ section header h1{
 section a{
 	color: red;
 }
-
+/*
 footer{
 	background-color: #ffffde;
 	max-width: 71em;
@@ -254,17 +260,28 @@ footer{
 	border-top-color: orange;	
 	margin-top: 1em;
 }
-
+*/
 footer nav{
 	text-align: right;
 }
 
-footer li{
+
+#metanav {
+	margin-left: 1em;	
+}
+
+#metanav, #metanav nav{
+	background-color:#ffefbf;
+}
+
+#metanav li{
 	display: inline;
 }
 
-footer nav a, footer nav a:visited{
+#metanav nav a, #metanav nav a:visited{
+	background-color:#ffefbf;
 	color: orange;
+	font-size: small;
 }
 
 div.box-flat {

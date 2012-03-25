@@ -1,18 +1,31 @@
 /* Author: Wolfgang Egger
  */
+function prcPrefix() {
+	return '<!doctype html>\n' +
+	'<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->\n' +
+	'<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->\n' +
+	'<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->\n' +
+	'<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->\n' +
+	'<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->\n' +
+	'<!--[if gt IE 8]><!--> <html class="no-js" lang="en">\n';	
+}
+
 function Framlin(win){
 	var $ = null,
 		window = win,
 		logger = console,
 		server = false,
 		client = true,
-		clone = null;
+		bodyClone = null,
+		prefix = prcPrefix();
 		
 	function Module() {
 		this.initialized = false;
 		this.currentSection = '#sec_home';
 		this.cameIn = false;
-	}
+	};
+	
+
 	
 	Module.prototype.init = function init(config) {
 		try {
@@ -28,26 +41,25 @@ function Framlin(win){
 				
 				if (typeof config.server !== 'undefined') {
 					server = config.server;
-					clone = window.$("html").clone();
+					bodyClone = window.$("body").clone();
 
 				}
 				client = !server;
 			}
 			$ = window.$;
 		} catch(e) {
-			logger.log('info',e);
+			logger.log('error', e);
 		}
 	};
 	
 	Module.prototype.reset = function reset() {
-		var new_clone = clone.clone();
-		window.$("html").replaceWith(clone);
-		clone = new_clone;
+		var newBodyClone = bodyClone.clone();
+		window.$("body").replaceWith(bodyClone);
+		bodyClone = newBodyClone;
 	};
 
 
 	Module.prototype.hideElem = function hideElem(elem, time) {
-		logger.log('info',['hideElem', elem, time]);
 		if (client) {
 			elem.fadeOut(time);			
 		} else {
@@ -56,7 +68,6 @@ function Framlin(win){
 	};
 
 	Module.prototype.showElem = function showElem(elem, time) {
-		logger.log('info',['showElem', elem, time]);
 		if (client) {
 			elem.fadeIn(time);			
 		} else {
@@ -65,12 +76,10 @@ function Framlin(win){
 	};
 
 	Module.prototype.hideArticle = function hideArticle(id) {
-		logger.log('info','hideArticle', id);
 		$(id).fadeOut(20);
 	};
 
 	Module.prototype.hideArticles = function hideArticles() {
-		logger.log('info', ['hideArticles', this.initialized]);
 		this.hideElem($('section'), 20);
 		if (!this.initialized) {
 			this.showElem($('#sec_home'), 20);
@@ -78,7 +87,6 @@ function Framlin(win){
 	};
 
 	Module.prototype.showSection = function showSection(id, time) {
-		logger.log('info',['showSection', id, time]);
 		this.hideArticles();
 		this.showElem($(id), time||20);
 		this.currentSection = id;
@@ -86,7 +94,6 @@ function Framlin(win){
 
 	Module.prototype.showHeader = function showHeader(id) {
 		this.hideArticle(this.currentSection);
-		logger.log('info','showHeader', id);
 		var teaser = $('#teaser'),
 		clone = $(id + ' header').clone();
 		var more = $('<p>klick to read more ...</p>');
@@ -99,13 +106,11 @@ function Framlin(win){
 	};
 
 	Module.prototype.hideHeader = function hideHeader(id) {
-		logger.log('info','hideHeader', id);
 		this.hideElem($('#teaser'), 20);
         $('#teaser header').remove();
 	};
 	
 	Module.prototype.navigationClicked = function navigationClicked(target, time) {
-		logger.log('info', ['navigation clicked', target, time])
 		if (client) {
 	        this.hideHeader(target);
 		}
@@ -178,7 +183,6 @@ function Framlin(win){
 	};
 	
 	Module.prototype.stylePage = function stylePage() {
-		logger.log('info', 'stylePage');
 		this.showContent();
 		this.hideArticles();
 		this.initialized = true;
@@ -186,7 +190,7 @@ function Framlin(win){
 
 	Module.prototype.render = function render(id) {
 		this.navigationClicked('#sec_'+id, 0);
-		var result =  '<html>'+window.$("html").html()+'</html>';
+		var result =  prefix + window.$("html").html() + '</html>';
 		this.reset();
 		return result;
 	};
