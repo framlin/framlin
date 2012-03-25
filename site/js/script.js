@@ -143,7 +143,7 @@ function Framlin(win){
 	};
 
 	Module.prototype.showContent = function showContent() {
-		$('#content').removeClass('hidden');
+		$('section').removeClass('hidden');
 	};
 	
 	Module.prototype.stylePage = function stylePage() {
