@@ -1,42 +1,92 @@
 /* Author: Wolfgang Egger
  */
-var Framlin = (function(window){
-	var $ = null;
-	
+function Framlin(win){
+	var $ = null,
+		window = win,
+		logger = console,
+		server = false,
+		client = true,
+		clone = null;
+		
 	function Module() {
 		this.initialized = false;
 		this.currentSection = '#sec_home';
 		this.cameIn = false;
 	}
 	
-	Module.prototype.init = function init() {
-		$ = window.$;
+	Module.prototype.init = function init(config) {
+		try {
+			if (typeof config !== 'undefined') {
+				if (typeof config.logger !== 'undefined') {
+					logger = config.logger;
+				}
+				
+				logger.log('info', 'INIT');
+				if (typeof config.win !== 'undefined') {
+					window = config.win;
+				}
+				
+				if (typeof config.server !== 'undefined') {
+					server = config.server;
+					clone = window.$("html").clone();
+
+				}
+				client = !server;
+			}
+			$ = window.$;
+		} catch(e) {
+			logger.log('info',e);
+		}
+	};
+	
+	Module.prototype.reset = function reset() {
+		var new_clone = clone.clone();
+		window.$("html").replaceWith(clone);
+		clone = new_clone;
 	};
 
 
+	Module.prototype.hideElem = function hideElem(elem, time) {
+		logger.log('info',['hideElem', elem, time]);
+		if (client) {
+			elem.fadeOut(time);			
+		} else {
+			elem.addClass('hidden');
+		}		
+	};
+
+	Module.prototype.showElem = function showElem(elem, time) {
+		logger.log('info',['showElem', elem, time]);
+		if (client) {
+			elem.fadeIn(time);			
+		} else {
+			elem.removeClass('hidden');
+		}		
+	};
+
 	Module.prototype.hideArticle = function hideArticle(id) {
-		console.log('hideArticle', id);
+		logger.log('info','hideArticle', id);
 		$(id).fadeOut(20);
 	};
 
 	Module.prototype.hideArticles = function hideArticles() {
-		console.log('hideArticles');
-		$('section').fadeOut(20);
+		logger.log('info', ['hideArticles', this.initialized]);
+		this.hideElem($('section'), 20);
 		if (!this.initialized) {
-			$('#sec_home').fadeIn(20);
+			this.showElem($('#sec_home'), 20);
 		}
 	};
 
 	Module.prototype.showSection = function showSection(id, time) {
-		console.log('showSection', id);
+		logger.log('info',['showSection', id, time]);
 		this.hideArticles();
-		$(id).fadeIn(time||20);
+		this.showElem($(id), time||20);
 		this.currentSection = id;
 	};
 
 	Module.prototype.showHeader = function showHeader(id) {
 		this.hideArticle(this.currentSection);
-		console.log('showHeader', id);
+		logger.log('info','showHeader', id);
 		var teaser = $('#teaser'),
 		clone = $(id + ' header').clone();
 		var more = $('<p>klick to read more ...</p>');
@@ -49,17 +99,24 @@ var Framlin = (function(window){
 	};
 
 	Module.prototype.hideHeader = function hideHeader(id) {
-		console.log('hideHeader', id);
-		$('#teaser').fadeOut(20);
+		logger.log('info','hideHeader', id);
+		this.hideElem($('#teaser'), 20);
         $('#teaser header').remove();
+	};
+	
+	Module.prototype.navigationClicked = function navigationClicked(target, time) {
+		logger.log('info', ['navigation clicked', target, time])
+		if (client) {
+	        this.hideHeader(target);
+		}
+		this.showSection(target, time);
 	};
 
 	Module.prototype.activateNavigation = function activateNavigation() {
 		var me = this;
 		$('nav a').click(function onClickA(){
 			var target = '#sec_' + $(this).attr('href').substring(1);
-            me.hideHeader(target);
-			me.showSection(target, 400);
+			me.navigationClicked(target, 400);
 		});
 
 		$('nav a').hover(
@@ -117,21 +174,28 @@ var Framlin = (function(window){
 	};
 
 	Module.prototype.showContent = function showContent() {
-		$('#content').removeClass('hidden');
+		$('section').removeClass('hidden');
 	};
 	
 	Module.prototype.stylePage = function stylePage() {
+		logger.log('info', 'stylePage');
 		this.showContent();
 		this.hideArticles();
 		this.initialized = true;
 	};
 
+	Module.prototype.render = function render(id) {
+		this.navigationClicked('#sec_'+id, 0);
+		var result =  '<html>'+window.$("html").html()+'</html>';
+		this.reset();
+		return result;
+	};
 	// ###############################
 	return new Module();
 
-});
+};
 
-if (jQuery) {
+if (typeof jQuery !== 'undefined') {
 	jQuery(function() {
 		var framlin = Framlin(window);
 		framlin.init();
@@ -140,4 +204,4 @@ if (jQuery) {
 	});	
 }
 
-exports = Framlin;
+exports.Framlin = Framlin;
