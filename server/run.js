@@ -35,7 +35,7 @@ router.get('/:id', function (id) {
 	if ( id !== 'favicon.ico') {
 		if (!window) {
 			jsdom.env("http://localhost:8080/", [
-	     	 	'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js',
+	     	 	'js/libs/jquery-1.7.1.min.js',
 	     	 	],
 	     	 	function(errors, win) {
 	     			window = win;
