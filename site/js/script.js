@@ -16,7 +16,7 @@ function Framlin(win){
 		logger = console,
 		server = false,
 		client = true,
-		clone = null,
+		bodyClone = null,
 		prefix = prcPrefix();
 		
 	function Module() {
@@ -41,26 +41,25 @@ function Framlin(win){
 				
 				if (typeof config.server !== 'undefined') {
 					server = config.server;
-					clone = window.$("html").clone();
+					bodyClone = window.$("body").clone();
 
 				}
 				client = !server;
 			}
 			$ = window.$;
 		} catch(e) {
-			logger.log('info',e);
+			logger.log('error', e);
 		}
 	};
 	
 	Module.prototype.reset = function reset() {
-		var new_clone = clone.clone();
-		window.$("html").replaceWith(clone);
-		clone = new_clone;
+		var newBodyClone = bodyClone.clone();
+		window.$("body").replaceWith(bodyClone);
+		bodyClone = newBodyClone;
 	};
 
 
 	Module.prototype.hideElem = function hideElem(elem, time) {
-		logger.log('info',['hideElem', elem, time]);
 		if (client) {
 			elem.fadeOut(time);			
 		} else {
@@ -69,7 +68,6 @@ function Framlin(win){
 	};
 
 	Module.prototype.showElem = function showElem(elem, time) {
-		logger.log('info',['showElem', elem, time]);
 		if (client) {
 			elem.fadeIn(time);			
 		} else {
@@ -78,12 +76,10 @@ function Framlin(win){
 	};
 
 	Module.prototype.hideArticle = function hideArticle(id) {
-		logger.log('info','hideArticle', id);
 		$(id).fadeOut(20);
 	};
 
 	Module.prototype.hideArticles = function hideArticles() {
-		logger.log('info', ['hideArticles', this.initialized]);
 		this.hideElem($('section'), 20);
 		if (!this.initialized) {
 			this.showElem($('#sec_home'), 20);
@@ -91,7 +87,6 @@ function Framlin(win){
 	};
 
 	Module.prototype.showSection = function showSection(id, time) {
-		logger.log('info',['showSection', id, time]);
 		this.hideArticles();
 		this.showElem($(id), time||20);
 		this.currentSection = id;
@@ -99,7 +94,6 @@ function Framlin(win){
 
 	Module.prototype.showHeader = function showHeader(id) {
 		this.hideArticle(this.currentSection);
-		logger.log('info','showHeader', id);
 		var teaser = $('#teaser'),
 		clone = $(id + ' header').clone();
 		var more = $('<p>klick to read more ...</p>');
@@ -112,13 +106,11 @@ function Framlin(win){
 	};
 
 	Module.prototype.hideHeader = function hideHeader(id) {
-		logger.log('info','hideHeader', id);
 		this.hideElem($('#teaser'), 20);
         $('#teaser header').remove();
 	};
 	
 	Module.prototype.navigationClicked = function navigationClicked(target, time) {
-		logger.log('info', ['navigation clicked', target, time])
 		if (client) {
 	        this.hideHeader(target);
 		}
@@ -191,7 +183,6 @@ function Framlin(win){
 	};
 	
 	Module.prototype.stylePage = function stylePage() {
-		logger.log('info', 'stylePage');
 		this.showContent();
 		this.hideArticles();
 		this.initialized = true;

@@ -24,7 +24,7 @@ server.listen(8080);
 //--------- server-side rendering ----------------------------------
 
 function requestHandler(id) {
-	winston.log('info', ['REQUEST ', id]);	
+	winston.log('info', ['REQUEST ', new Date(), id]);	
 	this.res.writeHead(200, { 'Content-Type': 'text/html' });
 	this.res.end(Framlin.render(id));
 }
