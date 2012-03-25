@@ -38,7 +38,29 @@ function Framlin(win){
 			console.log(e);
 		}
 	};
+	
+	Module.prototype.reset = function reset() {
+		var new_clone = clone.clone();
+		window.$("html").replaceWith(clone);
+		clone = new_clone;
+	};
 
+
+	Module.prototype.hideElem = function hideElem(elem, time) {
+		if (client) {
+			elem.fadeIn(20);			
+		} else {
+			elem.addClass('hidden');
+		}		
+	};
+
+	Module.prototype.showElem = function showElem(elem, time) {
+		if (client) {
+			elem.fadeOut(20);			
+		} else {
+			elem.removeClass('hidden');
+		}		
+	};
 
 	Module.prototype.hideArticle = function hideArticle(id) {
 		console.log('hideArticle', id);
@@ -76,16 +98,20 @@ function Framlin(win){
 
 	Module.prototype.hideHeader = function hideHeader(id) {
 		console.log('hideHeader', id);
-		$('#teaser').fadeOut(20);
+		this.hideElem($('#teaser'), 20);
         $('#teaser header').remove();
+	};
+	
+	Module.prototype.navigationClicked = function navigationClicked(target, time) {
+        this.hideHeader(target);
+		this.showSection(target, time);
 	};
 
 	Module.prototype.activateNavigation = function activateNavigation() {
 		var me = this;
 		$('nav a').click(function onClickA(){
 			var target = '#sec_' + $(this).attr('href').substring(1);
-            me.hideHeader(target);
-			me.showSection(target, 400);
+			me.navigationClicked(target, 400);
 		});
 
 		$('nav a').hover(
@@ -147,13 +173,17 @@ function Framlin(win){
 	};
 	
 	Module.prototype.stylePage = function stylePage() {
+		logger.log('info', 'stylePage');
 		this.showContent();
 		this.hideArticles();
 		this.initialized = true;
 	};
 
 	Module.prototype.render = function render(id) {
-		return '<html>' + $('html').html() + '</html>';
+		//this.navigationClicked('#'+id, 0);
+		var result =  '<html>'+window.$("html").html()+'</html>';
+		this.reset();
+		return result;
 	};
 	// ###############################
 	return new Module();
