@@ -44,7 +44,7 @@ router.get('/:id', function (id) {
 	     				logger: winston,
 	     				server: true
 	     			});
-	     			//Framlin.stylePage();
+	     			Framlin.stylePage();
 	     			requestHandler.call(me, id);
 	     	 	}
 	     	 );

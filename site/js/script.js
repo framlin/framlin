@@ -3,8 +3,8 @@
 function Framlin(win){
 	var $ = null,
 		window = win,
-		logger = console
-		server = false
+		logger = console,
+		server = false,
 		client = true,
 		clone = null;
 		
@@ -35,7 +35,7 @@ function Framlin(win){
 			}
 			$ = window.$;
 		} catch(e) {
-			console.log(e);
+			logger.log('info',e);
 		}
 	};
 	
@@ -47,6 +47,7 @@ function Framlin(win){
 
 
 	Module.prototype.hideElem = function hideElem(elem, time) {
+		logger.log('info',['hideElem', elem, time]);
 		if (client) {
 			elem.fadeOut(time);			
 		} else {
@@ -55,6 +56,7 @@ function Framlin(win){
 	};
 
 	Module.prototype.showElem = function showElem(elem, time) {
+		logger.log('info',['showElem', elem, time]);
 		if (client) {
 			elem.fadeIn(time);			
 		} else {
@@ -63,12 +65,12 @@ function Framlin(win){
 	};
 
 	Module.prototype.hideArticle = function hideArticle(id) {
-		console.log('hideArticle', id);
+		logger.log('info','hideArticle', id);
 		$(id).fadeOut(20);
 	};
 
 	Module.prototype.hideArticles = function hideArticles() {
-		logger.log('info', 'hideArticles');
+		logger.log('info', ['hideArticles', this.initialized]);
 		this.hideElem($('section'), 20);
 		if (!this.initialized) {
 			this.showElem($('#sec_home'), 20);
@@ -76,7 +78,7 @@ function Framlin(win){
 	};
 
 	Module.prototype.showSection = function showSection(id, time) {
-		console.log('showSection', id);
+		logger.log('info',['showSection', id, time]);
 		this.hideArticles();
 		this.showElem($(id), time||20);
 		this.currentSection = id;
@@ -84,7 +86,7 @@ function Framlin(win){
 
 	Module.prototype.showHeader = function showHeader(id) {
 		this.hideArticle(this.currentSection);
-		console.log('showHeader', id);
+		logger.log('info','showHeader', id);
 		var teaser = $('#teaser'),
 		clone = $(id + ' header').clone();
 		var more = $('<p>klick to read more ...</p>');
@@ -97,13 +99,16 @@ function Framlin(win){
 	};
 
 	Module.prototype.hideHeader = function hideHeader(id) {
-		console.log('hideHeader', id);
+		logger.log('info','hideHeader', id);
 		this.hideElem($('#teaser'), 20);
         $('#teaser header').remove();
 	};
 	
 	Module.prototype.navigationClicked = function navigationClicked(target, time) {
-        this.hideHeader(target);
+		logger.log('info', ['navigation clicked', target, time])
+		if (client) {
+	        this.hideHeader(target);
+		}
 		this.showSection(target, time);
 	};
 
@@ -180,7 +185,7 @@ function Framlin(win){
 	};
 
 	Module.prototype.render = function render(id) {
-		//this.navigationClicked('#'+id, 0);
+		this.navigationClicked('#sec_'+id, 0);
 		var result =  '<html>'+window.$("html").html()+'</html>';
 		this.reset();
 		return result;
