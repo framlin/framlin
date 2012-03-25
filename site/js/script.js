@@ -1,16 +1,42 @@
 /* Author: Wolfgang Egger
  */
-var Framlin = (function(window){
-	var $ = null;
-	
+function Framlin(win){
+	var $ = null,
+		window = win,
+		logger = console
+		server = false
+		client = true,
+		clone = null;
+		
 	function Module() {
 		this.initialized = false;
 		this.currentSection = '#sec_home';
 		this.cameIn = false;
 	}
 	
-	Module.prototype.init = function init() {
-		$ = window.$;
+	Module.prototype.init = function init(config) {
+		try {
+			if (typeof config !== 'undefined') {
+				if (typeof config.logger !== 'undefined') {
+					logger = config.logger;
+				}
+				
+				logger.log('info', 'INIT');
+				if (typeof config.win !== 'undefined') {
+					window = config.win;
+				}
+				
+				if (typeof config.server !== 'undefined') {
+					server = config.server;
+					clone = window.$("html").clone();
+
+				}
+				client = !server;
+			}
+			$ = window.$;
+		} catch(e) {
+			console.log(e);
+		}
 	};
 
 
@@ -126,12 +152,15 @@ var Framlin = (function(window){
 		this.initialized = true;
 	};
 
+	Module.prototype.render = function render(id) {
+		return '<html>' + $('html').html() + '</html>';
+	};
 	// ###############################
 	return new Module();
 
-});
+};
 
-if (jQuery) {
+if (typeof jQuery !== 'undefined') {
 	jQuery(function() {
 		var framlin = Framlin(window);
 		framlin.init();
@@ -140,4 +169,4 @@ if (jQuery) {
 	});	
 }
 
-exports = Framlin;
+exports.Framlin = Framlin;

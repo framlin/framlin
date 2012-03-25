@@ -1,8 +1,10 @@
 var union = require('union'),
     director = require('director'),
-    winston = require('winston');//,
-    //framlin = require('../_attachments/js/script.js');
-
+    winston = require('winston'),
+    framlin = require('../site/js/script.js').Framlin,
+    window = null,
+    jsdom = require("jsdom"),
+    Framlin = framlin();
 
 var router = new director.http.Router().configure({ async: true });
 
@@ -18,15 +20,38 @@ var server = union.createServer({
 });
 server.listen(8080);
 
-//router.get('/:id', function (id) {
-//	var jsdom = require("jsdom");
-//	var me = this;
-//	jsdom.env("http://localhost:8080/", [
-//	  'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'
-//	],
-//	function(errors, window) {
-//		me.res.writeHead(200, { 'Content-Type': 'text/plain' });
-//		me.res.end("there have been " + window.$("a").length + " nodejs releases!\n");
-//		console.log("there have been", window.$("a").length, "nodejs releases!\n");
-//	});
-//});
+
+//--------- server-side rendering ----------------------------------
+
+function requestHandler(id) {
+	winston.log('info', ['REQUEST ', id]);	
+	this.res.writeHead(200, { 'Content-Type': 'text/html' });
+	this.res.end(Framlin.render(id));
+}
+
+
+router.get('/:id', function (id) {
+	var me = this;
+	if ( id !== 'favicon.ico') {
+		if (!window) {
+			jsdom.env("http://localhost:8080/", [
+	     	 	'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js',
+	     	 	],
+	     	 	function(errors, win) {
+	     			window = win;
+	     			Framlin.init({
+	     				win: window,
+	     				logger: winston,
+	     				server: true
+	     			});
+	     			//Framlin.stylePage();
+	     			requestHandler.call(me, id);
+	     	 	}
+	     	 );
+		} else {
+			requestHandler.call(me, id);
+		}
+	} else {
+		//handle favicon
+	}
+});
