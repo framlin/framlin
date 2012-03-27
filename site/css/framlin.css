@@ -252,6 +252,10 @@ section header h1{
 section a{
 	color: red;
 }
+
+section footer{
+	text-align: right;
+}
 /*
 footer{
 	background-color: #ffffde;
