@@ -73,7 +73,7 @@ header h1{
 #content{
 	margin-top: .5em;
 	margin-right: 0em;
-	margin-left: 32em;
+	margin-left: 32.2em;
 }
 
 article{
@@ -83,7 +83,7 @@ article{
 #bottomteaser {
 	background-color:#ffffde; 
 	width: 31em;
-	margin: 0em .5em 0.1em .5em;
+	margin: 0em .5em 0.2em .5em;
 }
 
 #bottomteaser table{
@@ -229,7 +229,7 @@ nav{
 }
 
 section{
-	padding: 1em;
+	padding: .5em;
 	border-top: solid white 1px;
 	border-left: solid white 1px;
 }
