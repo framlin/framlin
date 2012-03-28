@@ -206,6 +206,7 @@ if (typeof jQuery !== 'undefined') {
 		framlin.stylePage();
 		framlin.activatePage();
 	});	
+} else {
+    exports.Framlin = Framlin;    
 }
 
-exports.Framlin = Framlin;
