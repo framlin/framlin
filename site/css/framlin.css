@@ -39,8 +39,8 @@ header h1{
 }
 
 #contact{
-	margin-left:36em;
-	margin-right: 1em;
+	margin-left:35em;
+	margin-right: .5em;
 	text-align: right;
 	font-size: 0.8em;
 }
@@ -55,11 +55,14 @@ header h1{
 }
 
 
-#heading, #main{
+#heading{
 	max-width: 70em;
 }
 
 #main{
+	max-width: 71em;
+	margin-right: 0em;
+	padding-right: 0em;
 	position: 'relative';
 }
 
@@ -68,8 +71,9 @@ header h1{
 }
 
 #content{
-	margin-top: 1em;
-	margin-left: 35em;
+	margin-top: .5em;
+	margin-right: 0em;
+	margin-left: 32.2em;
 }
 
 article{
@@ -78,20 +82,28 @@ article{
 /* ................................. */
 #bottomteaser {
 	background-color:#ffffde; 
-	width: 33em;
-	margin: 0em 1em 0.1em 1em;
+	width: 31em;
+	margin: 0em .5em 0.2em .5em;
 }
 
 #bottomteaser table{
 	background-color:#ffffde; 
-	width: 33em;
-	margin: 1em;
+	width: 31em;
+	margin: 0em .5em 1em .5em;
 }
 
 #topteaser{
 	background-color:#ffffde; 
-	width: 33em;
-	margin: 0em 1em 1em 1em;
+	width: 31em;
+	margin: 0em .5em .5em .5em;
+}
+
+#topteaser a {
+	color:orange;
+}
+
+#topteaser .strong a {
+	color:yellow;
 }
 
 #bottomteaser table, td, th{
@@ -139,13 +151,6 @@ nav{
 	height:  95px;
 }
 
-#topteaser a {
-	color:orange;
-}
-
-#topteaser .strong a {
-	color:yellow;
-}
 
 #exp_row {
 	position: relative; 
@@ -189,7 +194,7 @@ nav{
 }
 
 #competent, #productive{
-	padding-left:30px;
+	padding-left:20px;
 }
 
 #implementation{
@@ -224,7 +229,7 @@ nav{
 }
 
 section{
-	padding: 1em;
+	padding: .5em;
 	border-top: solid white 1px;
 	border-left: solid white 1px;
 }
@@ -254,7 +259,6 @@ section header h1{
 	font-size: 1.3em;
 }
 
-	
 section a{
 	color: red;
 }
@@ -277,7 +281,7 @@ footer nav{
 
 
 #metanav {
-	margin-left: 1em;	
+	margin-left: .5em;	
 }
 
 #metanav, #metanav nav{
@@ -290,7 +294,7 @@ footer nav{
 
 #metanav nav a, #metanav nav a:visited{
 	background-color:#ffefbf;
-	color: orange;
+	color: maroon;
 	font-size: small;
 }
 

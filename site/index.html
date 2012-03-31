@@ -1,3 +1,4 @@
+
 <!doctype html>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
@@ -218,7 +219,7 @@
 					<p>Programmieren ist der handwerkliche Teil der
 						Softwarenetwicklung. Die praktischen Erfahrungen, die ich dabei
 						gewinne, sind zudem unverzichtbar, um in den eher theoretischen
-						Phasen der Softwareentwicklung - Analyse und Design - gute
+						Phasen - Analyse und Design - gute
 						Ergebnisse zu erziehlen.</p>
 					<footer> Preis: 65€/h - 480€/Tag (8h) </footer>
 				</section>
@@ -230,12 +231,12 @@
 						Meine Lieblingsprogrammiersprache ist JavaScript
 					</header>
 					<p>Ich entwickle seit 6 Jahren Enterprise WebApplikationen
-						(RIA/FAT-Client). Zunächst mit XUL als Auszeichnungssprache, seit
-						einem halbenJahr mit ExtJS. Neben der Nutzerführung und der
-						Serverkommunikation ist auch ein beträchtlicher Teil der
-						Geschäftslogik in JavaScript implementiert. Im Verlauf dieses
-						Projektes konnte ich nachhaltige tiefgründige Erfahrungen mit
-						JavaScript in den Bereichen:
+						(RIA/FAT-Client) mit JavaScript. Zunächst mit XUL als
+						Auszeichnungssprache, seit einem halbenJahr mit ExtJS.</p>
+					<p>Neben der Nutzerführung und der Serverkommunikation ist auch
+						ein beträchtlicher Teil der Geschäftslogik in JavaScript
+						implementiert. Im Verlauf dieses Projektes konnte ich nachhaltige
+						und tiefgründige Erfahrungen in den Bereichen:
 					<ul>
 						<li>Objektorientierung (prototypenbasiert)</li>
 						<li>funktionale Programmierung (Closures)</li>
@@ -248,7 +249,7 @@
 						statischer Typisierung programmiert hatte, stand ich JavaScript
 						anfangs sehr skeptisch gegenüber. Ich teilte das allgemeine
 						Voruteil, das diese Sprache lediglich dazu nützlich sein könnte,
-						Webseite optisch "aufzumotzen"</p>
+						Webseiten optisch "aufzumotzen"</p>
 					<p>Sechs Jahre täglicher Einsatz als
 						Anwendungsprogrammiersprache für Enterprise Applikationen haben
 						mich eines besseren belehrt. JavaScript besticht durch eine
@@ -373,7 +374,7 @@
 				<section class='hidden' id='sec_impressum'>
 					<header>
 						<h1>
-							<a id='#impressum'>Haftungsauschluss</a>
+							<a id='#impressum'>Impressum</a>
 						</h1>
 						Impressum gem. § 6 Teledienstgesetz
 					</header>
@@ -402,8 +403,15 @@
 	<!-- JavaScript at the bottom for fast page loading -->
 	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline  -->
 
-	<script src="js/libs/jquery-1.7.1.min.js"></script>
-	<!-- script>
+	<script
+		src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script>
+		window.jQuery
+				|| document
+						.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')
+	</script>
+	<!-- script src="js/libs/jquery-1.7.1.min.js"></script>
+	<script>
 		window.jQuery
 				|| document
 						.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')

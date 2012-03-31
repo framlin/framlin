@@ -102,10 +102,13 @@ function Framlin(win){
 		var me = this,
 			teaser = $('#teaser'),
 			clone = $(id + ' header').clone(),
-			link = $("<a href='" + href + "'>Auf " + text + " klicken, um  mehr zu lesen ...</a>"),
+			link = $("<a href='" + href + "'>Auf " + text + " klicken, oder </a>"),
+			timeLeft = 9,
+			timer = $('<em/>').text(timeLeft),
 			more = $("<p/>");
 		
-		
+		link.append(timer);
+		timer.append('<em> Sekunden warten, um  mehr zu lesen ...</em>');
 		link.click(function onClickA(){
 			var target = '#sec_' + $(this).attr('href').substring(1);
 			me.navigationClicked(target, 400);
@@ -118,6 +121,14 @@ function Framlin(win){
 			teaser.fadeIn(400);
     		me.currentSection = id;
 		}, 100);
+		
+		var counter = window.setInterval(function setTimer(){
+			timer.text(--timeLeft).append('<em> Sekunden warten, um  mehr zu lesen ...</em>')
+			if (!timeLeft) {
+				window.clearInterval(counter);
+				link.click();
+			}
+		}, 1000);
 	};
 
 	Module.prototype.hideHeader = function hideHeader(id) {
