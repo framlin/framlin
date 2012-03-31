@@ -138,9 +138,12 @@ function Framlin(win){
 	
 	Module.prototype.navigationClicked = function navigationClicked(target, time) {
 		if (client) {
-	        this.hideHeader(target);
+	        this.hideHeader(target);    
 		}
 		this.showSection(target, time);
+		if (client) {
+			$('html, body').animate({scrollTop:0}, 'slow');
+		}
 	};
 
 	Module.prototype.activateNavigation = function activateNavigation() {
