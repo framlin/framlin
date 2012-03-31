@@ -23,6 +23,7 @@ function Framlin(win){
 		this.initialized = false;
 		this.currentSection = '#sec_home';
 		this.cameIn = false;
+		this.headerDisplayed = false;
 	};
 	
 
@@ -92,16 +93,30 @@ function Framlin(win){
 		this.currentSection = id;
 	};
 
-	Module.prototype.showHeader = function showHeader(id) {
+	Module.prototype.showHeader = function showHeader(id, href, text) {
+		if (text === '') {
+			text = 'das Logo';
+		}
+		
 		this.hideArticle(this.currentSection);
-		var teaser = $('#teaser'),
-		clone = $(id + ' header').clone();
-		var more = $('<p>klick to read more ...</p>');
+		var me = this,
+			teaser = $('#teaser'),
+			clone = $(id + ' header').clone(),
+			link = $("<a href='" + href + "'>Auf " + text + " klicken, um  mehr zu lesen ...</a>"),
+			more = $("<p/>");
+		
+		
+		link.click(function onClickA(){
+			var target = '#sec_' + $(this).attr('href').substring(1);
+			me.navigationClicked(target, 400);
+		});
+		more.wrapInner(link);
 		more.addClass('more');
 		clone.append(more);
 		teaser.wrapInner(clone);
 		window.setTimeout(function fadeIn() {
 			teaser.fadeIn(400);
+    		me.currentSection = id;
 		}, 100);
 	};
 
@@ -128,22 +143,27 @@ function Framlin(win){
             function onInA(){
                 me.cameIn = true;
                 var currElem = $(this);
+
                 window.setTimeout(function (){
+                	var href = currElem.attr('href');
                     var target = '#sec_' + currElem.attr('href').substring(1);
                     if ((me.cameIn) && (target !== me.currentSection)) {
-                        me.showHeader(target);
+                    	if(me.headerDisplayed) {
+                          me.hideHeader(target);
+                    	}
+                        me.showHeader(target, href, currElem.text());
                         me.cameIn = false;
-
+                        me.headerDisplayed = true;
                     }
                 }, 200); 
             }, function onOutA(){
-                var target = '#sec_' + $(this).attr('href').substring(1);
-                if ((!me.cameIn) && (target !== me.currentSection)) {
-                    me.hideHeader(target);
-                    window.setTimeout(function showSection() {
-                        me.showSection(me.currentSection, 400);
-                    }, 100);
-                }
+//                var target = '#sec_' + $(this).attr('href').substring(1);
+//                if ((!me.cameIn) && (target !== me.currentSection)) {
+//                    me.hideHeader(target);
+//                    window.setTimeout(function showSection() {
+//                        me.showSection(me.currentSection, 400);
+//                    }, 100);
+//                }
                 me.cameIn = false;
             });
 

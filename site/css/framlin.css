@@ -239,6 +239,11 @@ section header{
 		
 }
 
+section header a, section header a:visited {
+	color: orange;
+	text-decoration: none;
+}
+
 section header h1{
 	background-color:#ffffde;
 	padding-bottom: 5px;
@@ -249,6 +254,7 @@ section header h1{
 	font-size: 1.3em;
 }
 
+	
 section a{
 	color: red;
 }
