@@ -10,12 +10,12 @@ var router = new director.http.Router().configure({ async: true });
 
 var server = union.createServer({
 	before: [
-		function (req, res) {
-			if (!router.dispatch(req, res)) {
-				res.emit('next');
-			}
-		},
-		require('ecstatic')(__dirname  + '/../site')
+	         function (req, res) {
+	        	 if (!router.dispatch(req, res)) {
+	        		 res.emit('next');
+	        	 }
+	         },
+	         require('ecstatic')(__dirname  + '/../site')
 	]
 });
 server.listen(8080);

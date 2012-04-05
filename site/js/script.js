@@ -171,13 +171,6 @@ function Framlin(win){
                     }
                 }, 200); 
             }, function onOutA(){
-//                var target = '#sec_' + $(this).attr('href').substring(1);
-//                if ((!me.cameIn) && (target !== me.currentSection)) {
-//                    me.hideHeader(target);
-//                    window.setTimeout(function showSection() {
-//                        me.showSection(me.currentSection, 400);
-//                    }, 100);
-//                }
                 me.cameIn = false;
             });
 
