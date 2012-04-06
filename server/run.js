@@ -12,7 +12,7 @@ function getIP(req) {
 	return {
 		ip: ( req.headers["X-Forwarded-For"]
 		|| req.headers["x-forwarded-for"]
-		|| req.connection.remoteAddress )
+		|| (typeof req.connection !== 'undefined' ? req.connection.remoteAddress : 'n.a') )
 	};
 };
 
