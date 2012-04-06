@@ -12,7 +12,7 @@ function getIP(req) {
 	return {
 		ip: ( req.headers["X-Forwarded-For"]
 		|| req.headers["x-forwarded-for"]
-		|| req.connection.remoteAddress )
+		|| (typeof req.connection !== 'undefined' ? req.connection.remoteAddress : 'n.a.' ))
 	};
 };
 
@@ -20,11 +20,11 @@ function getIP(req) {
 var router = new director.http.Router().configure({ async: true });
 
 var server = union.createServer({
-	before: [
+	before: [ 
 	         function (req, res) {
 	      	   winston.log('info', new Date() + ' :: ' + getIP(req).ip + ' :: ' + url.parse(req.url).pathname);
 	      	   res.emit('next');
-	         },
+	         }, 
 	         function (req, res) {
 	        	 if (!router.dispatch(req, res)) {
 	        		 res.emit('next');
