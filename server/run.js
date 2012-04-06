@@ -1,4 +1,5 @@
 var union = require('union'),
+	url = require('url'),
     director = require('director'),
     winston = require('winston'),
     framlin = require('../site/js/script.js').Framlin,
@@ -10,6 +11,10 @@ var router = new director.http.Router().configure({ async: true });
 
 var server = union.createServer({
 	before: [
+	         function (req, res) {
+	      	   winston.log('info', new Date() + ' :: ' + req.connection.remoteAddress + ' :: ' + url.parse(req.url).pathname);
+	      	   res.emit('next');
+	         },
 	         function (req, res) {
 	        	 if (!router.dispatch(req, res)) {
 	        		 res.emit('next');
@@ -24,7 +29,7 @@ server.listen(8080);
 //--------- server-side rendering ----------------------------------
 
 function requestHandler(id) {
-	winston.log('info', ['REQUEST ', new Date(), id]);	
+	//winston.log('info', ['REQUEST ', new Date(), id]);	
 	this.res.writeHead(200, { 'Content-Type': 'text/html' });
 	this.res.end(Framlin.render(id));
 }
