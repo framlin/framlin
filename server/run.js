@@ -7,12 +7,22 @@ var union = require('union'),
     jsdom = require("jsdom"),
     Framlin = framlin();
 
+
+function getIP(req) {
+	return {
+		ip: ( req.headers["X-Forwarded-For"]
+		|| req.headers["x-forwarded-for"]
+		|| req.connection.remoteAddress )
+	};
+};
+
+
 var router = new director.http.Router().configure({ async: true });
 
 var server = union.createServer({
 	before: [
 	         function (req, res) {
-	      	   winston.log('info', new Date() + ' :: ' + req.connection.remoteAddress + ' :: ' + url.parse(req.url).pathname);
+	      	   winston.log('info', new Date() + ' :: ' + getIP(req).ip + ' :: ' + url.parse(req.url).pathname);
 	      	   res.emit('next');
 	         },
 	         function (req, res) {
