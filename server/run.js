@@ -5,6 +5,8 @@ var union = require('union'),
     framlin = require('../site/js/script.js').Framlin,
     window = null,
     jsdom = require("jsdom"),
+    couchdb = require('nano')('http://localhost:5984'),
+    logDB = couchdb.use('framlin'), 
     Framlin = framlin();
 
 
@@ -14,17 +16,31 @@ function getIP(req) {
 		|| req.headers["x-forwarded-for"]
 		|| (typeof req.connection !== 'undefined' ? req.connection.remoteAddress : 'n.a.' ))
 	};
-};
+}
+
+function logRequest(req, res) {
+	logDB.insert({
+		type: "requestLog",
+		date: new Date(),
+		ip: getIP(req).ip,
+		url: url.parse(req.url).pathname
+	}, function(e,b,h){
+		if(e) { throw e; }
+	});
+	res.emit('next');
+}
+
+
+
 
 
 var router = new director.http.Router().configure({ async: true });
 
 var server = union.createServer({
 	before: [ 
-	         function (req, res) {
-	      	   winston.log('info', new Date() + ' :: ' + getIP(req).ip + ' :: ' + url.parse(req.url).pathname);
-	      	   res.emit('next');
-	         }, 
+//	         function (req, res) {
+//	         }, 
+			 logRequest,
 	         function (req, res) {
 	        	 if (!router.dispatch(req, res)) {
 	        		 res.emit('next');
