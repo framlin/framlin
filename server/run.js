@@ -5,10 +5,9 @@ var union = require('union'),
     framlin = require('../site/js/script.js').Framlin,
     window = null,
     jsdom = require("jsdom"),
-    couchdb = require('nano')('http://localhost:5984'),
-    logDB = couchdb.use('framlin'), 
+    //couchdb = require('nano')('http://localhost:5984'),
+    //logDB = couchdb.use('framlin'),
     Framlin = framlin();
-
 
 function getIP(req) {
 	return {
@@ -30,17 +29,13 @@ function logRequest(req, res) {
 	res.emit('next');
 }
 
-
-
-
-
 var router = new director.http.Router().configure({ async: true });
 
 var server = union.createServer({
 	before: [ 
 //	         function (req, res) {
 //	         }, 
-			 logRequest,
+//			 logRequest,
 	         function (req, res) {
 	        	 if (!router.dispatch(req, res)) {
 	        		 res.emit('next');
@@ -51,22 +46,19 @@ var server = union.createServer({
 });
 server.listen(8080);
 
-
 //--------- server-side rendering ----------------------------------
-
 function requestHandler(id) {
 	//winston.log('info', ['REQUEST ', new Date(), id]);	
 	this.res.writeHead(200, { 'Content-Type': 'text/html' });
 	this.res.end(Framlin.render(id));
 }
 
-
 router.get('/:id', function (id) {
 	var me = this;
 	if ( id !== 'favicon.ico') {
 		if (!window) {
 			jsdom.env("http://localhost:8080/", [
-	     	 	'js/libs/jquery-1.7.1.min.js',
+	     	 	'js/libs/jquery-1.7.1.min.js'
 	     	 	],
 	     	 	function(errors, win) {
 	     			window = win;

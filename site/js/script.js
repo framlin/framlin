@@ -169,7 +169,7 @@ function Framlin(win){
                         me.cameIn = false;
                         me.headerDisplayed = true;
                     }
-                }, 200); 
+                }, 200);
             }, function onOutA(){
                 me.cameIn = false;
             });

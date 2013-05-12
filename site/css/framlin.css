@@ -1,5 +1,7 @@
 body, footer nav{
 	background-color:#ffefbf;
+    background-image: url("../images/lake-baker-like-2400x14nn.jpg");
+    overflow: scroll;
 }
 /* ------  header -------- */
 #logo {
@@ -39,14 +41,9 @@ header h1{
 }
 
 #contact{
-	margin-left:35em;
-	margin-right: .5em;
-	text-align: right;
-	font-size: 0.8em;
-}
-
-#contact p{
-	margin: 0;
+    margin: 0 auto;
+	font-size: 0.6em;
+    text-align: center;
 }
 
 #contact span{
@@ -56,24 +53,21 @@ header h1{
 
 
 #heading{
-	max-width: 70em;
+    margin: 0 auto;
+	max-width: 30em;
 }
 
 #main{
-	max-width: 71em;
-	margin-right: 0em;
-	padding-right: 0em;
-	position: 'relative';
+    margin: 0 auto;
+	max-width: 31em;
 }
 
 #navigation{
-		float: left;
+/*		float: left;*/
 }
 
 #content{
-	margin-top: .5em;
-	margin-right: 0em;
-	margin-left: 32.2em;
+margin: 0.5em 0;
 }
 
 article{
@@ -83,19 +77,16 @@ article{
 #bottomteaser {
 	background-color:#ffffde; 
 	width: 31em;
-	margin: 0em .5em 0.2em .5em;
 }
 
 #bottomteaser table{
 	background-color:#ffffde; 
 	width: 31em;
-	margin: 0em .5em 1em .5em;
 }
 
 #topteaser{
 	background-color:#ffffde; 
 	width: 31em;
-	margin: 0em .5em .5em .5em;
 }
 
 #topteaser a {
@@ -290,9 +281,6 @@ footer nav{
 }
 
 
-#metanav {
-	margin-left: .5em;	
-}
 
 #metanav, #metanav nav{
 	background-color:#ffefbf;
