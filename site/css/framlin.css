@@ -1,6 +1,7 @@
 body, footer nav{
-	background-color:#ffefbf;
+	background-color:#ee6d34;
     background-image: url("../images/lake-baker-like-2400x14nn.jpg");
+    background-repeat: no-repeat;
     overflow: scroll;
 }
 /* ------  header -------- */
