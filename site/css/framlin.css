@@ -1,358 +1,122 @@
-body, footer nav{
+html{
 	background-color:#ee6d34;
     background-image: url("../images/lake-baker-like-2400x14nn.jpg");
     background-repeat: no-repeat;
     overflow: scroll;
 }
+
+body {
+    padding-top: 5px;
+}
+
 /* ------  header -------- */
 #logo {
-	float:left;
-	margin: 15px 15px 0px 10px
+    float:left;
+    margin: 5px;
 }
 
 header {
-	background-color:#ffffde;
-	padding: 0px 10px 5px 10px;
-	border-bottom-style: solid;
-	border-bottom-color: orange;	
-	border-bottom-width: 2px;	
-}
-
-header span{
-	font-size: 1.2em;
-	font-weight: bold;
-	font-family: monospace;
-}
-
-header h1{
-	font-size: 1.5em;
-	margin-top: 13px;
-	margin-left: 1em;
-	margin-bottom: 0;
-}
-
-#heading div nav{
-	background-color:#ffffde;
-	height: 0px;
-}
-
-#slogan{
-	margin-top: 5px;
-	float:left;
-}
-
-#contact{
-    margin: 0 auto;
-	font-size: 0.6em;
-    text-align: center;
-}
-
-#contact span{
-	font-weight: bold;
-	margin-right: 20px;
+    background-color:#ffffde;
+    padding: 10px 10px 5px 10px;
+    border-bottom-style: solid;
+    border-bottom-color: orange;
+    border-bottom-width: 2px;
 }
 
 
 #heading{
     margin: 0 auto;
-	max-width: 30em;
+    max-width: 32em;
+}
+
+#slogan{
+    margin-top: 5px;
+}
+
+
+
+
+#slogan span{
+    display: block;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: monospace;
+    width: 100%;
+    text-align: center;
+}
+
+
+#slogan #firma{
+    font-size: 1.4em;
+    margin-bottom: 0.2em;
+}
+
+#slogan #contact{
+    margin-top: 0.4em;
+    font-size: xx-small;
 }
 
 #main{
     margin: 0 auto;
-	max-width: 31em;
+    max-width: 32em;
 }
 
+/* ------  navigation -------- */
+#topnav{
+    padding: 5px;
+}
 #navigation{
-/*		float: left;*/
+    margin-top: 5px;
+    width: 100%;
+    background-color: #550000;
 }
-
-#content{
-margin: 0.5em 0;
-}
-
-article{
-	background-color:#ffffde;
-}
-/* ................................. */
-#bottomteaser {
-	background-color:#ffffde; 
-	width: 31em;
-}
-
-#bottomteaser table{
-	background-color:#ffffde; 
-	width: 31em;
-}
-
-#topteaser{
-	background-color:#ffffde; 
-	width: 31em;
-}
-
-#topteaser a {
-	color:orange;
-}
-
-#topteaser .strong a {
-	color:yellow;
-}
-
-#bottomteaser table, td, th{
-	margin: 0;
-	border-style: none;
-	text-align: left;
-	font-size: small;
-}
-
-
-#bottomteaser td, th{
-	padding: 2px 10px 2px 5px;
-}
-
-
-#topteaser > span{
-	padding: 5px;
-}
-
-nav{
-	background-color: black;
-	color: orange;
-	padding: 5px;
-}
-
-#bottomteaser nav{
-	background-color:#ffffde; 
-	color: black;
-}
-
-#bottomteaser nav a{
-	color: maroon;
-}
-
 
 .col1{
-	float:left;
+    width: 20%;
+    float: left;
+    color: #ffff99;
 }
-.col1 span{
-	color: #ffffde;
-}
+
 .col2{
-	margin-left: 7em;
-	padding-left: 10px;
-	border-left-style: dotted;
-	border-left-width: 1px;
-	border-left-color: yellow;
-}
-.strong, .strong a {
-	color:yellow;
-}
-
-#experienced {
-	position: relative; 
-	height:  95px;
+    width: 80%;
+    margin-left: 20%;
 }
 
 
-#exp_row {
-	position: relative; 
+#analysis, #uml, #design{
+    width: 33%;
+    float: left;
 }
 
-#exp_label{
-	position: absolute;
-	top: 50px;
+#analysis, #implementation, #design{
+    background-color: #ffefbf;
+}
+#analysis #analysis-inner{
+    margin: 2px;
+    text-align: left;
 }
 
-#cpp, #delphi, #java, #js, #t1993, #t1997, #t2000, #t2006 {
-	position: absolute;
+#uml{
+    width: 34%;
+    text-align: center;
+    background-color: #ffcc99;
+}
+#design #design-inner{
+    margin: 2px;
+    text-align: right;
+}
+#competent_row2, #experienced{
+    width:100%;
+    text-align: center;
+    clear: left;
 }
 
-#cpp, #delphi, #java, #js{
-	top: 35px;
-}
-#t1993, #t1997, #t2000, #t2006 {
-	top: 60px;
+#cpp, #delphi, #java, #javascript{
+    width:25%;
+    float:left;
 }
 
-#cpp, #t1993{
-	left: 20px;
-}
-
-#delphi, #t1997 {
-	left: 104px;
-}
-
-#java, #t2000 {
-	left: 190px;
-}
-
-#js, #t2006 {
-	left: 270px;
-}
-
-
-#competent div, #implementation div, #productive div, #innovative div{
-	display:inline;
-}
-
-#competent, #productive{
-	padding-left:20px;
-}
-
-#implementation{
-	padding-left:130px;
-}
-
-#competent .spacer{
-	margin-left:85px;
-	margin-right:85px;
-}
-
-#productive .spacer {
-	margin-left:40px;
-	margin-right:40px;
-}
-
-#productive .spacer2{
-	margin-left:0px;
-	margin-right:40px;
-}
-
-#innovative{
-	text-align: center;
-}
-
-#inno_row, #innovative {
-	padding-top: 10px;
-}
-
-.hidden {
-	display:none;
-}
-
-section{
-	padding: .5em;
-	border-top: solid white 1px;
-	border-left: solid white 1px;
-}
-
-section header{
-	background-color: white;
-	padding: 0 0 5px 0;
-	margin: 0;
-	font-weight: bold;
-	border-bottom-color: red;	
-	border-bottom-width: 2px;
-		
-}
-
-section header a, section header a:visited {
-	color: orange;
-	text-decoration: none;
-}
-
-section header h1{
-	background-color:#ffffde;
-	padding-bottom: 5px;
-	margin: 0 0 5px 0;
-	border-bottom-color: red;	
-	border-bottom-width: 2px;
-	border-bottom-style: solid;
-	font-size: 1.3em;
-}
-
-section a{
-	color: red;
-}
-
-section footer{
-	text-align: right;
-}
-/*
-footer{
-	background-color: #ffffde;
-	max-width: 71em;
-	border-top-style: solid;
-	border-top-color: orange;	
-	margin-top: 1em;
-}
-*/
-footer nav{
-	text-align: right;
-}
-
-
-
-#metanav, #metanav nav{
-	background-color:#ffefbf;
-}
-
-#metanav li{
-	display: inline;
-}
-
-#metanav nav a, #metanav nav a:visited{
-	background-color:#ffefbf;
-	color: maroon;
-	font-size: small;
-}
-
-div.box-flat {
-   border-bottom: 1px solid #bbb;
-   border-right: 1px solid #777;
-}
-
-.boxshadow div.box-flat {
-   border: none;
-   box-shadow: #bbb 2px 2px 2px;
-   -moz-box-shadow: #bbb 2px 2px 2px;
-   -webkit-box-shadow: #bbb 2px 2px 2px;
-}
-
-div.box-high {
-   border-bottom: 2px solid #666;
-   border-right: 2px solid #777;
-}
-
-.boxshadow div.box-high {
-   border: none;
-   box-shadow: #666 3px 3px 3px;
-   -moz-box-shadow: #666 3px 3px 3px;
-   -webkit-box-shadow: #666 3px 3px 3px;
-}
-
-.more{
-	color: orange;
-}
-
-
-
-div.customers{
-	border-bottom-style: solid;
-	border-width: 0px 0px 1px 0px;
-	border-color:#fc9;
-	margin:1em;
-}
-div.customer_project{
-	margin-left:1em;
-}
-.customer_place{
-	display: inline;
-}
-.customer_description{
-	display:inline;
-}
-.project_name{
-	font-weight: bold;
-	margin-bottom: 0.1em;
-}
-p.project_skills{
-	margin-top: 0.2em;
-	margin-bottom: 0.1em;
-}
-p.project_endcustomer{
-	margin-top: 0.2em;
-}
-span.invisible {
-	display:none;
+.bordered{
+    border-style: solid;
+    border-bottom-width: 2px;
 }

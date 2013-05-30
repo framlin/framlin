@@ -1,0 +1,2 @@
+/* Author: Wolfgang Egger (framlin)
+ */

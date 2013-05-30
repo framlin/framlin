@@ -1,0 +1,640 @@
+
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+
+    <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+           More info: h5bp.com/i/378 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Software Engineering Wolfgang Egger</title>
+    <meta name="description" content="">
+
+    <!-- Mobile viewport optimized: h5bp.com/viewport -->
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="css/alt.css" type="text/css" rel="stylesheet" />
+    <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+
+    <!-- All JavaScript at the bottom, except this Modernizr build.
+           Modernizr enables HTML5 elements & feature detects for optimal performance.
+           Create your own custom Modernizr build: www.modernizr.com/download/  -->
+    <script src="js/libs/modernizr-2.5.3.min.js"></script>
+</head>
+<body>
+<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
+   chromium.org/developers/how-tos/chrome-frame-getting-started -->
+<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+<header id='heading'>
+    <div class='clearfix'>
+        <nav>
+            <a href='home'><img id='logo' src='images/framlin-logo-g+.jpg.png' /></a>
+        </nav>
+        <div id='slogan'>
+            <span id="firma">SoftWareEngineering Wolfgang Egger</span>
+            <span id="">Enterprise WebApplications</span>
+            <span id='contact'>
+                Bahnhofstraße 17 &bull; 12555 Berlin &bull; w.egger@framlin.com &bull; ++49 179 6746551
+            </span>
+        </div>
+    </div>
+</header>
+<div role="main" id="main">
+<div id='navigation'>
+    <div id='topteaser' class='box-high'>
+
+        <nav>
+            <div class='col1'>
+                <span>competent</span>
+            </div>
+            <div id='competent' class='col2'>
+                <div class='strong'>
+                    <a href='analysis'>Analysis</a>
+                </div>
+                <div class='spacer'>UML</div>
+                <div><a href='design'>Design</a></div>
+            </div>
+            <div class='clearfix'></div>
+            <div class='col1' id='exp_row'>
+                <span id='exp_label'>experienced</span>
+            </div>
+            <div id='experienced' class='col2'>
+                <div id='implementation'>
+                    <div>
+                        <a href='implementation'>Implementation</a>
+                    </div>
+                </div>
+                <div id='language'>
+                    <div id='cpp'>C++</div>
+                    <div id='delphi'>Delphi</div>
+                    <div id='java'>Java</div>
+                    <div id='js' class='strong'>
+                        <a href='javascript'>JavaScript</a>
+                    </div>
+                </div>
+                <div id='timeline'>
+                    <div id='t1993'>1993 -</div>
+                    <div id='t1997'>1997 -</div>
+                    <div id='t2000'>2000 -</div>
+                    <div id='t2006'>2006 - now</div>
+                </div>
+            </div>
+            <div class='clearfix'></div>
+            <div class='col1'>
+                <span>productive</span>
+            </div>
+            <div id='productive' class='col2'>
+                <div class='strong'>
+                    <a href='magicdraw'>MagicDraw</a>
+                </div>
+                <div class='spacer'>Eclipse</div>
+                <div class='spacer2'>git</div>
+                <div>Linux</div>
+            </div>
+            <div class='clearfix'></div>
+            <div class='col1' id='inno_row'>
+                <span>innovative</span>
+            </div>
+            <div id='innovative' class='col2'>
+                <div>Node.JS</div>
+                <div>&amp; CouchDB</div>
+            </div>
+            <div class='clearfix'></div>
+        </nav>
+
+    </div>
+    <div class='clearfix'></div>
+</div>
+<div id='bottom_nav'>
+    <div id='bottomteaser' class=' box-flat'>
+        <nav>
+            <table border="1">
+                <thead>
+                <tr>
+                    <th><a href='projects'>Projekte</a></th>
+                    <th>Endkunden</th>
+                    <th>Agenturen</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Leasing&nbsp;Vertragsverwaltung</td>
+                    <td>Sixt Leasing AG</td>
+                    <td>Soprado</td>
+                </tr>
+                <tr>
+                    <td>PDF Volltextsuche</td>
+                    <td>BiBB</td>
+                    <td>WR&nbsp;Multimedia</td>
+                </tr>
+                <tr>
+                    <td>Pille.de</td>
+                    <td>Schering&nbsp;Deutschland</td>
+                    <td>Hoch 3</td>
+                </tr>
+                <tr>
+                    <td>Social Network Prototype</td>
+                    <td>Red Bull</td>
+                    <td>BeagleSoft</td>
+                </tr>
+                <tr>
+                    <td>Sprachsignalanalyse</td>
+                    <td>Kasseler&nbsp;Stottertherapie</td>
+                    <td>Bioservices</td>
+                </tr>
+                <tr>
+                    <td>Presse-Mailbox</td>
+                    <td>Leipziger Messe AG</td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </nav>
+    </div>
+    <div id='metanav'>
+        <nav>
+            <ul>
+                <li><a href='impressum'>Impressum</a></li>
+                <li><a href='disclaimer'>Disclaimer</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+</div>
+<div id='content' class='box-flat'>
+<article>
+<section id='teaser'></section>
+<section id='sec_home'>
+    <header>
+        <h1>
+            <a id='#home'>Willkommen</a>
+        </h1>
+        SoftwareEntwicklung ist mein Leben und kann der Schlüssel zum
+        Erfolg Ihres Unternehmens sein.
+    </header>
+    <p>Die Leute sagen ich sei ein Geek ;-)</p>
+    <p>Ich entwickle seit fast 20 Jahren anspruchsvolle
+        SoftwareSysteme und muss mich zwingen hin und wieder auch mal an
+        etwas anderes zu denken, als an das aktuelle Projekt, an
+        Objektstrukturen oder Algorithmen.</p>
+    <p>Für Sie bedeutet das einen Partner an Ihrer Seite, der Tag
+        und Nacht nur Ihr Geschäft im Kopf hat und jede Minute damit
+        verbringt, für Sie nach Lösungen und Verbesserungen zu suchen.</p>
+</section>
+<section class='hidden' id='sec_analysis'>
+    <header>
+        <h1>
+            <a id='#analysis'>Analysis</a>
+        </h1>
+        Die Analyse bestehender Software-Systeme und Geschäftsprozesse ist
+        meine Kernkompetenz
+    </header>
+    <p>Meine größte Stärke ist meine Begabung für analytisches
+        Denken. Dadurch fällt es mir sehr leicht, mich in bestehende
+        Software einzudenken und mich schnell darin zurechtzufinden.</p>
+    <p>Darüber hinaus ermöglicht mir diese Fähigkeit, bestehende
+        Geschäftsprozesse in logische Strukturen zu übersetzen und
+        daraus neue Algorithmen abzuleiten.</p>
+    <footer> Preis: 65€/h - 480€/Tag (8h) </footer>
+</section>
+<section class='hidden' id='sec_design'>
+    <header>
+        <h1>
+            <a id='#design'>Design</a>
+        </h1>
+        I'll give you a DRY KISS
+    </header>
+    <ul>
+        <li>Dont Repeat Yourself</li>
+        <li>Keep It Simple, Stupid</li>
+        <li>Separation of Concerns</li>
+    </ul>
+    sind die Designprinzipien, an denen ich mich vornehmlich orientiere.
+    <p>Selbst wenn ich in der Regel kein Design-Modell erstelle, bevor ich mit der Implementation beginne, habe ich diese Prinzipien immer im Hinterkopf</p>
+    <p>Darüber hinaus versuche ich - wo immer möglich - mein Design an den vielen erprobten Design-Patterns, die sich in den letzten 20 Jahren herauskristalisiert haben, auszurichten.
+        <footer> Preis: 65€/h - 480€/Tag (8h) </footer>
+</section>
+<section class='hidden' id='sec_implementation'>
+    <header>
+        <h1>
+            <a id='#implementation'>Implementation</a>
+        </h1>
+        Coden ist das Salz in der Suppe meiner Arbeit als
+        Softwareentwickler.
+    </header>
+    <p>Ich verbringe täglich ca. 6 Stunden mit "hacken". Zu sehen,
+        dass der Computer tut, was man ihm "anschafft" und dass man mit
+        dem Ergebnis dann auch noch etwas nützliches anfangen kann,
+        verschafft mir eine tiefe, innere Befriedigung.</p>
+    <p>Programmieren ist der handwerkliche Teil der
+        Softwarenetwicklung. Die praktischen Erfahrungen, die ich dabei
+        gewinne, sind zudem unverzichtbar, um in den eher theoretischen
+        Phasen - Analyse und Design - gute Ergebnisse zu erzielen.</p>
+    <footer> Preis: 65€/h - 480€/Tag (8h) </footer>
+</section>
+<section class='hidden' id='sec_javascript'>
+    <header>
+        <h1>
+            <a id='#javascript'>JavaScript</a>
+        </h1>
+        Meine Lieblingsprogrammiersprache ist JavaScript
+    </header>
+    <p>Ich entwickle seit 6 Jahren Enterprise WebApplikationen
+        (RIA/FAT-Client) mit JavaScript. Zunächst mit XUL als
+        Auszeichnungssprache, seit einem halbenJahr mit ExtJS.</p>
+    <p>Neben der Nutzerführung und der Serverkommunikation ist auch
+        ein beträchtlicher Teil der Geschäftslogik in JavaScript
+        implementiert. Im Verlauf dieses Projektes konnte ich nachhaltige
+        und tiefgründige Erfahrungen in den Bereichen:
+    <ul>
+        <li>Objektorientierung (prototypenbasiert)</li>
+        <li>funktionale Programmierung (Closures)</li>
+        <li>asynchrone Serveraufrufe (AJAX)</li>
+        <li>DOM-scripting</li>
+    </ul>
+    sammeln.
+    </p>
+    <p>Nachdem ich jahrelang in objektorientierten Sprachen mit
+        statischer Typisierung programmiert hatte (C++, Delphi, Java), stand ich JavaScript
+        anfangs sehr skeptisch gegenüber. Ich teilte das allgemeine
+        Voruteil, dass diese Sprache lediglich dazu nützlich sein könnte,
+        Webseiten optisch "aufzumotzen"</p>
+    <p>Sechs Jahre täglicher Einsatz als
+        Anwendungsprogrammiersprache für Enterprise Applikationen haben
+        mich eines besseren belehrt. JavaScript besticht durch eine
+        gelungene Symbiose aus funktionalen und objektorientierten
+        Ausdrucksmöglichkeiten. Zusammen mit der dynamischen Typisierung
+        lassen sich damit bei hoher Entwicklungsgeschwindigkeit stabile
+        und klar strukturierte Softwaresysteme entwickeln.</p>
+</section>
+<section class='hidden' id='sec_magicdraw'>
+    <header>
+        <h1>
+            <a id='#magicdraw'>MagicDraw</a>
+        </h1>
+        MagicDraw ist in meinen Augen das beste UML-Modellierungswerkzeug
+        auf dem Markt. Ich benutze es täglich zur Analyse, zum Designen
+        und zur Dokumentation.
+    </header>
+    <p>Grund für meine Einschätzung ist die Tatsache, dass es als
+        eines der wenigen Tools konsequent auf die Arbeit mit einem Modell
+        setzt.</p>
+    <p>Bei mir entwickelt sich ein Modell kontinuerlich während des
+        gesamten Entwicklungsprozesses. Am Anfang steht oft ein kleines
+        Analysmodell, das sich dann schnell in ein erstes Designmodell
+        verwandelt</p>
+    <p>Im Verlauf der Impementierung "protokolliere" ich wichtige
+        Implementierungsdetails im Modell, stelle Teile davon in
+        Diargammen dar und verwende dieses dann als Kommunkationshilfe in
+        der Diskussion mit anderen Teammitgliedern, um zu entscheiden, wie
+        die Software weiterentwickelt werden kann</p>
+</section>
+<section class='hidden' id='sec_projects'>
+    <header>
+        <h1>
+            <a id='#projects'>Projekte</a>
+        </h1>
+        Hier sind nur die Projekte aufgeführt, die ich als
+        Freelancer durchgeführt habe. Daneben war ich außerdem einige
+        Jahre fest angestellt und im Rahmen der Walden&Egger GbR
+        selbständig tätig.
+        <p>
+            Nähere Einzelheiten siehe unter <a
+                href="http://www.framlin.info/anstellungen.html" target="_blank">Lebenslauf
+            Wolfgang Egger</a>
+        </p>
+    </header>
+    <div class="customers">
+        <h4>
+            &bull;&nbsp;Kunde:&nbsp;<span class="customer_firm">Soprado GmbH & Co. KG</span>,&nbsp;<span
+                class="customer_place">Grünwald</span><span
+                class="customer_description">&nbsp;(software identity)</span>
+        </h4>
+        <div class="customer_project">
+            <span class="invisible">Projekt: </span><span class="project_name">Leasing Vertragsverwaltung +++ Javascript Enterprise WebApplication</span>
+            <p class="project_skills">Technik: JavaScript, XUL, ExtJS, AJAX</p>
+            <p class="project_endcustomer">
+                Endkunde: <em>Sixt Leasing AG</em>
+            </p>
+        </div>
+					<span class="invisible">
+						<p>&nbsp;</p>
+					</span>
+    </div>
+    <div class="customers">
+        <h4>
+            &bull;&nbsp;Kunde:&nbsp;<span class="customer_firm">Hoch3 GmbH</span>,&nbsp;<span
+                class="customer_place">Berlin</span><span
+                class="customer_description">&nbsp;(Healthcare-Kommunikation)</span>
+        </h4>
+        <div class="customer_project">
+            <span class="invisible">Projekt: </span><span class="project_name">BWP
+							2005 (Upgrade) +++ barrierefreie PDF-Archiv-CD mit Volltextsuche</span>
+            <p class="project_skills">Technik: J2EE, JSP, XML, XSLT,
+                XSL-FO</p>
+            <p class="project_endcustomer">
+                Endkunde: <em>Bundesinstitut für Berufsbildung</em>
+            </p>
+        </div>
+					<span class="invisible">
+						<p>&nbsp;</p>
+					</span>
+        <div class="customer_project">
+            <span class="invisible">Projekt: </span><span class="project_name"
+                >Dardia	International</span>
+            <p class="project_skills">Technik: PHP, Perl, CMS (Teamsite)</p>
+            <p class="project_endcustomer">
+                Endkunde: <em>Intendis GmbH</em>
+            </p>
+        </div>
+					<span class="invisible">
+						<p>&nbsp;</p>
+					</span>
+    </div>
+    <div class="customers">
+        <h4>
+            &bull;&nbsp;Kunde:&nbsp;<span class="customer_firm">WR-Multimedia</span>,&nbsp;<span
+                class="customer_place">Nürnberg</span><span
+                class="customer_description">&nbsp;(Web Development)</span>
+        </h4>
+        <div class="customer_project">
+            <span class="invisible">Projekt: </span><span class="project_name">BWP
+							2007 (Update)</span>
+            <p class="project_skills">Technik: J2EE, JSP, XML, XSLT,
+                XSL-FO</p>
+            <p class="project_endcustomer">
+                Endkunde: <em>Bundesinstitut für Berufsbildung</em>
+            </p>
+        </div>
+					<span class="invisible">
+						<p>&nbsp;</p>
+					</span>
+        <div class="customer_project">
+            <span class="invisible">Projekt: </span><span class="project_name">BWP
+							2006 (Update)</span>
+            <p class="project_skills">Technik: J2EE, JSP, XML, XSLT,
+                XSL-FO</p>
+            <p class="project_endcustomer">
+                Endkunde: <em>Bundesinstitut für Berufsbildung</em>
+            </p>
+        </div>
+					<span class="invisible">
+						<p>&nbsp;</p>
+					</span>
+        <div class="customer_project">
+            <span class="invisible">Projekt: </span><span class="project_name">MS
+							SpaceSellers</span>
+            <p class="project_skills">Technik: C#, .NET, ActionScript, XML</p>
+            <p class="project_endcustomer">
+                Endkunde: <em>Microsoft Deutschland GmbH</em>
+            </p>
+        </div>
+					<span class="invisible">
+						<p>&nbsp;</p>
+					</span>
+        <div class="customer_project">
+            <span class="invisible">Projekt: </span><span class="project_name">Pille.com</span>
+            <p class="project_skills">Technik: PHP, Perl, CMS (Teamsite)</p>
+            <p class="project_endcustomer">
+                Endkunde: <em>Schering Deutschland GmbH</em>
+            </p>
+        </div>
+					<span class="invisible">
+						<p>&nbsp;</p>
+					</span>
+        <div class="customer_project">
+            <span class="invisible">Projekt: </span><span class="project_name">Ventavis
+							International</span>
+            <p class="project_skills">Technik: PHP</p>
+            <p class="project_endcustomer">
+                Endkunde: <em>Schering Deutschland GmbH</em>
+            </p>
+        </div>
+					<span class="invisible">
+						<p>&nbsp;</p>
+					</span>
+        <div class="customer_project">
+            <span class="invisible">Projekt: </span><span class="project_name">AZA
+							- Redirector</span>
+            <p class="project_skills">Technik: PHP</p>
+            <p class="project_endcustomer">
+                Endkunde: <em>Intendis GmbH</em>
+            </p>
+        </div>
+					<span class="invisible">
+						<p>&nbsp;</p>
+					</span>
+        <div class="customer_project">
+            <span class="invisible">Projekt: </span><span class="project_name">BWP
+							2004 (Update)</span>
+            <p class="project_skills">Technik: XML, XSLT, XSL-FO,
+                ActionScript</p>
+            <p class="project_endcustomer">
+                Endkunde: <em>Bundesinstitut für Berufsbildung</em>
+            </p>
+        </div>
+					<span class="invisible">
+						<p>&nbsp;</p>
+					</span>
+        <div class="customer_project">
+            <span class="invisible">Projekt: </span><span class="project_name">BWP
+							2003 +++ PDF-Archiv-CD mit Volltextsuche</span>
+            <p class="project_skills">Technik: XML, XSLT, XSL-FO,
+                ActionScript</p>
+            <p class="project_endcustomer">
+                Endkunde: <em>Bundesinstitut für Berufsbildung</em>
+            </p>
+        </div>
+					<span class="invisible">
+						<p>&nbsp;</p>
+					</span>
+        <div class="customer_project">
+            <span class="invisible">Projekt: </span><span class="project_name">IT
+							Consulting</span>
+        </div>
+					<span class="invisible">
+						<p>&nbsp;</p>
+					</span>
+    </div>
+    <div class="customers">
+        <h4>
+            &bull;&nbsp;Kunde:&nbsp;<span class="customer_firm">Institut der
+							Kasseler Stottertherapie</span>,&nbsp;<span class="customer_place">Kassel</span><span
+                class="customer_description"><br/>(Multidimensionale
+							Stottertherapie)</span>
+        </h4>
+        <div class="customer_project">
+            <span class="invisible">Projekt: </span><span class="project_name">IT
+							Consulting</span>
+        </div>
+					<span class="invisible">
+						<p>&nbsp;</p>
+					</span>
+    </div>
+</section>
+<section class='hidden' id='sec_disclaimer'>
+    <header>
+        <h1>
+            <a id='#disclaimer'>Haftungsauschluss</a>
+        </h1>
+    </header>
+    <h3>1. Inhalt des Onlineangebotes</h3>
+    <p>Der Autor übernimmt keinerlei Gewähr für die Aktualität,
+        Korrektheit, Vollständigkeit oder Qualität der bereitgestellten
+        Informationen. Haftungsansprüche gegen den Autor, welche sich auf
+        Schäden materieller oder ideeller Art beziehen, die durch die
+        Nutzung oder Nichtnutzung der dargebotenen Informationen bzw.
+        durch die Nutzung fehlerhafter und unvollständiger Informationen
+        verursacht wurden, sind grundsätzlich ausgeschlossen, sofern
+        seitens des Autors kein nachweislich vorsätzliches oder grob
+        fahrlässiges Verschulden vorliegt. Alle Angebote sind freibleibend
+        und unverbindlich. Der Autor behält es sich ausdrücklich vor,
+        Teile der Seiten oder das gesamte Angebot ohne gesonderte
+        Ankündigung zu verändern, zu ergänzen, zu löschen oder die
+        Veröffentlichung zeitweise oder endgültig einzustellen.</p>
+
+    <h3>2. Verweise und Links</h3>
+    <p>Bei direkten oder indirekten Verweisen auf fremde Webseiten
+        ("Hyperlinks"), die außerhalb des Verantwortungsbereiches des
+        Autors liegen, würde eine Haftungsverpflichtung ausschließlich in
+        dem Fall in Kraft treten, in dem der Autor von den Inhalten
+        Kenntnis hat und es ihm technisch möglich und zumutbar wäre, die
+        Nutzung im Falle rechtswidriger Inhalte zu verhindern. Der Autor
+        erklärt hiermit ausdrücklich, dass zum Zeitpunkt der Linksetzung
+        keine illegalen Inhalte auf den zu verlinkenden Seiten erkennbar
+        waren. Auf die aktuelle und zukünftige Gestaltung, die Inhalte
+        oder die Urheberschaft der verlinkten/verknüpften Seiten hat der
+        Autor keinerlei Einfluss. Deshalb distanziert er sich hiermit
+        ausdrücklich von allen Inhalten aller verlinkten /verknüpften
+        Seiten, die nach der Linksetzung verändert wurden. Diese
+        Feststellung gilt für alle innerhalb des eigenen Internetangebotes
+        gesetzten Links und Verweise sowie für Fremdeinträge in vom Autor
+        eingerichteten Gästebüchern, Diskussionsforen, Linkverzeichnissen,
+        Mailinglisten und in allen anderen Formen von Datenbanken, auf
+        deren Inhalt externe Schreibzugriffe möglich sind. Für illegale,
+        fehlerhafte oder unvollständige Inhalte und insbesondere für
+        Schäden, die aus der Nutzung oder Nichtnutzung solcherart
+        dargebotener Informationen entstehen, haftet allein der Anbieter
+        der Seite, auf welche verwiesen wurde, nicht derjenige, der über
+        Links auf die jeweilige Veröffentlichung lediglich verweist.</p>
+
+    <h3>3. Urheber- und Kennzeichenrecht</h3>
+    <p>Der Autor ist bestrebt, in allen Publikationen die
+        Urheberrechte der verwendeten Bilder, Grafiken, Tondokumente,
+        Videosequenzen und Texte zu beachten, von ihm selbst erstellte
+        Bilder, Grafiken, Tondokumente, Videosequenzen und Texte zu nutzen
+        oder auf lizenzfreie Grafiken, Tondokumente, Videosequenzen und
+        Texte zurückzugreifen. Alle innerhalb des Internetangebotes
+        genannten und ggf. durch Dritte geschützten Marken- und
+        Warenzeichen unterliegen uneingeschränkt den Bestimmungen des
+        jeweils gültigen Kennzeichenrechts und den Besitzrechten der
+        jeweiligen eingetragenen Eigentümer. Allein aufgrund der bloßen
+        Nennung ist nicht der Schluss zu ziehen, dass Markenzeichen nicht
+        durch Rechte Dritter geschützt sind! Das Copyright für
+        veröffentlichte, vom Autor selbst erstellte Objekte bleibt allein
+        beim Autor der Seiten. Eine Vervielfältigung oder Verwendung
+        solcher Grafiken, Tondokumente, Videosequenzen und Texte in
+        anderen elektronischen oder gedruckten Publikationen ist ohne
+        ausdrückliche Zustimmung des Autors nicht gestattet.</p>
+
+    <h3>4. Datenschutz</h3>
+    <p>Sofern innerhalb des Internetangebotes die Möglichkeit zur
+        Eingabe persönlicher oder geschäftlicher Daten (Emailadressen,
+        Namen, Anschriften) besteht, so erfolgt die Preisgabe dieser Daten
+        seitens des Nutzers auf ausdrücklich freiwilliger Basis. Die
+        Inanspruchnahme und Bezahlung aller angebotenen Dienste ist -
+        soweit technisch möglich und zumutbar - auch ohne Angabe solcher
+        Daten bzw. unter Angabe anonymisierter Daten oder eines Pseudonyms
+        gestattet. Die Nutzung der im Rahmen des Impressums oder
+        vergleichbarer Angaben veröffentlichten Kontaktdaten wie
+        Postanschriften, Telefon- und Faxnummern sowie Emailadressen durch
+        Dritte zur Übersendung von nicht ausdrücklich angeforderten
+        Informationen ist nicht gestattet. Rechtliche Schritte gegen die
+        Versender von sogenannten Spam-Mails bei Verstössen gegen dieses
+        Verbot sind ausdrücklich vorbehalten.</p>
+
+
+    <h3>5. Rechtswirksamkeit dieses Haftungsausschlusses</h3>
+    <p>Dieser Haftungsausschluss ist als Teil des Internetangebotes
+        zu betrachten, von dem aus auf diese Seite verwiesen wurde. Sofern
+        Teile oder einzelne Formulierungen dieses Textes der geltenden
+        Rechtslage nicht, nicht mehr oder nicht vollständig entsprechen
+        sollten, bleiben die übrigen Teile des Dokumentes in ihrem Inhalt
+        und ihrer Gültigkeit davon unberührt.</p>
+</section>
+<section class='hidden' id='sec_impressum'>
+    <header>
+        <h1>
+            <a id='#impressum'>Impressum</a>
+        </h1>
+        Impressum gem. § 6 Teledienstgesetz
+    </header>
+    <p>
+        <b>Herausgeber/Redaktion:</b>
+    <h3>framlin - SoftWareEngineering Wolfgang Egger</h3>
+    vertreten durch:
+    </p>
+    <p>
+        Wolfgang Egger<br /> Gneisenaustr. 64<br /> 10961 Berlin
+    </p>
+    <p>
+        Steuernummer: 14/272/61064<br /> Finanzamt Kreuzberg
+    </p>
+    <p>
+        <b>Tel.:</b> ++49 179 6746551<br /> <b>E-Mail:</b>
+        w.egger@framlin.de
+    </p>
+</section>
+</article>
+
+</div>
+
+
+</div>
+<div class='clearfix'></div>
+<footer> </footer>
+<!-- JavaScript at the bottom for fast page loading -->
+<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline  -->
+
+<script
+        src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+    window.jQuery
+    || document
+            .write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')
+</script>
+<!-- script src="js/libs/jquery-1.7.1.min.js"></script>
+<script>
+    window.jQuery
+            || document
+                    .write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')
+</script -->
+
+<!-- scripts concatenated and minified via build script  -->
+<script src="js/plugins.js"></script>
+<script src="js/alt.js"></script>
+<!-- end scripts -->
+
+<!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
+   mathiasbynens.be/notes/async-analytics-snippet
+<script>
+var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+s.parentNode.insertBefore(g,s)}(document,'script'));
+</script> -->
+
+</body>
+</html>
