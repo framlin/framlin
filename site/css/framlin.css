@@ -15,16 +15,18 @@ section {
     border-bottom-color: #ff6b03;
     border-bottom-width: 4px;
     background-color: #ffe;
+    font-family: serif;
 }
 section p{
-    padding-left: 15px;
+    padding: 0 15px;
 }
 
 section header{
     background-color: white;
     padding: 5px;
     margin: 0;
-    font-weight: bold;
+    font-family: sans-serif;
+    font-size:  0.8em;
     border-bottom-style: solid;
     border-bottom-color: red;
     border-bottom-width: 2px;
@@ -49,9 +51,20 @@ section a{
     color: red;
 }
 
+section .msg {
+    float:left;
+    width:75%;
+}
 
+section nav{
+    width:25%;
+    margin-left:75%;
+    text-align: right;
+}
 
-
+section nav a{
+    padding-right:5px;
+}
 
 
 
@@ -59,16 +72,12 @@ section footer {
     width: 100%;
     background-color: #ffff99;
 }
-section footer a{
-    margin-left:50%;
-    font-size: 2em:;
-}
 
 /* ============== CUSTOM ======================== */
 /* ------  header -------- */
 #logo {
     float:left;
-    margin: 5px;
+    margin: 0;
 }
 
 header#heading{
@@ -76,7 +85,7 @@ header#heading{
 }
 header {
     background-color:#ffffff;
-    padding: 10px 10px 5px 10px;
+    padding: 5px 10px 5px 10px;
     border-bottom-style: solid;
     border-bottom-color: orange;
     border-bottom-width: 2px;

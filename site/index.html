@@ -23,17 +23,19 @@
 
 <!-- Add your site or application content here -->
 <header id='heading'>
+    <div class='clearfix'>
+
     <nav>
         <a id='home'><img id='logo' src='images/framlin-logo-g+.jpg.png' /></a>
     </nav>
     <div id='slogan'>
-        <span id="firma">SoftWareEngineering Wolfgang Egger</span>
+        <span id="firma">SoftWareEngineering Wolfgang&nbsp;Egger</span>
         <span id="product">Enterprise WebApplications</span>
                 <span id='contact'>
-                    Bahnhofstraße 17 &bull; 12555 Berlin &bull; w.egger@framlin.com &bull; ++49 179 6746551
+                    Bahnhofstraße 17 &bull; 12555 Berlin &bull; w.egger@framlin.com
                 </span>
     </div>
-    <div class='clearfix'/>
+    <div/>
 </header>
 
 <div role="main" id="main">
@@ -97,40 +99,7 @@
                 und Nacht nur Ihr Geschäft im Kopf hat und jede Minute damit
                 verbringt, für Sie nach Lösungen und Verbesserungen zu suchen.</p>
         </section>
-        <section class='hidden' id='sec_analysis'>
-            <header>
-                <h1>
-                    <a id='#analysis'>Analysis</a>
-                </h1>
-                Die Analyse bestehender Software-Systeme und Geschäftsprozesse ist
-                meine Kernkompetenz
-            </header>
-            <p>Meine größte Stärke ist meine Begabung für analytisches
-                Denken. Dadurch fällt es mir sehr leicht, mich in bestehende
-                Software einzudenken und mich schnell darin zurechtzufinden.</p>
-            <p>Darüber hinaus ermöglicht mir diese Fähigkeit, bestehende
-                Geschäftsprozesse in logische Strukturen zu übersetzen und
-                daraus neue Algorithmen abzuleiten.</p>
-            <footer> Preis: 65€/h - 480€/Tag (8h) <a href="#home">top</a></footer>
-        </section>
-        <section class='hidden' id='sec_design'>
-            <header>
-                <h1>
-                    <a id='#design'>Design</a>
-                </h1>
-                I'll give you a DRY KISS
-            </header>
-            <ul>
-                <li>Dont Repeat Yourself</li>
-                <li>Keep It Simple, Stupid</li>
-                <li>Separation of Concerns</li>
-            </ul>
-            sind die Designprinzipien, an denen ich mich vornehmlich orientiere.
-            <p>Selbst wenn ich in der Regel kein Design-Modell erstelle, bevor ich mit der Implementation beginne, habe ich diese Prinzipien immer im Hinterkopf</p>
-            <p>Darüber hinaus versuche ich - wo immer möglich - mein Design an den vielen erprobten Design-Patterns, die sich in den letzten 20 Jahren herauskristalisiert haben, auszurichten.
-                <footer> Preis: 65€/h - 480€/Tag (8h) <a href="#home">top</a></footer>
-        </section>
-        <section class='hidden' id='sec_implementation'>
+        <section id='sec_implementation'>
             <header>
                 <h1>
                     <a id='implementation'>Implementation</a>
@@ -146,7 +115,7 @@
                 Softwarenetwicklung. Die praktischen Erfahrungen, die ich dabei
                 gewinne, sind zudem unverzichtbar, um in den eher theoretischen
                 Phasen - Analyse und Design - gute Ergebnisse zu erzielen.</p>
-            <footer> Preis: 65€/h - 480€/Tag (8h) <a href="#home">top</a></footer>
+            <footer><div class="msg"> Preis: 65€/h - 480€/Tag (8h)</div><nav><a href="#home">top</a></nav></footer>
         </section>
         <section class='hidden' id='sec_javascript'>
             <header>
@@ -155,19 +124,21 @@
                 </h1>
                 Meine Lieblingsprogrammiersprache ist JavaScript
             </header>
-            <p>Ich entwickle seit 6 Jahren Enterprise WebApplikationen
-                (RIA/FAT-Client) mit JavaScript. Zunächst mit XUL als
-                Auszeichnungssprache, seit einem halbenJahr mit ExtJS.</p>
+            <p>Ich programmiere seit 6 Jahren Enterprise WebApplikationen
+                (RIA/FAT-Client) in JavaScript. Zunächst mit XUL als
+                Auszeichnungssprache, seit 2012 auch mit ExtJS.</p>
             <p>Neben der Nutzerführung und der Serverkommunikation ist auch
                 ein beträchtlicher Teil der Geschäftslogik in JavaScript
                 implementiert. Im Verlauf dieses Projektes konnte ich nachhaltige
                 und tiefgründige Erfahrungen in den Bereichen:
+</p>
             <ul>
                 <li>Objektorientierung (prototypenbasiert)</li>
                 <li>funktionale Programmierung (Closures)</li>
                 <li>asynchrone Serveraufrufe (AJAX)</li>
                 <li>DOM-scripting</li>
             </ul>
+<p>
             sammeln.
             </p>
             <p>Nachdem ich jahrelang in objektorientierten Sprachen mit
@@ -182,7 +153,42 @@
                 Ausdrucksmöglichkeiten. Zusammen mit der dynamischen Typisierung
                 lassen sich damit bei hoher Entwicklungsgeschwindigkeit stabile
                 und klar strukturierte Softwaresysteme entwickeln.</p>
-            <footer> Preis: 65€/h - 480€/Tag (8h) <a href="#home">top</a></footer>
+            <footer><div class="msg"> Preis: 65€/h - 480€/Tag (8h)</div><nav><a href="#home">top</a></nav></footer>
+        </section>
+        <section class='hidden' id='sec_analysis'>
+            <header>
+                <h1>
+                    <a id='#analysis'>Analysis</a>
+                </h1>
+                Die Analyse bestehender Software-Systeme und Geschäftsprozesse ist
+                meine Kernkompetenz
+            </header>
+            <p>Meine größte Stärke ist meine Begabung für analytisches
+                Denken. Dadurch fällt es mir sehr leicht, mich in bestehende
+                Software einzudenken und mich schnell darin zurechtzufinden.</p>
+            <p>Darüber hinaus ermöglicht mir diese Fähigkeit, bestehende
+                Geschäftsprozesse in logische Strukturen zu übersetzen und
+                daraus neue Algorithmen abzuleiten.</p>
+            <footer><div class="msg"> Preis: 65€/h - 480€/Tag (8h)</div><nav><a href="#home">top</a></nav></footer>
+        </section>
+        <section class='hidden' id='sec_design'>
+            <header>
+                <h1>
+                    <a id='#design'>Design</a>
+                </h1>
+                I'll give you a DRY KISS
+            </header>
+            <ul>
+                <li>Dont Repeat Yourself</li>
+                <li>Keep It Simple, Stupid</li>
+                <li>Separation of Concerns</li>
+            </ul>
+<p>
+            sind die Designprinzipien, an denen ich mich vornehmlich orientiere.
+</p>
+            <p>Selbst wenn ich in der Regel kein Design-Modell erstelle, bevor ich mit der Implementation beginne, habe ich diese Prinzipien immer im Hinterkopf</p>
+            <p>Darüber hinaus versuche ich - wo immer möglich - mein Design an erprobten Design-Patterns, die sich in den letzten 20 Jahren herauskristalisiert haben, auszurichten.
+                <footer><div class="msg"> Preis: 65€/h - 480€/Tag (8h)</div><nav><a href="#home">top</a></nav></footer>
         </section>
         <section class='hidden' id='sec_magicdraw'>
             <header>
@@ -205,7 +211,7 @@
                 Diargammen dar und verwende dieses dann als Kommunkationshilfe in
                 der Diskussion mit anderen Teammitgliedern, um zu entscheiden, wie
                 die Software weiterentwickelt werden kann</p>
-            <footer> Preis: 65€/h - 480€/Tag (8h) <a href="#home">top</a></footer>
+            <footer><div class="msg"> Preis: 65€/h - 480€/Tag (8h)</div><nav><a href="#home">top</a></nav></footer>
         </section>
     </article>
 </div>
