@@ -120,6 +120,8 @@ section nav a{
 section footer {
     width: 100%;
     background-color: #ffff99;
+    font-size: 0.7em;
+    font-family: TeXMono;
 }
 
 /* ============== CUSTOM ======================== */
