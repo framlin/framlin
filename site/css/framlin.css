@@ -1,3 +1,51 @@
+@font-face {
+    font-family: TeX;
+    src: url('../fonts/texgyreschola-regular.otf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: TeX_Bold;
+    src: url('../fonts/texgyreschola-bold.otf');
+    font-style: normal;
+    font-weight: bold;
+}
+@font-face {
+    font-family: TeXMono;
+    src: url('../fonts/texgyrecursor-regular.otf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: TeXMono_Bold;
+    src: url('../fonts/texgyrecursor-bold.otf');
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: TeXSans;
+    src: url('../fonts/texgyreadventor-regular.otf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: TeXSans_Bold;
+    src: url('../fonts/texgyreadventor-bold.otf');
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: telegrame;
+    src: url('../fonts/telegrama_render_osn.otf');
+    font-style: normal;
+    font-weight: normal;
+}
+
 html{
     background-color: #fff1e1;
     /*background-image: url("../images/lake-baker-like-2400x14nn.jpg");*/
@@ -6,6 +54,7 @@ html{
 }
 
 body {
+    font-family: TeXSans;
     padding-top: 5px;
 }
 
@@ -15,7 +64,7 @@ section {
     border-bottom-color: #ff6b03;
     border-bottom-width: 4px;
     background-color: #ffe;
-    font-family: serif;
+    font-family: TeX, serif;
 }
 section p{
     padding: 0 15px;
@@ -25,7 +74,7 @@ section header{
     background-color: white;
     padding: 5px;
     margin: 0;
-    font-family: sans-serif;
+    font-family: TeXSans, sans-serif;
     font-size:  0.8em;
     border-bottom-style: solid;
     border-bottom-color: red;
@@ -106,21 +155,21 @@ header {
 
 #slogan span{
     display: block;
-    font-size: 1.2em;
-    font-weight: bold;
-    font-family: monospace;
+    font-size: 1em;
+    /*font-weight: bold;*/
+    font-family: telegrame, monospace;
     width: 100%;
     text-align: center;
 }
 
 
 #slogan #firma{
-    font-size: 1.4em;
+    font-size: 1.1em;
     margin-bottom: 0.2em;
 }
 
 #slogan #contact{
-    margin-top: 0.4em;
+    margin-top: 1em;
     font-size: xx-small;
 }
 
@@ -158,10 +207,13 @@ header {
     float: left;
     width: 24%;
     color: rgba(68, 5, 68, 0.98);
-    font-family: monospace;
-    font-size: 1.2em;
+    font-family: TeXMono_Bold, monospace;
+    font-size: 1em;
+    /*font-weight: bold;*/
 }
 .navcol-2{
+    font-family: TeXMono_Bold, monospace;
+    /*font-family: TeXSans, sans-serif;*/
     text-align: center;
     margin-left: 24%;
     width: 76%;
@@ -291,6 +343,7 @@ div.customer_project{
     padding-left:2em;
 }
 .project_name{
+    font-family: TeX_Bold;
     font-weight: bold;
     margin-bottom: 0.1em;
 }
