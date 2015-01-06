@@ -1,5 +1,6 @@
-.git/
-.settings/
-.idea/
-projectFilesBackup/
-node_modules
+/.git/
+CVS
+/node_modules
+/.settings
+/.project
+/.idea*
