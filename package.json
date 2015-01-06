@@ -1,18 +1,11 @@
 {
-  "name": "hello",
-  "scripts": {
-    "start": "server/run.js"
-  },
-  "version": "0.0.1-19",
-  "subdomain": "framlin",
-  "engines": {
-    "node": "0.6.x"
-  },
+  "name": "framlin",
+  "version": "0.0.1",
   "dependencies": {
-    "union": "0.1.7",
-    "director": "1.0.9-1",
-    "winston": "0.5.10",
-    "jsdom": "0.2.13",
-    "ecstatic": "0.1.5"
+    "director": "^1.2.3",
+    "ecstatic": "^0.5.6",
+    "flatiron": "^0.4.2",
+    "restify": "^2.8.3",
+    "union": "^0.4.3"
   }
 }

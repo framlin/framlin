@@ -1,8 +1,33 @@
-var union = require('union');
+var union = require('union'),
+    director = require('director'),
+    flatiron = require('flatiron'),
+    ecstatic = require('ecstatic'),
+    webserver = new flatiron.App(),
+    router = new director.http.Router(),
+    routing = require('./routing'),
+    SERVER_PORT = 8080;
 
-var server = union.createServer({
-    before: [
-        require('ecstatic')(__dirname  + '/../site')
-    ]
+
+
+
+
+function RESTDispatcher(req, res) {
+    if (!router.dispatch(req, res)) {
+        res.emit('next');
+    }
+}
+
+//--------- RUN ---------------------------
+webserver.use(flatiron.plugins.http);
+webserver.http.before = [
+    RESTDispatcher,
+    ecstatic(__dirname + '/../site')
+];
+
+routing.configure(router, function cbConfigured() {
+    webserver.start(SERVER_PORT);
 });
-server.listen(8080);
+
+
+
+
