@@ -3,9 +3,9 @@ var union = require('union'),
     flatiron = require('flatiron'),
     ecstatic = require('ecstatic'),
     webserver = new flatiron.App(),
+    ServerPort = require('fr-infra').ServerConfig.framlin.port,
     router = new director.http.Router(),
-    routing = require('./routing'),
-    SERVER_PORT = 8080;
+    routing = require('./routing');
 
 
 
@@ -25,7 +25,7 @@ webserver.http.before = [
 ];
 
 routing.configure(router, function cbConfigured() {
-    webserver.start(SERVER_PORT);
+    webserver.start(ServerPort);
 });
 
 
