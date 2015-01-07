@@ -15,14 +15,19 @@ function Builder() {
             'Content-Type': 'text/html'
         });
         this.res.write(me.partialIndex.top);
+        this.res.write(me.partialIndex.heading);
+        this.res.write(me.partialIndex.maintop);
+        this.res.write(me.partialIndex.topnav);
         this.res.write(homeHTML);
         this.res.write(projectsHTML);
-        this.res.write(me.partialIndex.showcases);
+        this.res.write(me.partialIndex.bottomnav);
+        this.res.write(me.partialIndex.metanav);
+        this.res.write(me.partialIndex.mainbottom);
         this.res.write(me.partialIndex.bottom);
         this.res.end();
     };
 }
 
-Builder.prototype = frBuilder;
+Builder.prototype = new frBuilder('framlin');
 
 module.exports = new Builder();
