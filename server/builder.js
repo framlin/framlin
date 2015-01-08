@@ -1,11 +1,15 @@
 var frBuilder = require('fr-builder'),
-    partial = require('./partial'),
-    homeHTML = partial.load('home'),
-    projectsHTML = partial.load('projects');
-
+    PARTIALS_PATH = __dirname + '/../site/partials/',
+    partialCache = frBuilder.loadAllPartials(PARTIALS_PATH);
 
 function Builder() {
-    var me = this;
+    var me = this,
+        partial;
+
+    //overwrite framlin base CI
+    for (partial in partialCache) {
+        this.partialIndex[partial] = partialCache[partial];
+    }
 
     /**
      * @callback: 'this' is the calling router
@@ -18,8 +22,8 @@ function Builder() {
         this.res.write(me.partialIndex.heading);
         this.res.write(me.partialIndex.maintop);
         this.res.write(me.partialIndex.topnav);
-        this.res.write(homeHTML);
-        this.res.write(projectsHTML);
+        this.res.write(me.articleIndex.home);
+        this.res.write(me.articleIndex.projects);
         this.res.write(me.partialIndex.bottomnav);
         this.res.write(me.partialIndex.metanav);
         this.res.write(me.partialIndex.mainbottom);
