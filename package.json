@@ -1,11 +1,10 @@
 {
   "name": "framlin",
-  "version": "0.0.1",
+ "version": "0.0.2",
   "dependencies": {
-    "director": "^1.2.3",
-    "ecstatic": "^0.5.6",
-    "flatiron": "^0.4.2",
-    "restify": "^2.8.3",
-    "union": "^0.4.3"
+  },
+  "scripts": {
+    "postinstall": "npm link fr-builder fr-infra fr-routing fr-server",
+    "postupdate": "npm link fr-builder fr-infra fr-routing fr-server"
   }
 }

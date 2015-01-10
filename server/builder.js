@@ -1,16 +1,9 @@
 var frBuilder = require('fr-builder'),
     PARTIALS_PATH = __dirname + '/../site/partials/',
-    partialCache = frBuilder.loadAllPartials(PARTIALS_PATH);
+    localPartials = frBuilder.loadAllPartials(PARTIALS_PATH);
 
 function Builder() {
-    var me = this,
-        partial;
-
-    //overwrite framlin base CI
-    for (partial in partialCache) {
-        this.partialIndex[partial] = partialCache[partial];
-    }
-
+    var me = this;
     /**
      * @callback: 'this' is the calling router
      */
@@ -32,6 +25,6 @@ function Builder() {
     };
 }
 
-Builder.prototype = new frBuilder('framlin');
+Builder.prototype = new frBuilder(localPartials);
 
 module.exports = new Builder();
