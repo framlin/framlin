@@ -2,4 +2,6 @@
 @import 'design.css';
 @import 'header.css';
 @import 'main.css';
+@import "statement.css";
+@import "projects.css";
 @import 'debug.css';

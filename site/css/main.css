@@ -10,6 +10,7 @@
 
 .navrow {
     justify-content: space-between;
+    margin: 0.2em 0;
 }
 
 .navcol-1 {
@@ -23,7 +24,65 @@
 .navcol-2 {
     justify-content: space-around;
 
-
     font-family: TeXMono_Bold, monospace;
     text-align: center;
 }
+
+.navcol-2 div {
+    padding: 0.2em 0;
+}
+
+/*=== NAV ===*/
+#navigation {
+    border-bottom-color: #ffa;
+    /*border-bottom-color: #ffff99*/
+    border-bottom-style: solid;
+    border-bottom-width: 0.5em;
+}
+
+
+/*============ CONTENT ==================*/
+#breadcrumb {
+    background-color: #ffffde;
+    font-size: small;
+}
+
+#breadcrumb a, #breadcrumb a:visited {
+    color: #521700;
+    font-size: small;
+}
+
+
+/* -------------customer-nav --------------------------------------*/
+#bottomnav {
+    background-color: #ffffde;
+}
+#bottomnav table {
+    background-color: #ffffde;
+}
+#bottomnav nav {
+    background-color: #ffffde;
+    color: black;
+}
+#bottomnav nav a {
+    color: #521700;
+}
+
+#bottomnav table, td, th {
+    border-style: none;
+    text-align: left;
+    font-size: small;
+}
+
+/* -------------meta-nav --------------------------------------*/
+#metanav, #metanav nav {
+    background-color: #ffee37;
+}
+
+#metanav nav a, #metanav nav a:visited {
+    background-color: #ffee37;
+    color: #521700;
+    font-size: small;
+}
+
+
