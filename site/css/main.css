@@ -1,7 +1,4 @@
 #main {
-    margin: 0 auto;
-    max-width: 33.2em;
-    padding: 0;
 }
 
 #topnav {
@@ -12,6 +9,7 @@
 }
 
 .navrow {
+    justify-content: space-between;
 }
 
 .navcol-1 {
@@ -23,10 +21,9 @@
 }
 
 .navcol-2 {
-    width: 21em;
     justify-content: space-around;
+
 
     font-family: TeXMono_Bold, monospace;
     text-align: center;
-
 }

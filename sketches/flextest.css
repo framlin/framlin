@@ -1,4 +1,4 @@
-.page, .hbox, .vbox, .window, .flex{
+.page, .hbox, .vbox, .window, .flex, header, footer, article{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,21 +13,42 @@
     flex-direction: column;
 }
 
+.flex-1 {
+    flex: 1;
+}
+
+.fill-horizontal {
+    align-items: stretch;
+    align-content: stretch;
+    justify-content: center;
+
+}
 
 #content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: yellow;
+    background-color: #e4ebef;
+    max-width: 35em;
 }
 
 div {
-    border: solid 2px;
-    padding: 10px;
-    margin: 5px;
-    display: flex;
+    border: solid 1px;
 }
 
+#a1 {
+    background-color: red;
+}
+
+
+#a2 {
+    background-color: blue;
+}
+
+#b1 {
+    background-color: green;
+}
+
+#b2 {
+    background-color: yellow;
+}
 
 
 
