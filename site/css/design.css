@@ -1,6 +1,10 @@
 @import 'colors.css';
 @import 'fonts.css';
 
+:root {
+    --section-radius: 10px;
+}
+
 html {
     background-color: var(--color-light-orange);
 }

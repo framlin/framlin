@@ -13,9 +13,9 @@ article header {
 }
 
 section {
-    border-bottom-color: #ff8352;
-    border-bottom-style: solid;
-    border-bottom-width: 4px;
+    /*border-bottom-color: #ff8352;*/
+    /*border-bottom-style: solid;*/
+    /*border-bottom-width: 4px;*/
     font-family: TeX, serif;
 }
 section header {
@@ -65,11 +65,21 @@ section.no-boddy {
 
 article section header {
     display: block;
+    border-top-left-radius: var(--section-radius);
+    border-top-right-radius: var(--section-radius);
 }
 
 section {
     margin-bottom: 1em;
+    box-shadow: 3px 3px 0px 0px var(--section-shadow-color);
+    border-radius: var(--section-radius);
+
 }
+
+section footer {
+    border-radius: var(--section-radius);
+}
+
 section header, section p, section footer {
     padding: 5px;
 }
