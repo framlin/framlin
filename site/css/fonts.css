@@ -1,0 +1,42 @@
+@font-face {
+    font-family: TeX;
+    src: url("../../site/fonts/texgyreschola-regular.otf");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: TeX_Bold;
+    src: url("../../site/fonts/texgyreschola-bold.otf");
+    font-style: normal;
+    font-weight: bold;
+}
+@font-face {
+    font-family: TeXMono;
+    src: url("../../site/fonts/texgyrecursor-regular.otf");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: TeXMono_Bold;
+    src: url("../../site/fonts/texgyrecursor-bold.otf");
+    font-style: normal;
+    font-weight: bold;
+}
+@font-face {
+    font-family: TeXSans;
+    src: url("../../site/fonts/texgyreadventor-regular.otf");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: TeXSans_Bold;
+    src: url("../../site/fonts/texgyreadventor-bold.otf");
+    font-style: normal;
+    font-weight: bold;
+}
+@font-face {
+    font-family: telegrame;
+    src: url("../../site/fonts/telegrama_render_osn.otf");
+    font-style: normal;
+    font-weight: normal;
+}
