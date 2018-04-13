@@ -338,7 +338,7 @@ FRUTILS.prototype.introspect_deep = function(x, deep, deep_tab) {
 
 
 FRUTILS.prototype.merge_overlays = function merge_overlays(docroot) {
-    var xulOverlays = this.get_class(docroot, 'overlay'),
+    var overlays = this.get_class(docroot, 'overlay'),
         me = this;
 
     var insert_overlay = function(id, data) {
@@ -384,8 +384,8 @@ FRUTILS.prototype.merge_overlays = function merge_overlays(docroot) {
     }
 
     // do not use methods of Array.prototype for iterating because they skip some elements (observed on Chromium)
-    for (var i = 0; i < xulOverlays.length; i++) {
-        var overlay = xulOverlays[i];
+    for (var i = 0; i < overlays.length; i++) {
+        var overlay = overlays[i];
         var href = overlay.getAttribute('href');
         var id = overlay.getAttribute('id');
 

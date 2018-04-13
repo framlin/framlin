@@ -1,0 +1,32 @@
+#main {
+    margin: 0 auto;
+    max-width: 33.2em;
+    padding: 0;
+}
+
+#topnav {
+    margin: 1em 0em;
+    background-color: #ffe;
+    color: black;
+    font-size: 0.75em;
+}
+
+.navrow {
+}
+
+.navcol-1 {
+    width: 9em;
+
+    color: rgba(68, 5, 68, 0.98);
+    font-family: TeXMono_Bold, monospace;
+    font-size: 1em;
+}
+
+.navcol-2 {
+    width: 21em;
+    justify-content: space-around;
+
+    font-family: TeXMono_Bold, monospace;
+    text-align: center;
+
+}

@@ -1,2 +1,8 @@
 @import 'reset.css';
 @import 'flexbox.css';
+
+.page, article, nav, header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,4 +1,4 @@
-.hbox, .vbox, .groupbox, .window, .flex {
+.hbox, .vbox, .window, .flex, article {
     display: flex;
 }
 
@@ -6,6 +6,7 @@
     flex-direction: row;
 }
 
+article,
 .vbox,
 .window {
     flex-direction: column;

@@ -13,22 +13,3 @@ ul {
     list-style-image: url("../../site/images/bullet.png");
 }
 
-
-/*========= SITE-HEADING ================*/
-#heading {
-    background-color: var(--heading-bg-color);
-}
-
-#slogan span {
-    font-size: 1em;
-    font-family: telegrame, monospace;
-    text-align: center;
-}
-
-#slogan #firma {
-    font-size: 1.1em;
-}
-
-#slogan #contact {
-    font-size: xx-small;
-}
