@@ -27,9 +27,7 @@ FRUTILS.prototype.get_backtrace = function get_backtrace() {
     };
 
     return get_stack_trace();
-
 };
-
 
 FRUTILS.prototype.get_class = function get_class(docroot, class_name) {
     return docroot.getElementsByClassName(class_name);
@@ -38,8 +36,6 @@ FRUTILS.prototype.get_class = function get_class(docroot, class_name) {
 FRUTILS.prototype.has_class = function has_class(element, class_name) {
     return element && element.classList.contains(class_name);
 };
-
-
 
 FRUTILS.prototype.get_element = function get_element(docroot, id, may_fail) {
     var obj;
@@ -58,7 +54,6 @@ FRUTILS.prototype.get_element = function get_element(docroot, id, may_fail) {
     return obj;
 };
 
-//*****************
 FRUTILS.prototype.remote_method = function remote_method(url, request_body, func, treat, ct, errfunc, cache) {
     if (!this.allow_sync && (typeof func == "undefined" || !func)) {
         this.dump(this.get_backtrace());
@@ -147,21 +142,12 @@ FRUTILS.prototype.remote_method = function remote_method(url, request_body, func
     request.open(method, url, async, "", "");
     request.setRequestHeader("Content-Type", ct);
 
-    if (me.global_xdebug) {
-        if (request_body) {
-            request_body += '&XDEBUG_SESSION_START=xul';
-        } else {
-            request_body = 'XDEBUG_SESSION_START=xul';
-        }
-    }
-
     try {
         request.send(request_body);
     } catch(ex) {
         request = null;
         me.comm_error(ex);
     }
-    //});
 
     if (async) {
         request = null;
@@ -172,7 +158,6 @@ FRUTILS.prototype.remote_method = function remote_method(url, request_body, func
 };
 
 
-//******************************
 FRUTILS.prototype.cleanup_request = function cleanup_request(req) {
 
     if ( this.onreadystatechange_works ) {
@@ -217,9 +202,6 @@ FRUTILS.prototype.get_class_name = function get_class_name(thing) {
     return Object.prototype.toString.call(thing).slice(8, -1);
 };
 
-
-
-//******************************
 FRUTILS.prototype.__req_onload = function __req_onload(func, treat, cache, response) {
     var me = this;
     return function _cb__req_onload() {
@@ -243,7 +225,6 @@ FRUTILS.prototype.__req_onload = function __req_onload(func, treat, cache, respo
     }
 };
 
-//*****************
 FRUTILS.prototype.__req_onerror = function __req_onerror(url, request_body, errfunc, cache) {
     var me = this;
     return function(err, text) {
@@ -270,7 +251,6 @@ FRUTILS.prototype.__req_onerror = function __req_onerror(url, request_body, errf
     }
 };
 
-//*****************
 FRUTILS.prototype.comm_error = function comm_error(ex) {
     if (this.silent_comm_err) {
         return;
@@ -281,7 +261,6 @@ FRUTILS.prototype.comm_error = function comm_error(ex) {
 };
 
 
-//*****************
 FRUTILS.prototype.dump = function dump(obj) {
     // don't dump in production if global_debug = 0
     if (this.FR_IN_PRODUCTION) {
@@ -290,7 +269,7 @@ FRUTILS.prototype.dump = function dump(obj) {
     console.log(obj);
 };
 
-//*****************
+
 FRUTILS.prototype.introspect_deep = function(x, deep, deep_tab) {
     if (typeof deep == "undefined") {
         deep = 3;
@@ -357,7 +336,7 @@ FRUTILS.prototype.introspect_deep = function(x, deep, deep_tab) {
 };
 
 
-//*****************
+
 FRUTILS.prototype.merge_overlays = function merge_overlays(docroot) {
     var xulOverlays = this.get_class(docroot, 'overlay'),
         me = this;
@@ -422,4 +401,24 @@ FRUTILS.prototype.merge_overlays = function merge_overlays(docroot) {
         }
     }
 
+};
+
+FRUTILS.prototype.remote_method_treat_data = function remote_method_treat_data(request) {
+    if (request.status == 200) {
+        return request.responseText;
+    }
+
+    this.dump('responseText: ' + request.responseText, 10, true);
+    var tmp = "REQUEST STATUS IS NOT 200";
+    request = null;
+
+    try {
+        return JSON.parse(tmp);
+    } catch(ex) {
+        this.dump(tmp, 10, true);
+        this.comm_error(ex);
+        return tmp;
+    }
+
+    return tmp;
 };
