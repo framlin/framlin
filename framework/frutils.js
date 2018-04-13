@@ -61,7 +61,6 @@ FRUTILS.prototype.get_element = function get_element(docroot, id, may_fail) {
 //*****************
 FRUTILS.prototype.remote_method = function remote_method(url, request_body, func, treat, ct, errfunc, cache) {
     if (!this.allow_sync && (typeof func == "undefined" || !func)) {
-        //LACXULHTML
         this.dump(this.get_backtrace());
         throw("sync function");
     }
@@ -86,7 +85,6 @@ FRUTILS.prototype.remote_method = function remote_method(url, request_body, func
         method = 'GET';
     }
 
-    // LACXULHTML
     if (url != null) {
         if(url.match('xml$')) {
             method = 'GET';
@@ -98,7 +96,6 @@ FRUTILS.prototype.remote_method = function remote_method(url, request_body, func
     // set expiry time to 3 hours in the future
     this.close_yourself = (+new Date) + 3 * 60 * 60 * 1000;
 
-    //LACXULHTML
     var request;// = this.request_cache.pop();
 
     if (!request) {
@@ -241,7 +238,6 @@ FRUTILS.prototype.__req_onload = function __req_onload(func, treat, cache, respo
         }
 
         if (func) {
-            //LACXULHTML
             me.run_cb( func, result );
         }
     }
@@ -251,7 +247,6 @@ FRUTILS.prototype.__req_onload = function __req_onload(func, treat, cache, respo
 FRUTILS.prototype.__req_onerror = function __req_onerror(url, request_body, errfunc, cache) {
     var me = this;
     return function(err, text) {
-        //LACXULHTML
         me.cleanup_request(me, cache);
         me.dump("load error " + text + ", argument count: " + arguments.length+" "+url);
         try {
@@ -260,9 +255,6 @@ FRUTILS.prototype.__req_onerror = function __req_onerror(url, request_body, errf
             me.dump(this.readyState, 3, true);
             me.dump(this.responseText, 3, true);
             me.dump(err.toString(), 3, true);
-            //LACXULHTML
-            me.dump(err.toString(), 3, true);
-            me.dump([err, text], 2, true);
             me.dump([err, text], 10, true);
         } catch (ex) {
             me.dump('Could not dump err in FRUTILS.prototype.__req_onerror');
@@ -367,9 +359,8 @@ FRUTILS.prototype.introspect_deep = function(x, deep, deep_tab) {
 
 //*****************
 FRUTILS.prototype.merge_overlays = function merge_overlays(docroot) {
-    //LACXULHTML
-    var xulOverlays = this.get_class(docroot, 'overlay');
-    var me = this;
+    var xulOverlays = this.get_class(docroot, 'overlay'),
+        me = this;
 
     var insert_overlay = function(id, data) {
         // find our overlay placeholder

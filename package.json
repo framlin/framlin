@@ -1,7 +1,9 @@
 {
   "name": "framlin",
   "version": "0.0.2",
-  "dependencies": {},
+  "dependencies": {
+    "http-server": "^0.11.1"
+  },
   "scripts": {
     "postinstall": "npm link fr-builder fr-infra fr-routing fr-server",
     "postupdate": "npm link fr-builder fr-infra fr-routing fr-server"
