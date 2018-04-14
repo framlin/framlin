@@ -3,17 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>Framlin Custom Software</title>
-    <link rel="stylesheet" href="css/framlin.css">
+    <script type="text/javascript">
+        var host = window.location.protocol+"//"+window.location.hostname;
+        window.CI_HOST = host+":8088";
+        window.CO_HOST = host+":8093";
+
+        var link = document.createElement( "link" );
+        link.href = window.CI_HOST+"/styles/framlin/site.css";
+        link.type = "text/css";
+        link.rel = "stylesheet";
+        link.media = "screen,print";
+
+        document.getElementsByTagName( "head" )[0].appendChild( link );
+    </script>
+    <script src="framework/frutils.js"></script>
 </head>
 <body onload="frutils.page_onload(window)">
 <div class="page vbox fill-horizontal">
-    <div  id="header"      class="overlay load-sync" href="http://localhost:8088/partials/header.html"></div>
-    <div  id="navigation"  class="overlay load-sync" href="http://localhost:8088/partials/topnav.html"></div>
-    <div  id="main"        class="overlay load-sync" href="http://localhost:8093/article/framlin/home.html"></div>
-    <div  id="bottomnav"   class="overlay load-sync" href="http://localhost:8088/partials/bottomnav.html"></div>
-    <div  id="footer"      class="overlay load-sync" href="http://localhost:8088/partials/footer.html"></div>
+    <div  id="header"      class="overlay load-sync" href="ci::/partials/header.html"></div>
+    <div  id="navigation"  class="overlay load-sync" href="ci::/partials/topnav.html"></div>
+    <div  id="main"        class="overlay load-sync" href="co::/article/framlin/home.html"></div>
+    <div  id="bottomnav"   class="overlay load-sync" href="ci::/partials/bottomnav.html"></div>
+    <div  id="footer"      class="overlay load-sync" href="ci::/partials/footer.html"></div>
 </div>
 </body>
-<script src="framework/frutils.js"></script>
-<script src="index.js"></script>
 </html>

@@ -14,6 +14,7 @@ FRUTILS.prototype.page_onload = function page_onload(base, msg) {
     }
 
     this.merge_overlays(base.document);
+    this.load_images(base.document);
 };
 
 FRUTILS.prototype.get_backtrace = function get_backtrace() {
@@ -338,6 +339,7 @@ FRUTILS.prototype.introspect_deep = function(x, deep, deep_tab) {
 
 
 FRUTILS.prototype.merge_overlays = function merge_overlays(docroot) {
+
     var overlays = this.get_class(docroot, 'overlay'),
         me = this;
 
@@ -383,10 +385,12 @@ FRUTILS.prototype.merge_overlays = function merge_overlays(docroot) {
         elem.parentNode.replaceChild(new_elem, elem);
     }
 
+
+
     // do not use methods of Array.prototype for iterating because they skip some elements (observed on Chromium)
     for (var i = 0; i < overlays.length; i++) {
         var overlay = overlays[i];
-        var href = overlay.getAttribute('href');
+        var href = this.map_url(overlay.getAttribute('href'));
         var id = overlay.getAttribute('id');
 
         if (this.has_class(overlay, 'load-sync')) {
@@ -422,3 +426,43 @@ FRUTILS.prototype.remote_method_treat_data = function remote_method_treat_data(r
 
     return tmp;
 };
+
+
+// Include CSS file
+FRUTILS.prototype.load_css =  function load_css(docroot){
+    var styles =  docroot.getElementsByClassName('style');
+
+    for (var i = 0; i < styles.length; i++) {
+        var pattern = styles[i];
+        var url = pattern.getAttribute("href");
+        pattern.href = this.map_url(url);
+    }
+};
+
+
+FRUTILS.prototype.load_images = function load_images(docroot) {
+    var images = docroot.getElementsByTagName('img');
+
+    for (var i = 0; i < images.length; i++) {
+        var img = images[i];
+        var url = img.getAttribute("src");
+        img.src = this.map_url(url);
+    }
+};
+
+FRUTILS.prototype.map_url = function map_url(href) {
+
+    var paths = href.split('::'),
+        map = {
+            ci: CI_HOST,
+            co: CO_HOST
+        },
+        host = map[paths[0]],
+        file =  paths[1],
+        url = host+file;
+
+
+    return url;
+};
+
+window.frutils = new FRUTILS(false);
