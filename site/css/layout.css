@@ -1,0 +1,23 @@
+@import 'reset.css';
+@import 'flexbox.css';
+
+:root {
+    --content-width: 33em;
+}
+
+.page, article, nav, header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page {
+    margin: 0 auto;
+    max-width: var(--content-width);
+    padding: 0;
+}
+
+.fill-horizontal {
+    align-items: stretch;
+    align-content: stretch;
+}

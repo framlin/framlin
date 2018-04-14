@@ -1,0 +1,54 @@
+.page, .hbox, .vbox, .window, .flex, header, footer, article{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hbox {
+    flex-direction: row;
+}
+
+.vbox,
+.window {
+    flex-direction: column;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.fill-horizontal {
+    align-items: stretch;
+    align-content: stretch;
+    justify-content: center;
+
+}
+
+#content {
+    background-color: #e4ebef;
+    max-width: 35em;
+}
+
+div {
+    border: solid 1px;
+}
+
+#a1 {
+    background-color: red;
+}
+
+
+#a2 {
+    background-color: blue;
+}
+
+#b1 {
+    background-color: green;
+}
+
+#b2 {
+    background-color: yellow;
+}
+
+
+
