@@ -1,3 +1,15 @@
+var host = window.location.protocol+"//"+window.location.hostname;
+window.CI_HOST = host+":8088";
+window.CO_HOST = host+":8093";
+
+var link = document.createElement( "link" );
+link.href = window.CI_HOST+"/styles/"+window.SITE_NAME+"/site.css";
+link.type = "text/css";
+link.rel = "stylesheet";
+link.media = "screen,print";
+
+document.getElementsByTagName( "head" )[0].appendChild( link );
+
 /**
  * User: w.egger@framlin.com
  * Date: 13.04.18
