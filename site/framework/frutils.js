@@ -1,32 +1,63 @@
-var host = window.location.protocol+"//"+window.location.hostname;
-window.CI_HOST = host+":8088";
-window.CO_HOST = host+":8093";
+/* =============  ATTENTIONE ======= ACHTUNG ======= ATTENTION =======
+ TODO: SYNC this ALLWAYS between ALL sites
+ * ################################################################### */
 
-var link = document.createElement( "link" );
-link.href = window.CI_HOST+"/styles/"+window.SITE_NAME+"/site.css";
-link.type = "text/css";
-link.rel = "stylesheet";
-link.media = "screen,print";
+(function init_ports(ctx) {
+    var host = ctx.location.protocol+"//"+ctx.location.hostname;
 
-document.getElementsByTagName( "head" )[0].appendChild( link );
+    ctx.CI_HOST = host+":8088";
+    ctx.CO_HOST = host+":8093";
+    ctx.CV_HOST = host+":8089";
 
-/**
- * User: w.egger@framlin.com
- * Date: 13.04.18
- * Time: 10:05
- */
+})(window);
+
+(function init_redirect(ctx) {
+    var search = ctx.location.search;
+
+    if (search.length > 0) {
+        ctx.REDIRECT = search.substring(1);
+    }
+
+})(window);
+
+(function import_styles(ctx) {
+    var link = ctx.document.createElement( "link" );
+
+    link.href = ctx.CI_HOST+"/styles/"+ctx.SITE_NAME+"/site.css";
+    link.type = "text/css";
+    link.rel = "stylesheet";
+    link.media = "screen,print";
+
+    ctx.document.getElementsByTagName( "head" )[0].appendChild( link );
+
+})(window);
+
+
 function FRUTILS(productive) {
     this.FR_IN_PRODUCTION = productive;
     this.allow_sync = true;
 }
 
-FRUTILS.prototype.page_onload = function page_onload(base, msg) {
+FRUTILS.prototype.page_onload = function page_onload(ctx, msg) {
     if (typeof msg !== "undefined") {
-        this.dump(["FRUTILS.prototype.page_onload", msg, base])
+        this.dump(["FRUTILS.prototype.page_onload", msg, ctx])
     }
 
-    this.merge_overlays(base.document);
-    this.load_images(base.document);
+    this.configure_overlay(ctx);
+    this.merge_overlays(ctx.document);
+    this.load_images(ctx.document);
+};
+
+FRUTILS.prototype.configure_overlay = function configure_overlay(ctx) {
+    if (ctx.REDIRECT) {
+        var query = ctx.REDIRECT.split(','),
+            overlay_id = query[0],
+            overlay_content = query[1],
+            overlay_node = ctx.document.getElementById(overlay_id),
+            href = overlay_node.getAttribute('href');
+
+        overlay_node.setAttribute("href", href + overlay_content + ".html")
+    }
 };
 
 FRUTILS.prototype.get_backtrace = function get_backtrace() {
@@ -199,8 +230,8 @@ FRUTILS.prototype.run_cb = function run_cb(cb) {
 
 FRUTILS.prototype.is_cb = function(cb) {
     return (typeof cb == 'function' ||            // is it a function
-        this.is_array(cb)                         // is it Array?
-        && typeof cb[1] == 'function');           // has it a function?
+    this.is_array(cb)                         // is it Array?
+    && typeof cb[1] == 'function');           // has it a function?
 };
 
 FRUTILS.prototype.is_array = function(thing) {
@@ -312,7 +343,7 @@ FRUTILS.prototype.introspect_deep = function(x, deep, deep_tab) {
                         buf += "[MASKED]";
                     } else {
                         buf += "\n" + this.introspect_deep(x[i],
-                            deep != -1 ? deep - 1 : -1, deep_tab + "> ")
+                                deep != -1 ? deep - 1 : -1, deep_tab + "> ")
                             + "\n" + deep_tab;
                         next_prefix = "";
                     }
@@ -467,7 +498,8 @@ FRUTILS.prototype.map_url = function map_url(href) {
     var paths = href.split('::'),
         map = {
             ci: CI_HOST,
-            co: CO_HOST
+            co: CO_HOST,
+            cv: CV_HOST
         },
         host = map[paths[0]],
         file =  paths[1],
