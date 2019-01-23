@@ -11,15 +11,6 @@
 
 })(window);
 
-(function init_redirect(ctx) {
-    var search = ctx.location.search;
-
-    if (search.length > 0) {
-        ctx.REDIRECT = search.substring(1);
-    }
-
-})(window);
-
 (function import_styles(ctx) {
     var link = ctx.document.createElement( "link" );
 
@@ -31,6 +22,16 @@
     ctx.document.getElementsByTagName( "head" )[0].appendChild( link );
 
 })(window);
+
+(function init_redirect(ctx) {
+    var search = ctx.location.search;
+
+    if (search.length > 0) {
+        ctx.REDIRECT = search.substring(1);
+    }
+
+})(window);
+
 
 
 function FRUTILS(productive) {
@@ -509,4 +510,4 @@ FRUTILS.prototype.map_url = function map_url(href) {
     return url;
 };
 
-window.frutils = new FRUTILS(false);
+window.frutils = new FRUTILS(true);
